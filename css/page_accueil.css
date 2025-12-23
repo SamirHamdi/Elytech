@@ -109,69 +109,155 @@ form{
 
 /* ===== SECTION HERO (Bannière principale) ===== */
 .hero {
-    background-color: #FFBE30;/* Fond beige très léger */
-    padding: 80px 20px; /* Espacement interne */
- 
+    background-color: #FFBE30;
+    padding: 80px 20px;
+}
 
 .hero-container {
-    display: flex; /* Disposition flex */
-    background-color: #FFBE30 ;
-    flex-wrap: wrap; /* Permet le passage en colonne */
-    gap: 50px; /* Espace entre image et contenu */
-    align-items: center; /* Alignement vertical centré */
-    max-width: 1400px; /* Largeur maximum */
-    margin: 0 auto; /* Centrage horizontal */
+    display: flex;
+    background-color: #FFBE30;
+    flex-wrap: wrap;
+    gap: 50px;
+    align-items: center;
+    max-width: 1400px;
+    margin: 0 auto;
 }
 
 .hero-image {
-    flex: 1 1 45%; /* Prend 45% de l'espace */
-    min-width: 300px; /* Minimum avant passage en colonne */
+    flex: 1 1 45%;
+    min-width: 300px;
 }
 
 .hero-image img {
-    width: 100%; /* Image responsive */
-    height: auto; /* Garde proportions */
-    border-radius: 15px; /* Coins arrondis */
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1); /* Ombre douce */
+    width: 100%;
+    height: auto;
+    border-radius: 15px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
 }
 
 .hero-content {
-    flex: 1 1 45%; /* Prend 45% de l'espace */
-    min-width: 300px; /* Minimum avant passage en colonne */
-    display: flex; /* Disposition flexible */
-    flex-direction: column; /* Disposition verticale */
-    gap: 24px; /* Espacement entre éléments */
+    flex: 1 1 45%;
+    min-width: 300px;
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
 }
 
 .hero h3 {
-    align-self: center; /* Centrage horizontal */
-    font-size: 1.875rem; /* Taille police */
-    line-height: 1.2; /* Hauteur de ligne */
-    color: #3f3f3f; /* Couleur texte gris foncé */
+    align-self: center;
+    font-size: 1.875rem;
+    line-height: 1.2;
+    color: #3f3f3f;
 }
 
 .hero p {
-    align-self: center; /* Centrage horizontal */
-    font-size: 1.125rem; /* Taille police */
-    color: #bfb3a8; /* Couleur texte beige */
-    max-width: 500px; /* Largeur maximum */
-    line-height: 1.8; /* Hauteur de ligne */
+    align-self: center;
+    font-size: 1.125rem;
+    color: #666;
+    max-width: 500px;
+    line-height: 1.8;
 }
+
 /* ===== BOUTONS ===== */
 .btn {
-    display: inline-block; /* Disposition inline avec block */
-    padding: 14px 32px; /* Espacement interne */
-    background: white; /* Fond marron */
-    color: #173334; /* Couleur texte */
-    border: none; /* Pas de bordure */
-    border-radius: 6px; /* Coins arrondis */
-    font-size: 1rem; /* Taille police */
-    font-weight: 600; /* Poids police */
-    text-decoration: none; /* Pas de soulignement */
-    cursor: pointer; /* Curseur main */
-    transition: background 0.3s ease; /* Animation fond */
+    display: inline-block;
+    padding: 14px 32px;
+    background: white;
+    color: #173334;
+    border: none;
+    border-radius: 6px;
+    font-size: 1rem;
+    font-weight: 600;
+    text-decoration: none;
+    cursor: pointer;
+    transition: background 0.3s ease;
 }
 
 .btn:hover {
-    background: #a17c03; /* Fond plus foncé au survol */
+    background: #a17c03;
+}
+
+/* ===== SECTION Grid Catégories ===== */
+.grid-categories {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 60px 20px;
+}
+
+.section-title {
+    grid-column: 1 / -1;
+    text-align: center;
+    margin-bottom: 20px;
+    color: #173334;
+    font-size: 2rem;
+}
+
+.featured-card1,
+.featured-card2,
+.featured-card3,
+.featured-card4 {
+    background-size: cover;
+    background-position: center;
+    height: 300px;
+    border-radius: 15px;
+    position: relative;
+    overflow: hidden;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+}
+
+.featured-card1 {
+    background-image: url("/images/image-cuisine-inde.jpg");
+}
+
+.featured-card2 {
+    background-image: url("/images/image-cuisine-france.jpg");
+}
+
+.featured-card3 {
+    background-image: url("/images/image-cuisine-marocaine.jpg");
+}
+
+.featured-card4 {
+    background-image: url("/images/image-cuisine-italienne.jpg");
+}
+
+.featured-card1:hover,
+.featured-card2:hover,
+.featured-card3:hover,
+.featured-card4:hover {
+    transform: scale(1.05);
+}
+
+.featured-content {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    padding: 20px;
+    background: linear-gradient(to top, rgba(0,0,0,0.8), transparent);
+    color: white;
+}
+
+.featured-title {
+    font-size: 1.5rem;
+    margin: 0 0 10px 0;
+}
+
+.featured-btn {
+    display: inline-block;
+    padding: 8px 16px;
+    background: white;
+    color: #173334;
+    text-decoration: none;
+    border-radius: 5px;
+    font-size: 0.9rem;
+    transition: background 0.3s ease;
+}
+
+.featured-btn:hover {
+    background: #FFBE30;
 }
