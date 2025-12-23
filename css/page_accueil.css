@@ -281,13 +281,46 @@ form{
 
 
 
+/* ===============================
+   BOUTON FAVORI (COEUR)
+   =============================== */
+
 .item-card {
-    background-color:bisque ;
-    border-radius: 8px; /* Coins arrondis */
-    overflow: hidden; /* Cache débordements */
-    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Animations */
-    cursor: pointer; /* Curseur main */
+    position: relative;
 }
+
+.favorite-btn {
+    position: absolute;
+    top: 12px;
+    right: 12px;
+    width: 36px;
+    height: 36px;
+    background: white;
+    border: none;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    z-index: 5;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+    transition: transform 0.2s ease, background 0.2s ease;
+}
+
+.favorite-btn i {
+    font-size: 1.1rem;
+    color: #173334;
+}
+
+.favorite-btn:hover {
+    transform: scale(1.1);
+    background: #ffefef;
+}
+
+.favorite-btn:hover i {
+    color: #e63946;
+}
+
 
 .item-card:hover {
     transform: translateY(-5px); /* Légère élévation */
