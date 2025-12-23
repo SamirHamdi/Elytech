@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/css/page-categorie_marocain.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Kadwa:wght@400;700&display=swap" rel="stylesheet">
+    <title>Cuisine Marocaine - Cooking 4 Noob</title>
+</head>
+<body>
+    <!-- Navbar -->
+    <nav class="navbar">
+        <div class="navbar-container">
+            <div class="navbar-logo">
+                <a href="page_accueil.html">Cooking 4 Noob</a>
+            </div>
+            <div>
+                <form action="" method="get">
+                    <div class="search-bar-nav">
+                        <input type="text" placeholder="Que voulez-vous manger?">
+                        <button type="submit"><i class="fa-solid fa-magnifying-glass"></i></button>
+                    </div>
+                </form>
+            </div>
+            <div class="navbar-icons">
+                <a href="#" class="nav-icon-">
+                    <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="white">
+                        <path d="M200-246q54-53 125.5-83.5T480-360q83 0 154.5 30.5T760-246v-514H200v514Zm280-194q58 0 99-41t41-99q0-58-41-99t-99-41q-58 0-99 41t-41 99q0 58 41 99t99 41ZM200-120q-33 0-56.5-23.5T120-200v-560q0-33 23.5-56.5T200-840h560q33 0 56.5 23.5T840-760v560q0 33-23.5 56.5T760-120H200Zm69-80h422q-44-39-99.5-59.5T480-280q-56 0-112.5 20.5T269-200Zm211-320q-25 0-42.5-17.5T420-580q0-25 17.5-42.5T480-640q25 0 42.5 17.5T540-580q0 25-17.5 42.5T480-520Zm0 17Z"/>
+                    </svg>
+                </a>
+                <a href="#" class="nav-icon">❤️</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Catégorie -->
+    <section class="category-hero" style="background-image: url('/images/image-cuisine-marocaine.jpg');">
+        <div class="category-hero-overlay">
+            <div class="category-hero-content">
+                <h1>Cuisine Marocaine</h1>
+                <p>Plongez dans les saveurs exotiques du Maroc. Des tajines parfumés aux couscous généreux, découvrez une cuisine riche en épices et en traditions.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Filtres -->
+    <section class="filters-section">
+        <div class="filters-container">
+            <h3>Filtrer par :</h3>
+            <div class="filter-buttons">
+                <button class="filter-btn active">Tous</button>
+                <button class="filter-btn">Tajines</button>
+                <button class="filter-btn">Couscous</button>
+                <button class="filter-btn">Épicé</button>
+                <button class="filter-btn">Végétarien</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Grille de recettes -->
+    <section class="recipes-grid">
+        <!-- Recette 1 -->
+        <article class="recipe-card">
+            <button class="favorite-btn">
+                <i class="fa-regular fa-heart"></i>
+            </button>
+            <img src="/images/rfissa au poulet.jpeg" alt="Rfissa">
+            <div class="recipe-info">
+                <h4 class="recipe-title">Rfissa au Poulet</h4>
+                <div class="recipe-meta">
+                    <span><i class="fa-regular fa-clock"></i> 90 min</span>
+                    <span><i class="fa-solid fa-user"></i> 6 pers.</span>
+                </div>
+                <div class="recipe-rating">★★★★★</div>
+                <p class="recipe-description">Msemen émiettés avec poulet aux fenugrec et lentilles.</p>
+            </div>
+        </article>
+
+        <!-- Recette 2 -->
+        <article class="recipe-card">
+            <button class="favorite-btn">
+                <i class="fa-regular fa-heart"></i>
+            </button>
+            <img src="/images/tajine-agneau-pruneaux.jpg" alt="Tajine d'agneau">
+            <div class="recipe-info">
+                <h4 class="recipe-title">Tajine d'Agneau aux Pruneaux</h4>
+                <div class="recipe-meta">
+                    <span><i class="fa-regular fa-clock"></i> 120 min</span>
+                    <span><i class="fa-solid fa-user"></i> 6 pers.</span>
+                </div>
+                <div class="recipe-rating">★★★★★</div>
+                <p class="recipe-description">Agneau mijoté avec pruneaux, amandes et miel.</p>
+            </div>
+        </article>
+
+        <!-- Recette 3 -->
+        <article class="recipe-card">
+            <button class="favorite-btn">
+                <i class="fa-regular fa-heart"></i>
+            </button>
+            <img src="/images/couscous-royal.jpg" alt="Couscous Royal">
+            <div class="recipe-info">
+                <h4 class="recipe-title">Couscous Royal</h4>
+                <div class="recipe-meta">
+                    <span><i class="fa-regular fa-clock"></i> 150 min</span>
+                    <span><i class="fa-solid fa-user"></i> 8 pers.</span>
+                </div>
+                <div class="recipe-rating">★★★★★</div>
+                <p class="recipe-description">Semoule avec agneau, poulet, merguez et légumes.</p>
+            </div>
+        </article>
+
+        <!-- Recette 4 -->
+        <article class="recipe-card">
+            <button class="favorite-btn">
+                <i class="fa-regular fa-heart"></i>
+            </button>
+            <img src="/images/tajine-poulet-citron.jpg" alt="Tajine poulet citron">
+            <div class="recipe-info">
+                <h4 class="recipe-title">Tajine de Poulet au Citron</h4>
+                <div class="recipe-meta">
+                    <span><i class="fa-regular fa-clock"></i> 90 min</span>
+                    <span><i class="fa-solid fa-user"></i> 5 pers.</span>
+                </div>
+                <div class="recipe-rating">★★★★☆</div>
+                <p class="recipe-description">Poulet confit aux citrons et olives vertes.</p>
+            </div>
+        </article>
+
+        <!-- Recette 5 -->
+        <article class="recipe-card">
+            <button class="favorite-btn">
+                <i class="fa-regular fa-heart"></i>
+            </button>
+            <img src="/images/pastilla.jpg" alt="Pastilla">
+            <div class="recipe-info">
+                <h4 class="recipe-title">Pastilla au Poulet</h4>
+                <div class="recipe-meta">
+                    <span><i class="fa-regular fa-clock"></i> 120 min</span>
+                    <span><i class="fa-solid fa-user"></i> 6 pers.</span>
+                </div>
+                <div class="recipe-rating">★★★★★</div>
+                <p class="recipe-description">Feuilletée sucrée-salée au poulet et amandes.</p>
+            </div>
+        </article>
+
+        <!-- Recette 6 -->
+        <article class="recipe-card">
+            <button class="favorite-btn">
+                <i class="fa-regular fa-heart"></i>
+            </button>
+            <img src="/images/harira.jpg" alt="Harira">
+            <div class="recipe-info">
+                <h4 class="recipe-title">Harira</h4>
+                <div class="recipe-meta">
+                    <span><i class="fa-regular fa-clock"></i> 90 min</span>
+                    <span><i class="fa-solid fa-user"></i> 6 pers.</span>
+                </div>
+                <div class="recipe-rating">★★★★☆</div>
+                <p class="recipe-description">Soupe traditionnelle aux lentilles, pois chiches et viande.</p>
+            </div>
+        </article>
+
+        <!-- Recette 7 -->
+        <article class="recipe-card">
+            <button class="favorite-btn">
+                <i class="fa-regular fa-heart"></i>
+            </button>
+            <img src="/images/briouates.jpg" alt="Briouates">
+            <div class="recipe-info">
+                <h4 class="recipe-title">Briouates à la Viande</h4>
+                <div class="recipe-meta">
+                    <span><i class="fa-regular fa-clock"></i> 60 min</span>
+                    <span><i class="fa-solid fa-user"></i> 6 pers.</span>
+                </div>
+                <div class="recipe-rating">★★★★☆</div>
+                <p class="recipe-description">Petits triangles frits farcis à la viande épicée.</p>
+            </div>
+        </article>
+
+        <!-- Recette 8 -->
+        <article class="recipe-card">
+            <button class="favorite-btn">
+                <i class="fa-regular fa-heart"></i>
+            </button>
+            <img src="/images/zaalouk.jpg" alt="Zaalouk">
+            <div class="recipe-info">
+                <h4 class="recipe-title">Zaalouk</h4>
+                <div class="recipe-meta">
+                    <span><i class="fa-regular fa-clock"></i> 40 min</span>
+                    <span><i class="fa-solid fa-user"></i> 4 pers.</span>
+                </div>
+                <div class="recipe-rating">★★★★☆</div>
+                <p class="recipe-description">Caviar d'aubergines aux tomates et épices.</p>
+            </div>
+        </article>
+    </section>
+
+    <!-- Footer simple -->
+    <footer class="footer">
+        <div class="footer-content">
+            <p>&copy; 2024 Cooking 4 Noob - Toutes les recettes pour débutants</p>
+        </div>
+    </footer>
+
+</body>
+</html>
