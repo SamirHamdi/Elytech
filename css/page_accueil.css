@@ -261,3 +261,91 @@ form{
 .featured-btn:hover {
     background: #FFBE30;
 }
+
+/* ===== SECTION Reco ===== */
+
+.section-title2 {
+    grid-column: 1 / -1;
+    text-align: center;
+    margin-bottom: 20px;
+    color: #173334;
+    font-size: 2rem;
+}
+.reco-grid {
+    display: grid; /* Disposition grid */
+    grid-template-columns: repeat(4, 1fr); /* 4 colonnes */
+    gap: 20px; /* Espacement entre éléments */
+    max-width: 1400px; /* Largeur maximum */
+    margin: 0 auto; /* Centrage horizontal */
+}
+
+
+
+.item-card {
+    background-color:bisque ;
+    border-radius: 8px; /* Coins arrondis */
+    overflow: hidden; /* Cache débordements */
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Animations */
+    cursor: pointer; /* Curseur main */
+}
+
+.item-card:hover {
+    transform: translateY(-5px); /* Légère élévation */
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15); /* Ombre au survol */
+}
+
+.item-card img {
+    width: 100%; /* Image responsive */
+    height: 280px; /* Hauteur fixe */
+    object-fit: cover; /* Image recadrée */
+}
+
+.item-info {
+    padding: 20px; /* Espacement interne */
+}
+
+.item-title {
+    font-size: 0.9rem; /* Taille police */
+    font-weight: 500; /* Poids police */
+    color: #333; /* Couleur texte */
+    margin-bottom: 8px; /* Marge bas */
+}
+
+.item-rating {
+    color: #ffc107; /* Couleur étoiles (jaune) */
+    font-size: 0.875rem; /* Taille police */
+    margin-bottom: 12px; /* Marge bas */
+}
+
+.item-price {
+    font-size: 1.25rem; /* Taille police */
+    font-weight: 700; /* Poids police */
+    color: #333; /* Couleur texte */
+}
+
+
+/* ===== Section HERO 2 ===== */
+
+.hero2 {
+    width: 100%;
+    background-color: #173334;
+    padding: 60px 0;
+    margin-top: 20px;
+}
+
+.hero-container2 {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* 3 colonnes */
+    gap: 20px;
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.section-title3 {
+    grid-column: 1 / -1;
+    text-align: center;
+    margin-bottom: 20px;
+    color: white;
+    font-size: 2rem;
+}
