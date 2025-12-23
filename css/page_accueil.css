@@ -287,6 +287,7 @@ form{
 
 .item-card {
     position: relative;
+    background-color: bisque;
 }
 
 .favorite-btn {
@@ -299,7 +300,7 @@ form{
     border: none;
     border-radius: 50%;
     display: flex;
-    align-items: center;
+    align-items: center;    
     justify-content: center;
     cursor: pointer;
     z-index: 5;
@@ -361,10 +362,11 @@ form{
 
 .hero2 {
     width: 100%;
-    background-color: #173334;
+    background-color: #ffc107;
     padding: 60px 0;
-    margin-top: 20px;
+    margin-top: 20px;    
 }
+
 
 .hero-container2 {
     display: grid;
@@ -379,6 +381,6 @@ form{
     grid-column: 1 / -1;
     text-align: center;
     margin-bottom: 20px;
-    color: white;
+    color: #173334;
     font-size: 2rem;
 }
