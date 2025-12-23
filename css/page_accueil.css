@@ -1,0 +1,97 @@
+*{
+    box-sizing: border-box;
+}
+
+/* ===== NAVBAR ===== */
+.navbar {
+    box-sizing: border-box;
+    background: #173334; /* Fond blanc */
+    border-bottom: 1px solid #e5e5e5; /* Bordure inférieure grise */
+    padding: 0 40px; /* Pas de padding vertical, 40px horizontal */
+    position: sticky; /* Reste fixe au scroll */
+    top: 0; /* Positionné en haut */
+    z-index: 1000; /* Au-dessus des autres éléments */
+}
+
+.navbar-container {
+    max-width: 1400px; /* Largeur maximale */
+    margin: 0; /* Pas de marge */
+    display: flex; /* Disposition flexible */
+    justify-content: space-between; /* Espace entre les éléments */
+    align-items: center; /* Centrage vertical */
+    height: 70px; /* Hauteur fixe */
+}
+
+/* Logo */
+.navbar-logo a {
+    font-size: 1.125rem; /* Taille police */
+    font-weight: 700; /* Police en gras */
+    color: white; /* Couleur texte */
+    text-decoration: none; /* Pas de soulignement */
+    letter-spacing: 1px; /* Espacement entre lettres */
+}
+
+/* Icônes */
+.navbar-icons {
+    display: flex; /* Disposition flexible */
+    align-items: center; /* Centrage vertical */
+    margin-right: 0; /* Pas de marge à droite */
+    gap: 24px; /* Espace entre les icônes */
+}
+
+.nav-icon {
+    position: relative; /* Position relative pour les enfants absolus */
+    color: #333; /* Couleur icône */
+    text-decoration: none; /* Pas de soulignement */
+    display: flex; /* Disposition flexible */
+    align-items: center; /* Centrage vertical */
+    justify-content: center; /* Centrage horizontal */
+    width: 40px; /* Largeur fixe */
+    height: 40px; /* Hauteur fixe */
+    border-radius: 50%; /* Forme circulaire */
+    transition: background 0.3s ease; /* Animation au survol */
+}
+
+.nav-icon:hover {
+    background: #f5f5f5; /* Fond gris clair au survol */
+}
+
+.nav-icon svg {
+    stroke: #333; /* Couleur des icônes SVG */
+}
+
+.search-bar-nav{
+    width: 100%;
+    margin: 0 auto;
+    position: relative;
+    display: flex;
+}
+
+.search-bar-nav input{
+    width: 300px;
+    height: 40px;
+    padding: 5px;
+    border: none;
+    border-radius: 32px;
+    box-sizing: border-box;
+    cursor: pointer;
+}
+
+.search-bar-nav input:focus{
+    outline: none;
+}
+
+.search-bar-nav button{
+    position: absolute;
+    top: 0;
+    right: 0; 
+    height: 100%;
+    width: 50px;
+    border: none;
+    border-radius: 0 32px 32px 0;
+    background-color: white;
+    cursor: pointer;
+    margin: 0;
+    display: flex;
+    align-items: center;
+}
