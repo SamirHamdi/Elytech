@@ -72,7 +72,7 @@ form{
 }
 
 .search-bar-nav{
-    width: 300px;
+    width: 500px;
     margin: 0 auto;
     position: relative;
     display: flex;
@@ -105,4 +105,73 @@ form{
     margin: 0;
     display: flex;
     align-items: center;
+}
+
+/* ===== SECTION HERO (Bannière principale) ===== */
+.hero {
+    background-color: #FFBE30;/* Fond beige très léger */
+    padding: 80px 20px; /* Espacement interne */
+ 
+
+.hero-container {
+    display: flex; /* Disposition flex */
+    background-color: #FFBE30 ;
+    flex-wrap: wrap; /* Permet le passage en colonne */
+    gap: 50px; /* Espace entre image et contenu */
+    align-items: center; /* Alignement vertical centré */
+    max-width: 1400px; /* Largeur maximum */
+    margin: 0 auto; /* Centrage horizontal */
+}
+
+.hero-image {
+    flex: 1 1 45%; /* Prend 45% de l'espace */
+    min-width: 300px; /* Minimum avant passage en colonne */
+}
+
+.hero-image img {
+    width: 100%; /* Image responsive */
+    height: auto; /* Garde proportions */
+    border-radius: 15px; /* Coins arrondis */
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1); /* Ombre douce */
+}
+
+.hero-content {
+    flex: 1 1 45%; /* Prend 45% de l'espace */
+    min-width: 300px; /* Minimum avant passage en colonne */
+    display: flex; /* Disposition flexible */
+    flex-direction: column; /* Disposition verticale */
+    gap: 24px; /* Espacement entre éléments */
+}
+
+.hero h3 {
+    align-self: center; /* Centrage horizontal */
+    font-size: 1.875rem; /* Taille police */
+    line-height: 1.2; /* Hauteur de ligne */
+    color: #3f3f3f; /* Couleur texte gris foncé */
+}
+
+.hero p {
+    align-self: center; /* Centrage horizontal */
+    font-size: 1.125rem; /* Taille police */
+    color: #bfb3a8; /* Couleur texte beige */
+    max-width: 500px; /* Largeur maximum */
+    line-height: 1.8; /* Hauteur de ligne */
+}
+/* ===== BOUTONS ===== */
+.btn {
+    display: inline-block; /* Disposition inline avec block */
+    padding: 14px 32px; /* Espacement interne */
+    background: white; /* Fond marron */
+    color: #173334; /* Couleur texte */
+    border: none; /* Pas de bordure */
+    border-radius: 6px; /* Coins arrondis */
+    font-size: 1rem; /* Taille police */
+    font-weight: 600; /* Poids police */
+    text-decoration: none; /* Pas de soulignement */
+    cursor: pointer; /* Curseur main */
+    transition: background 0.3s ease; /* Animation fond */
+}
+
+.btn:hover {
+    background: #a17c03; /* Fond plus foncé au survol */
 }
