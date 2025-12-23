@@ -335,7 +335,7 @@ form{
 
 .hero-container2 {
     display: grid;
-    grid-template-columns: repeat(3, 1fr); /* 3 colonnes */
+    grid-template-columns: repeat(5, 1fr); /* 3 colonnes */
     gap: 20px;
     max-width: 1400px;
     margin: 0 auto;
