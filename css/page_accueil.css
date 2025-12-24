@@ -697,7 +697,129 @@ form {
         width: 35px;
         height: 35px;
     }
-    
+
+    /* ===== HERO SECTION ===== */
+    .hero {
+        padding: 40px 15px;
+    }
+
+    .hero-container {
+        gap: 30px;
+    }
+
+    .hero-image {
+        flex: 1 1 100%;
+    }
+
+    .hero-content {
+        flex: 1 1 100%;
+    }
+
+    .hero h3 {
+        font-size: 1.5rem;
+        text-align: center;
+    }
+
+    .hero p {
+        font-size: 1rem;
+        text-align: center;
+    }
+
+    .btn {
+        padding: 12px 24px;
+        font-size: 0.9rem;
+        align-self: center;
+    }
+
+    /* ===== SECTION CATEGORIES ===== */
+    .grid-categories {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 15px;
+        padding: 40px 15px;
+    }
+
+    .section-title {
+        font-size: 1.5rem;
+        margin-bottom: 15px;
+    }
+
+    .featured-card1,
+    .featured-card2,
+    .featured-card3,
+    .featured-card4 {
+        height: 250px;
+    }
+
+    .featured-title {
+        font-size: 1.2rem;
+    }
+
+    .featured-btn {
+        padding: 6px 14px;
+        font-size: 0.85rem;
+    }
+
+    /* ===== SECTION RECOMMANDATIONS ===== */
+    .reco-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 15px;
+        padding: 40px 15px;
+    }
+
+    .section-title2 {
+        font-size: 1.5rem;
+        margin-bottom: 15px;
+    }
+
+    .item-card img {
+        height: 220px;
+    }
+
+    .item-info {
+        padding: 15px;
+    }
+
+    .item-title {
+        font-size: 0.85rem;
+    }
+
+    .item-rating {
+        font-size: 0.8rem;
+    }
+
+    .item-price {
+        font-size: 1.1rem;
+    }
+
+    .favorite-btn {
+        width: 34px;
+        height: 34px;
+        top: 10px;
+        right: 10px;
+    }
+
+    .favorite-btn i {
+        font-size: 1rem;
+    }
+
+    /* ===== SECTION HERO 2 (RECETTES DU MOMENT) ===== */
+    .hero2 {
+        padding: 40px 0;
+        margin-top: 15px;
+    }
+
+    .hero-container2 {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 15px;
+        padding: 0 15px;
+    }
+
+    .section-title3 {
+        font-size: 1.5rem;
+        margin-bottom: 15px;
+    }
+
+    /* ===== FOOTER ===== */
     .footer-main {
         padding: 40px 15px 20px;
         margin-top: 60px;
@@ -706,6 +828,7 @@ form {
     .footer-container {
         grid-template-columns: 1fr;
         gap: 30px;
+        margin-bottom: 30px;
     }
 
     .footer-column h3 {
@@ -714,6 +837,14 @@ form {
 
     .footer-column h4 {
         font-size: 1.1rem;
+    }
+
+    .footer-column p {
+        font-size: 0.9rem;
+    }
+
+    .footer-links a {
+        font-size: 0.9rem;
     }
 
     .newsletter-form {
@@ -728,5 +859,57 @@ form {
     .newsletter-form button {
         border-radius: 5px;
         padding: 12px;
+    }
+
+    .footer-bottom p {
+        font-size: 0.85rem;
+    }
+}
+
+/* Très petits mobiles (480px et moins) */
+@media (max-width: 480px) {
+    
+    /* ===== NAVBAR ===== */
+    .navbar-logo a {
+        font-size: 0.9rem;
+    }
+
+    .search-bar-nav {
+        width: 180px;
+    }
+
+    .search-bar-nav input {
+        font-size: 0.85rem;
+    }
+
+    /* ===== GRILLES EN 1 COLONNE ===== */
+    .grid-categories {
+        grid-template-columns: 1fr;
+        padding: 30px 15px;
+    }
+
+    .reco-grid {
+        grid-template-columns: 1fr;
+        padding: 30px 15px;
+    }
+
+    .hero-container2 {
+        grid-template-columns: 1fr;
+        padding: 0 15px;
+    }
+
+    /* ===== TITRES ===== */
+    .section-title,
+    .section-title2,
+    .section-title3 {
+        font-size: 1.3rem;
+    }
+
+    .hero h3 {
+        font-size: 1.3rem;
+    }
+
+    .hero p {
+        font-size: 0.95rem;
     }
 }
