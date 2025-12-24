@@ -13,91 +13,104 @@ body {
 /* ===== NAVBAR ===== */
 .navbar {
     box-sizing: border-box;
-    background: #173334; /* Fond blanc */
-    border-bottom: 1px solid #e5e5e5; /* Bordure inférieure grise */
-    padding: 0 40px; /* Pas de padding vertical, 40px horizontal */
-    position: sticky; /* Reste fixe au scroll */
-    top: 0; /* Positionné en haut */
-    z-index: 1000; /* Au-dessus des autres éléments */
+    background: #173334;
+    border-bottom: 1px solid #e5e5e5;
+    padding: 0 40px;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
 }
 
 .navbar-container {
-    max-width: 1400px; /* Largeur maximale */
-    margin: 0; /* Pas de marge */
-    display: flex; /* Disposition flexible */
-    justify-content: space-between; /* Espace entre les éléments */
-    align-items: center; /* Centrage vertical */
-    height: 70px; /* Hauteur fixe */
+    max-width: 1400px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 70px;
 }
 
 /* Logo */
+.navbar-logo {
+    flex: 0 0 auto;
+}
+
 .navbar-logo a {
-    font-size: 1.125rem; /* Taille police */
-    font-weight: 700; /* Police en gras */
-    color: white; /* Couleur texte */
-    text-decoration: none; /* Pas de soulignement */
-    letter-spacing: 1px; /* Espacement entre lettres */
+    font-size: 1.125rem;
+    font-weight: 700;
+    color: white;
+    text-decoration: none;
+    letter-spacing: 1px;
+}
+
+/* Conteneur de la barre de recherche */
+.navbar-container > div:nth-child(2) {
+    flex: 1;
+    display: flex;
+    justify-content: center;
 }
 
 /* Icônes */
 .navbar-icons {
-    display: flex; /* Disposition flexible */
-    align-items: center; /* Centrage vertical */
-    margin-right: 0; /* Pas de marge à droite */
-    gap: 24px; /* Espace entre les icônes */
+    flex: 0 0 auto;
+    display: flex;
+    align-items: center;
+    margin-right: 0;
+    gap: 24px;
 }
 
-.nav-icon {
-    position: relative; /* Position relative pour les enfants absolus */
-    color: #333; /* Couleur icône */
-    text-decoration: none; /* Pas de soulignement */
-    display: flex; /* Disposition flexible */
-    align-items: center; /* Centrage vertical */
-    justify-content: center; /* Centrage horizontal */
-    width: 40px; /* Largeur fixe */
-    height: 40px; /* Hauteur fixe */
-    border-radius: 50%; /* Forme circulaire */
-    transition: background 0.3s ease; /* Animation au survol */
+.nav-icon, .nav-icon- {
+    position: relative;
+    color: #333;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    transition: background 0.3s ease;
 }
 
-.nav-icon:hover {
-    background: #f5f5f5; /* Fond gris clair au survol */
+.nav-icon:hover, .nav-icon-:hover {
+    background: rgba(255, 255, 255, 0.1);
 }
 
-.nav-icon svg {
-    stroke: #333; /* Couleur des icônes SVG */
+.nav-icon svg, .nav-icon- svg {
+    fill: white;
 }
-form{
+
+form {
     margin: 0;
 }
 
-.search-bar-nav{
+.search-bar-nav {
     width: 500px;
-    margin: 0 auto;
+    margin: 0;
     position: relative;
     display: flex;
 }
 
-.search-bar-nav input{
+.search-bar-nav input {
     width: 100%;
     height: 40px;
-    padding: 5px;
+    padding: 5px 50px 5px 20px;
     border: none;
     border-radius: 32px;
     box-sizing: border-box;
-    cursor: pointer;
+    font-family: 'Kadwa', serif;
 }
 
-.search-bar-nav input:focus{
+.search-bar-nav input:focus {
     outline: none;
 }
 
-.search-bar-nav button{
+.search-bar-nav button {
     position: absolute;
     top: 0;
-    right: 0; 
+    right: 0;
     height: 100%;
-    width: 100%px;
+    width: 50px;
     border: none;
     border-radius: 0 32px 32px 0;
     background-color: white;
@@ -105,6 +118,7 @@ form{
     margin: 0;
     display: flex;
     align-items: center;
+    justify-content: center;
 }
 
 /* ===== SECTION HERO (Bannière principale) ===== */
@@ -648,6 +662,42 @@ form{
 
 /* ===== MEDIA QUERIES FOOTER ===== */
 @media (max-width: 768px) {
+    .navbar {
+        padding: 0 20px;
+    }
+
+    .navbar-container {
+        height: 60px;
+    }
+
+    .navbar-logo a {
+        font-size: 1rem;
+    }
+
+    .search-bar-nav {
+        width: 250px;
+    }
+
+    .search-bar-nav input {
+        height: 35px;
+        font-size: 0.9rem;
+        padding: 5px 40px 5px 15px;
+    }
+
+    .search-bar-nav button {
+        width: 40px;
+    }
+
+    .navbar-icons {
+        gap: 15px;
+    }
+
+    .nav-icon,
+    .nav-icon- {
+        width: 35px;
+        height: 35px;
+    }
+    
     .footer-main {
         padding: 40px 15px 20px;
         margin-top: 60px;
