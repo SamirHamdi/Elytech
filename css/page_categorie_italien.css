@@ -28,11 +28,16 @@ form {
 
 .navbar-container {
     max-width: 1400px;
-    margin: 0;
+    margin: 0 auto;
     display: flex;
     justify-content: space-between;
     align-items: center;
     height: 70px;
+}
+
+/* Logo */
+.navbar-logo {
+    flex: 0 0 auto;
 }
 
 .navbar-logo a {
@@ -43,7 +48,16 @@ form {
     letter-spacing: 1px;
 }
 
+/* Conteneur de la barre de recherche */
+.navbar-container > div:nth-child(2) {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+}
+
+/* Icônes */
 .navbar-icons {
+    flex: 0 0 auto;
     display: flex;
     align-items: center;
     margin-right: 0;
@@ -67,9 +81,17 @@ form {
     background: rgba(255, 255, 255, 0.1);
 }
 
+.nav-icon svg, .nav-icon- svg {
+    fill: white;
+}
+
+form {
+    margin: 0;
+}
+
 .search-bar-nav {
     width: 500px;
-    margin: 0 auto;
+    margin: 0;
     position: relative;
     display: flex;
 }
@@ -404,7 +426,7 @@ form {
 /* Tablettes et mobiles (768px et moins) */
 @media (max-width: 768px) {
     /* Navbar */
-    .navbar {
+.navbar {
         padding: 0 20px;
     }
 
