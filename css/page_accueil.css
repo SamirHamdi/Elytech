@@ -11,6 +11,7 @@ body {
 }
 
 /* ===== NAVBAR ===== */
+
 .navbar {
     box-sizing: border-box;
     background: #173334;
@@ -72,12 +73,45 @@ body {
     transition: background 0.3s ease;
 }
 
+/* Icônes FontAwesome dans les liens */
+.nav-icon i {
+    color: white;
+    font-size: 1.2rem;
+    transition: color 0.3s ease;
+}
+
+/* Icône active (optionnel - pour la page courante) */
+.nav-icon.active i {
+    color: #FFBE30;
+}
+
 .nav-icon:hover, .nav-icon-:hover {
     background: rgba(255, 255, 255, 0.1);
 }
 
+.nav-icon:hover i {
+    color: #FFBE30;
+}
+
+/* Icônes SVG (profil) */
 .nav-icon svg, .nav-icon- svg {
     fill: white;
+    transition: fill 0.3s ease;
+}
+
+.nav-icon:hover svg, .nav-icon-:hover svg {
+    fill: #FFBE30;
+}
+
+/* Icône coeur (emoji) */
+.nav-icon:last-child {
+    font-size: 1.2rem;
+    color: white;
+    transition: color 0.3s ease;
+}
+
+.nav-icon:last-child:hover {
+    color: #FFBE30;
 }
 
 form {
@@ -103,6 +137,7 @@ form {
 
 .search-bar-nav input:focus {
     outline: none;
+    box-shadow: 0 0 0 2px rgba(255, 190, 48, 0.3);
 }
 
 .search-bar-nav button {
@@ -119,6 +154,16 @@ form {
     display: flex;
     align-items: center;
     justify-content: center;
+    transition: background-color 0.3s ease;
+}
+
+.search-bar-nav button:hover {
+    background-color: #f0f0f0;
+}
+
+.search-bar-nav button i {
+    color: #173334;
+    font-size: 1rem;
 }
 
 /* ===== SECTION HERO (Bannière principale) ===== */
@@ -683,6 +728,25 @@ form {
         font-size: 0.9rem;
         padding: 5px 40px 5px 15px;
     }
+
+    .search-bar-nav button {
+        width: 40px;
+    }
+
+    .navbar-icons {
+        gap: 15px;
+    }
+
+    .nav-icon,
+    .nav-icon- {
+        width: 35px;
+        height: 35px;
+    }
+    
+    .nav-icon i {
+        font-size: 1rem;
+    }
+
 
     .search-bar-nav button {
         width: 40px;
