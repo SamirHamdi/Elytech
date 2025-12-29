@@ -742,39 +742,3 @@ button {
         padding: 12px;
     }
 }
-
-@media (max-width: 480px) {
-    /* Navbar très petit */
-    .navbar-container {
-        padding: 0 15px;
-    }
-    
-    .navbar-logo a {
-        font-size: 0.9rem;
-    }
-    
-    .search-bar-nav {
-        width: 180px;
-    }
-    
-    /* Onglets très petit */
-    .profile-nav li {
-        width: 100%;
-    }
-    
-    .tab-link {
-        padding: 12px 5px;
-        font-size: 0.85rem;
-    }
-    
-    /* Statistiques */
-    .profile-stats {
-        flex-direction: column;
-        gap: 15px;
-    }
-    
-    /* Footer */
-    .footer-main {
-        padding: 40px 15px 20px;
-    }
-}
