@@ -510,29 +510,3 @@ form {
     }
 }
 
-/* Très petits mobiles (480px et moins) */
-@media (max-width: 480px) {
-    .navbar-logo a {
-        font-size: 0.9rem;
-    }
-
-    .search-bar-nav {
-        width: 180px;
-    }
-
-    .contact-header h1 {
-        font-size: 1.5rem;
-    }
-
-    .contact-header p {
-        font-size: 0.95rem;
-    }
-
-    .contact-form-wrapper {
-        padding: 20px 15px;
-    }
-
-    .form-group {
-        margin-bottom: 20px;
-    }
-}
