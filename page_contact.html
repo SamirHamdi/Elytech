@@ -1,11 +1,178 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="fr">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <link rel="stylesheet" href="/css/page_contact.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Kadwa:wght@400;700&display=swap" rel="stylesheet">
+    <title>Contact - Cooking 4 Noob</title>
 </head>
 <body>
-    
+    <!-- Navbar -->
+    <nav class="navbar">
+        <div class="navbar-container">
+            <div class="navbar-logo">
+                <a href="page_accueil.html">Cooking 4 Noob</a>
+            </div>
+            <div>
+                <form action="" method="get">
+                    <div class="search-bar-nav">
+                        <input type="text" placeholder="Que voulez-vous manger?">
+                        <button type="submit"><i class="fa-solid fa-magnifying-glass"></i></button>
+                    </div>
+                </form>
+            </div>
+            <div class="navbar-icons">
+                <a href="#" class="nav-icon-">
+                    <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="white">
+                        <path d="M200-246q54-53 125.5-83.5T480-360q83 0 154.5 30.5T760-246v-514H200v514Zm280-194q58 0 99-41t41-99q0-58-41-99t-99-41q-58 0-99 41t-41 99q0 58 41 99t99 41ZM200-120q-33 0-56.5-23.5T120-200v-560q0-33 23.5-56.5T200-840h560q33 0 56.5 23.5T840-760v560q0 33-23.5 56.5T760-120H200Zm69-80h422q-44-39-99.5-59.5T480-280q-56 0-112.5 20.5T269-200Zm211-320q-25 0-42.5-17.5T420-580q0-25 17.5-42.5T480-640q25 0 42.5 17.5T540-580q0 25-17.5 42.5T480-520Zm0 17Z"/>
+                    </svg>
+                </a>
+                <a href="#" class="nav-icon">❤️</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Section Contact -->
+    <section class="contact-section">
+        <div class="contact-container">
+            <div class="contact-header">
+                <h1>Contactez-nous</h1>
+                <p>Une question ? Une suggestion ? N'hésitez pas à nous contacter, nous vous répondrons dans les plus brefs délais.</p>
+            </div>
+
+            <div class="contact-content">
+                <!-- Formulaire -->
+                <div class="contact-form-wrapper">
+                    <form class="contact-form" action="" method="post">
+                        <div class="form-group">
+                            <label for="name">Nom <span class="required">*</span></label>
+                            <input type="text" id="name" name="name" required>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="email">Email <span class="required">*</span></label>
+                            <input type="email" id="email" name="email" required>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="phone">Téléphone</label>
+                            <input type="tel" id="phone" name="phone">
+                        </div>
+
+                        <div class="form-group">
+                            <label for="subject">Sujet <span class="required">*</span></label>
+                            <select id="subject" name="subject" required>
+                                <option value="">Sélectionnez un sujet</option>
+                                <option value="question">Question générale</option>
+                                <option value="recette">Proposition de recette</option>
+                                <option value="bug">Signaler un problème</option>
+                                <option value="partenariat">Partenariat</option>
+                                <option value="autre">Autre</option>
+                            </select>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="message">Message <span class="required">*</span></label>
+                            <textarea id="message" name="message" rows="6" required></textarea>
+                        </div>
+
+                        <button type="submit" class="submit-btn">
+                            <i class="fa-solid fa-paper-plane"></i> Envoyer le message
+                        </button>
+                    </form>
+                </div>
+
+                <!-- Informations de contact -->
+                <div class="contact-info">
+                    <div class="info-card">
+                        <div class="info-icon">
+                            <i class="fa-solid fa-envelope"></i>
+                        </div>
+                        <h3>Email</h3>
+                        <p>contact@cooking4noob.com</p>
+                    </div>
+
+                    <div class="info-card">
+                        <div class="info-icon">
+                            <i class="fa-solid fa-phone"></i>
+                        </div>
+                        <h3>Téléphone</h3>
+                        <p>+33 1 23 45 67 89</p>
+                    </div>
+
+                    <div class="info-card">
+                        <div class="info-icon">
+                            <i class="fa-solid fa-clock"></i>
+                        </div>
+                        <h3>Horaires</h3>
+                        <p>Lun - Ven : 9h00 - 18h00</p>
+                    </div>
+
+                    <div class="info-card social-card">
+                        <h3>Suivez-nous</h3>
+                        <div class="social-links">
+                            <a href="#" class="social-icon"><i class="fa-brands fa-facebook"></i></a>
+                            <a href="#" class="social-icon"><i class="fa-brands fa-instagram"></i></a>
+                            <a href="#" class="social-icon"><i class="fa-brands fa-youtube"></i></a>
+                            <a href="#" class="social-icon"><i class="fa-brands fa-pinterest"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer-main">
+        <div class="footer-container">
+            <!-- Colonne 1: A propos -->
+            <div class="footer-column">
+                <h3>Cooking 4 Noob</h3>
+                <p>Des recettes simples et délicieuses pour tous les niveaux. Découvrez des plats du monde entier, faciles à réaliser chez vous.</p>
+            </div>
+
+            <!-- Colonne 2: Navigation -->
+            <div class="footer-column">
+                <h4>Navigation</h4>
+                <ul class="footer-links">
+                    <li><a href="page_accueil.html">Accueil</a></li>
+                    <li><a href="#">Mes Favoris</a></li>
+                    <li><a href="#">Catégories</a></li>
+                    <li><a href="#">Recettes du moment</a></li>
+                </ul>
+            </div>
+
+            <!-- Colonne 3: A propos -->
+            <div class="footer-column">
+                <h4>À Propos</h4>
+                <ul class="footer-links">
+                    <li><a href="#">Qui sommes-nous</a></li>
+                    <li><a href="page_contact.html">Nous contacter</a></li>
+                    <li><a href="#">FAQ</a></li>
+                    <li><a href="#">Conditions d'utilisation</a></li>
+                    <li><a href="#">Politique de confidentialité</a></li>
+                </ul>
+            </div>
+
+            <!-- Colonne 4: Newsletter -->
+            <div class="footer-column">
+                <h4>Inscrivez-vous à notre newsletter</h4>
+                <p>Recevez nos meilleures recettes et astuces culinaires chaque semaine directement dans votre boîte mail.</p>
+                <form class="newsletter-form">
+                    <input type="email" placeholder="Entrez votre email..." required>
+                    <button type="submit"><i class="fa-solid fa-arrow-right"></i></button>
+                </form>
+            </div>
+        </div>
+
+        <!-- Copyright -->
+        <div class="footer-bottom">
+            <p>© 2024, Tous droits réservés - Cooking 4 Noob</p>
+        </div>
+    </footer>
 </body>
 </html>
