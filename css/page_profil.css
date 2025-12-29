@@ -1,0 +1,654 @@
+@import url('https://fonts.googleapis.com/css2?family=Kadwa:wght@400;700&display=swap');
+
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Kadwa', serif;
+    background-color: #fafafa;
+}
+
+.navbar {
+    background: #173334;
+    padding: 0 40px;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.navbar-container {
+    max-width: 1400px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 70px;
+}
+
+.navbar-logo a {
+    font-size: 1.125rem;
+    font-weight: 700;
+    color: white;
+    text-decoration: none;
+}
+
+.navbar-container > div:nth-child(2) {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+}
+
+.navbar-icons {
+    display: flex;
+    align-items: center;
+    gap: 24px;
+}
+
+.nav-icon {
+    color: white;
+    text-decoration: none;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+}
+
+.nav-icon:hover {
+    background: rgba(255, 255, 255, 0.1);
+}
+
+.search-bar-nav {
+    width: 500px;
+    position: relative;
+    display: flex;
+}
+
+.search-bar-nav input {
+    width: 100%;
+    height: 40px;
+    padding: 5px 20px;
+    border: none;
+    border-radius: 32px;
+    font-family: 'Kadwa', serif;
+}
+
+.search-bar-nav button {
+    position: absolute;
+    right: 0;
+    height: 100%;
+    width: 50px;
+    border: none;
+    background: white;
+    border-radius: 0 32px 32px 0;
+    cursor: pointer;
+}
+
+/* ===== SECTION PROFIL ===== */
+.profile-section {
+    padding: 80px 20px;
+    background: linear-gradient(135deg, #FFBE30 0%, #ffc107 100%);
+}
+
+.profile-container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* En-tête du profil */
+.profile-header {
+    background: white;
+    padding: 40px;
+    border-radius: 15px;
+    margin-bottom: 30px;
+    display: flex;
+    gap: 40px;
+    align-items: center;
+}
+
+.profile-avatar {
+    position: relative;
+}
+
+.profile-avatar img {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 5px solid #FFBE30;
+}
+
+.edit-avatar-btn {
+    position: absolute;
+    bottom: 10px;
+    right: 10px;
+    background: #173334;
+    color: white;
+    border: none;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+.profile-info h1 {
+    color: #173334;
+    font-size: 2.5rem;
+    margin-bottom: 10px;
+}
+
+.profile-bio {
+    color: #666;
+    margin-bottom: 25px;
+}
+
+.profile-stats {
+    display: flex;
+    gap: 40px;
+    margin-bottom: 25px;
+}
+
+.stat {
+    text-align: center;
+}
+
+.stat-number {
+    font-size: 2rem;
+    font-weight: 700;
+    color: #173334;
+    display: block;
+}
+
+.stat-label {
+    color: #666;
+    font-size: 0.9rem;
+}
+
+.edit-profile-btn {
+    background: #173334;
+    color: white;
+    border: none;
+    padding: 12px 24px;
+    border-radius: 8px;
+    font-family: 'Kadwa', serif;
+    font-size: 1rem;
+    cursor: pointer;
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.edit-profile-btn:hover {
+    background: #0f2526;
+}
+
+/* Navigation des onglets */
+.profile-nav {
+    background: white;
+    border-radius: 15px;
+    margin-bottom: 30px;
+}
+
+.profile-nav ul {
+    display: flex;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.profile-nav li {
+    flex: 1;
+}
+
+.tab-link {
+    display: block;
+    padding: 20px;
+    text-align: center;
+    text-decoration: none;
+    color: #666;
+    font-weight: 600;
+    border-bottom: 3px solid transparent;
+}
+
+.tab-link:hover {
+    color: #173334;
+    background: rgba(255, 190, 48, 0.1);
+}
+
+/* Le premier onglet est actif par défaut */
+.profile-nav a[href="#mes-recettes"] {
+    color: #173334;
+    border-bottom-color: #FFBE30;
+    background: rgba(255, 190, 48, 0.1);
+}
+
+/* Contenu des onglets */
+.profile-content {
+    background: white;
+    border-radius: 15px;
+    padding: 30px;
+}
+
+/* Tous les onglets sont cachés sauf le premier */
+.tab-content {
+    display: none;
+}
+
+/* Le premier onglet est visible */
+.tab-content:first-of-type {
+    display: block;
+}
+
+/* Quand on clique sur un onglet, il devient visible */
+.tab-content:target {
+    display: block;
+}
+
+/* Quand un onglet est visible, les autres sont cachés */
+.tab-content:target ~ .tab-content {
+    display: none;
+}
+
+/* Quand un onglet est cliqué, son lien devient actif */
+#mes-recettes:target ~ .profile-nav a[href="#mes-recettes"],
+#favoris:target ~ .profile-nav a[href="#favoris"],
+#historique:target ~ .profile-nav a[href="#historique"],
+#parametres:target ~ .profile-nav a[href="#parametres"] {
+    color: #173334;
+    border-bottom-color: #FFBE30;
+    background: rgba(255, 190, 48, 0.1);
+}
+
+/* Titre des onglets */
+.tab-content h2 {
+    color: #173334;
+    margin-bottom: 30px;
+    font-size: 1.8rem;
+}
+
+/* Grille de recettes */
+.recipes-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 20px;
+}
+
+.recipe-card {
+    background: #fff;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+}
+
+.recipe-card:hover {
+    transform: translateY(-5px);
+    transition: transform 0.3s;
+}
+
+.recipe-card img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+
+.recipe-info {
+    padding: 15px;
+}
+
+.recipe-info h3 {
+    color: #173334;
+    margin-bottom: 10px;
+    font-size: 1.1rem;
+}
+
+.recipe-meta {
+    display: flex;
+    gap: 10px;
+    color: #666;
+    font-size: 0.9rem;
+    margin-bottom: 10px;
+}
+
+.recipe-meta i {
+    color: #FFBE30;
+    margin-right: 5px;
+}
+
+.recipe-desc {
+    color: #666;
+    font-size: 0.9rem;
+    margin-bottom: 15px;
+    line-height: 1.4;
+}
+
+.recipe-actions {
+    display: flex;
+    gap: 10px;
+}
+
+.action-btn {
+    flex: 1;
+    padding: 8px;
+    border: 1px solid #ddd;
+    background: white;
+    border-radius: 5px;
+    font-family: 'Kadwa', serif;
+    cursor: pointer;
+    font-size: 0.9rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 5px;
+}
+
+.action-btn:hover {
+    background: #f5f5f5;
+}
+
+.action-btn.delete {
+    color: #e63946;
+    border-color: #e63946;
+}
+
+/* Carte pour ajouter une recette */
+.add-recipe-card {
+    background: #173334;
+    border-radius: 10px;
+    height: 100%;
+    min-height: 300px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.add-recipe-content {
+    text-align: center;
+    color: white;
+    padding: 20px;
+}
+
+.add-recipe-content i {
+    font-size: 3rem;
+    color: #FFBE30;
+    margin-bottom: 15px;
+}
+
+.add-recipe-content h3 {
+    color: white;
+    margin-bottom: 10px;
+}
+
+.add-recipe-content p {
+    color: rgba(255, 255, 255, 0.8);
+    margin: 0;
+}
+
+/* Section Historique */
+.history-list {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.history-item {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    padding: 15px;
+    background: #f9f9f9;
+    border-radius: 10px;
+}
+
+.history-item img {
+    width: 80px;
+    height: 80px;
+    border-radius: 8px;
+    object-fit: cover;
+}
+
+.history-info h3 {
+    color: #173334;
+    margin-bottom: 5px;
+}
+
+.history-info p {
+    color: #666;
+    margin-bottom: 5px;
+    font-size: 0.9rem;
+}
+
+.history-time {
+    color: #999;
+    font-size: 0.85rem;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+/* Section Paramètres */
+.settings-form {
+    max-width: 600px;
+}
+
+.form-section {
+    margin-bottom: 30px;
+    padding-bottom: 20px;
+    border-bottom: 1px solid #eee;
+}
+
+.form-section h3 {
+    color: #173334;
+    margin-bottom: 20px;
+    font-size: 1.3rem;
+}
+
+.form-group {
+    margin-bottom: 15px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 5px;
+    color: #333;
+    font-weight: 600;
+}
+
+.form-group input {
+    width: 100%;
+    padding: 10px;
+    border: 2px solid #e5e5e5;
+    border-radius: 8px;
+    font-family: 'Kadwa', serif;
+}
+
+.checkbox-group {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.form-actions {
+    display: flex;
+    gap: 15px;
+    margin-top: 30px;
+}
+
+.save-btn {
+    background: #173334;
+    color: white;
+    border: none;
+    padding: 12px 24px;
+    border-radius: 8px;
+    font-family: 'Kadwa', serif;
+    cursor: pointer;
+    flex: 1;
+}
+
+.save-btn:hover {
+    background: #0f2526;
+}
+
+.footer-main {
+    background: #173334;
+    color: white;
+    padding: 60px 20px 20px;
+    margin-top: 80px;
+}
+
+.footer-container {
+    max-width: 1400px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 40px;
+    margin-bottom: 40px;
+}
+
+.footer-column h3 {
+    font-size: 1.5rem;
+    margin-bottom: 20px;
+    color: white;
+}
+
+.footer-column h4 {
+    font-size: 1.2rem;
+    margin-bottom: 20px;
+    color: white;
+}
+
+.footer-column p {
+    color: rgba(255, 255, 255, 0.8);
+    line-height: 1.6;
+}
+
+.footer-links {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.footer-links li {
+    margin-bottom: 12px;
+}
+
+.footer-links a {
+    color: rgba(255, 255, 255, 0.8);
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+.footer-links a:hover {
+    color: #FFBE30;
+}
+
+.newsletter-form {
+    display: flex;
+    margin-top: 20px;
+}
+
+.newsletter-form input {
+    flex: 1;
+    padding: 12px;
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    background: rgba(255, 255, 255, 0.1);
+    color: white;
+    border-radius: 5px 0 0 5px;
+    font-family: 'Kadwa', serif;
+}
+
+.newsletter-form button {
+    background: #FFBE30;
+    border: none;
+    padding: 12px 24px;
+    border-radius: 0 5px 5px 0;
+    cursor: pointer;
+}
+
+.footer-bottom {
+    max-width: 1400px;
+    margin: 0 auto;
+    padding-top: 30px;
+    border-top: 1px solid rgba(255, 255, 255, 0.2);
+    text-align: center;
+}
+
+.footer-bottom p {
+    color: rgba(255, 255, 255, 0.7);
+    margin: 0;
+}
+
+/* ===== RESPONSIVE ===== */
+@media (max-width: 768px) {
+    /* Navbar mobile */
+    .navbar {
+        padding: 0 20px;
+    }
+    
+    .search-bar-nav {
+        width: 250px;
+    }
+    
+    .navbar-icons {
+        gap: 15px;
+    }
+    
+    /* Profil mobile */
+    .profile-section {
+        padding: 40px 15px;
+    }
+    
+    .profile-header {
+        flex-direction: column;
+        text-align: center;
+        padding: 30px 20px;
+        gap: 20px;
+    }
+    
+    .profile-stats {
+        justify-content: center;
+    }
+    
+    /* Onglets mobile */
+    .profile-nav ul {
+        flex-wrap: wrap;
+    }
+    
+    .profile-nav li {
+        flex: none;
+        width: 50%;
+    }
+    
+    .tab-link {
+        padding: 15px 10px;
+        font-size: 0.9rem;
+    }
+    
+    /* Grille mobile */
+    .recipes-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    /* Footer mobile */
+    .footer-container {
+        grid-template-columns: 1fr;
+        gap: 30px;
+    }
+    
+    .newsletter-form {
+        flex-direction: column;
+    }
+    
+    .newsletter-form input {
+        border-radius: 5px;
+        margin-bottom: 10px;
+    }
+    
+    .newsletter-form button {
+        border-radius: 5px;
+    }
+}
