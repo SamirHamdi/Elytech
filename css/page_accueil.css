@@ -439,6 +439,41 @@ form {
     font-size: 2rem; /* Taille du titre */
 }
 
+.recette-card {
+    /* Lien de la carte */
+    text-decoration: none;
+    color: inherit;
+    display: block;
+    position: relative;
+}
+
+/* Ajustement du bouton favori pour qu'il reste cliquable */
+.favorite-btn {
+    position: absolute;
+    top: 12px;
+    right: 12px;
+    width: 36px;
+    height: 36px;
+    background: white;
+    border: none;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    z-index: 10; /* Plus élevé pour être au-dessus du lien */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+    transition: transform 0.2s ease, background 0.2s ease;
+}
+
+/* Empêcher le lien de se déclencher quand on clique sur le bouton favori */
+.favorite-btn:hover {
+    transform: scale(1.1);
+    background: #ffefef;
+}
+
+}
+
 /* ===== MEDIA QUERIES RESPONSIVE ===== */
 
 /* Tablettes et mobiles (768px et moins) */
