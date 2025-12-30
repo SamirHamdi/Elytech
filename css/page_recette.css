@@ -117,7 +117,7 @@ form {
     text-align: center;
 }
 
- .image-container h1 {
+.image-container h1 {
     margin-bottom: 20px;
     font-size: 2rem;
     color: #333;
@@ -126,7 +126,7 @@ form {
 .gallery-container {
     background-color: #FFBE30;
     width: 100%;
-    
+
 }
 
 .main-container {
@@ -166,9 +166,8 @@ form {
   background-color: #f8f8f8;
   padding: 20px;
   border-radius: 8px;
-  max-width: 400px;
+  max-width: 500px;
 }
-
 
 .ingredients h2 {
   color: #333;
@@ -182,7 +181,9 @@ form {
 }
 
 .ingredients li {
-  padding: 10px 0;
+  display: flex;
+  align-items: center;
+  padding: 12px 0;
   border-bottom: 1px solid #e0e0e0;
 }
 
@@ -190,12 +191,21 @@ form {
   border-bottom: none;
 }
 
-/* Pour ajouter des puces personnalisées */
 .ingredients li::before {
-  content: "✓";
-  color: #4CAF50;
-  font-weight: bold;
-  margin-right: 10px;
+  content: none;
+}
+
+.ingredients img {
+  width: 40px;
+  height: 40px;
+  border-radius: 100%;
+  object-fit: cover;
+  margin-right: 1px;
+}
+
+.ingredients span {
+  font-size: 16px;
+  color: #333;
 }
 
 
@@ -268,7 +278,7 @@ form {
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
     cursor: pointer;
     transition: transform 0.3s ease;
-    
+
 }
 
 .gallery-small-image:hover {
@@ -475,13 +485,13 @@ form {
 
     .image1,
     .image2,
-    .image3, {
+    .image3 {
         height: 200px;
     }
 
     .image1 img,
     .image2 img,
-    .image3 img, {
+    .image3 img {
         width: 100%;
         height: 100%;
         object-fit: cover;
@@ -490,8 +500,55 @@ form {
 
     .image1 img:hover,
     .image2 img:hover,
-    .image3 img:hover, {
+    .image3 img:hover {
         transform: scale(1.05);
+    }
+
+    .ingredients {
+        background-color: #f8f8f8;
+        padding: 20px;
+        border-radius: 8px;
+        max-width: 500px;
+    }
+
+    .ingredients h2 {
+        color: #333;
+        margin-bottom: 15px;
+        font-size: 24px;
+    }
+
+    .ingredients ul {
+        list-style: none;
+        padding: 0;
+    }
+
+    .ingredients li {
+        display: flex;
+        align-items: center;
+        padding: 12px 0;
+        border-bottom: 1px solid #e0e0e0;
+    }
+
+    .ingredients li:last-child {
+        border-bottom: none;
+    }
+
+    .ingredients li::before {
+        content: none;
+        /* Enlève la coche */
+    }
+
+    .ingredients img {
+        width: 60px;
+        height: 60px;
+        border-radius: 50%;
+        object-fit: cover;
+        margin-right: 15px;
+    }
+
+    .ingredients span {
+        font-size: 16px;
+        color: #333;
     }
 
     .footer-main {
