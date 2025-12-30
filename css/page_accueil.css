@@ -472,6 +472,15 @@ form {
     background: #ffefef;
 }
 
+/* ===== ONGLET ACTIF ===== */
+.profile-nav a[href="#mes-recettes"],
+#favoris:target ~ .profile-nav a[href="#favoris"],
+#historique:target ~ .profile-nav a[href="#historique"],
+#parametres:target ~ .profile-nav a[href="#parametres"] {
+    color: #173334;
+    border-bottom: 3px solid #FFBE30;
+    background: rgba(255, 190, 48, 0.15);
+}
 
 
 /* ===== MEDIA QUERIES RESPONSIVE ===== */
