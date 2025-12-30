@@ -163,51 +163,133 @@ form {
 /* ===== INGREDIENTS ===== */
 
 .ingredients {
-  background-color: #f8f8f8;
-  padding: 20px;
-  border-radius: 8px;
-  max-width: 500px;
+    background-color: #f8f8f8;
+    padding: 20px;
+    border-radius: 2px;
+    max-width: 500px;
 }
 
 .ingredients h2 {
-  color: #333;
-  margin-bottom: 15px;
-  font-size: 24px;
+    color: #333;
+    margin-bottom: 15px;
+    font-size: 24px;
 }
 
 .ingredients ul {
-  list-style: none;
-  padding: 0;
+    list-style: none;
+    padding: 0;
 }
 
 .ingredients li {
-  display: flex;
-  align-items: center;
-  padding: 12px 0;
-  border-bottom: 1px solid #e0e0e0;
+    display: flex;
+    align-items: center;
+    padding: 12px 0;
+    border-bottom: 1px solid #e0e0e0;
 }
 
 .ingredients li:last-child {
-  border-bottom: none;
+    border-bottom: none;
 }
 
 .ingredients li::before {
-  content: none;
+    content: none;
 }
 
 .ingredients img {
-  width: 40px;
-  height: 40px;
-  border-radius: 100%;
-  object-fit: cover;
-  margin-right: 1px;
+    width: 40px;
+    height: 40px;
+    border-radius: 100%;
+    object-fit: cover;
+    margin-right: 1px;
 }
 
 .ingredients span {
-  font-size: 16px;
-  color: #333;
+    font-size: 16px;
+    color: #333;
 }
 
+
+/* Container pour mettre les deux sections côte à côte */
+.recipe-content {
+    max-width: 1400px;
+    margin: 40px auto;
+    padding: 0 20px;
+    display: flex;
+    gap: 40px;
+    align-items: flex-start;
+}
+
+/* Ajustement des ingrédients */
+.ingredients {
+    background-color: #f8f8f8;
+    padding: 20px;
+    border-radius: 8px;
+    flex: 1;
+    max-width: 400px;
+}
+
+/* Section des étapes */
+.steps {
+    background-color: #f8f8f8;
+    padding: 20px;
+    border-radius: 8px;
+    flex: 2;
+}
+
+.steps h2 {
+    color: #333;
+    margin-bottom: 20px;
+    font-size: 24px;
+}
+
+.steps ol {
+    list-style: none;
+    counter-reset: step-counter;
+    padding: 0;
+}
+
+.steps li {
+    counter-increment: step-counter;
+    margin-bottom: 25px;
+    padding-bottom: 25px;
+    border-bottom: 1px solid #e0e0e0;
+}
+
+.steps li:last-child {
+    border-bottom: none;
+    margin-bottom: 0;
+    padding-bottom: 0;
+}
+
+.steps strong {
+    display: block;
+    color: #FFBE30;
+    font-size: 18px;
+    margin-bottom: 8px;
+}
+
+.steps strong::before {
+    content: counter(step-counter) ". ";
+}
+
+.steps p {
+    margin: 0;
+    color: #555;
+    line-height: 1.6;
+    font-size: 16px;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .recipe-content {
+        flex-direction: column;
+        gap: 30px;
+    }
+
+    .ingredients {
+        max-width: 100%;
+    }
+}
 
 /* ===== TOP BAR ===== */
 .top-bar {
