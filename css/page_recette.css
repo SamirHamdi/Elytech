@@ -1,5 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Kadwa:wght@400;700&display=swap');
 
+@import url('https://fonts.googleapis.com/css2?family=Kadwa:wght@400;700&display=swap');
+
 * {
     box-sizing: border-box;
 }
@@ -14,91 +16,58 @@ body {
 .navbar {
     box-sizing: border-box;
     background: #173334;
-    /* Fond blanc */
     border-bottom: 1px solid #e5e5e5;
-    /* Bordure inférieure grise */
     padding: 0 40px;
-    /* Pas de padding vertical, 40px horizontal */
     position: sticky;
-    /* Reste fixe au scroll */
     top: 0;
-    /* Positionné en haut */
     z-index: 1000;
-    /* Au-dessus des autres éléments */
 }
 
 .navbar-container {
     max-width: 1400px;
-    /* Largeur maximale */
     margin: 0;
-    /* Pas de marge */
     display: flex;
-    /* Disposition flexible */
     justify-content: space-between;
-    /* Espace entre les éléments */
     align-items: center;
-    /* Centrage vertical */
     height: 70px;
-    /* Hauteur fixe */
 }
 
 /* Logo */
 .navbar-logo a {
     font-size: 1.125rem;
-    /* Taille police */
     font-weight: 700;
-    /* Police en gras */
     color: white;
-    /* Couleur texte */
     text-decoration: none;
-    /* Pas de soulignement */
     letter-spacing: 1px;
-    /* Espacement entre lettres */
 }
 
 /* Icônes */
 .navbar-icons {
     display: flex;
-    /* Disposition flexible */
     align-items: center;
-    /* Centrage vertical */
     margin-right: 0;
-    /* Pas de marge à droite */
     gap: 24px;
-    /* Espace entre les icônes */
 }
 
 .nav-icon {
     position: relative;
-    /* Position relative pour les enfants absolus */
     color: #333;
-    /* Couleur icône */
     text-decoration: none;
-    /* Pas de soulignement */
     display: flex;
-    /* Disposition flexible */
     align-items: center;
-    /* Centrage vertical */
     justify-content: center;
-    /* Centrage horizontal */
     width: 40px;
-    /* Largeur fixe */
     height: 40px;
-    /* Hauteur fixe */
     border-radius: 50%;
-    /* Forme circulaire */
     transition: background 0.3s ease;
-    /* Animation au survol */
 }
 
 .nav-icon:hover {
-    background: #f5f5f5;
-    /* Fond gris clair au survol */
+    background: rgba(255, 255, 255, 0.1);
 }
 
 .nav-icon svg {
     stroke: #333;
-    /* Couleur des icônes SVG */
 }
 
 form {
@@ -115,7 +84,7 @@ form {
 .search-bar-nav input {
     width: 100%;
     height: 40px;
-    padding: 5px;
+    padding: 5px 15px;
     border: none;
     border-radius: 32px;
     box-sizing: border-box;
@@ -131,16 +100,138 @@ form {
     top: 0;
     right: 0;
     height: 100%;
-    width: 100%px;
+    width: 40px;
     border: none;
     border-radius: 0 32px 32px 0;
-    background-color: white;
+    background-color: transparent;
     cursor: pointer;
     margin: 0;
     display: flex;
     align-items: center;
+    justify-content: center;
 }
 
+/* ===== MAIN SECTION ===== */
+.gallery-container {
+    background-color: #FFBE30;
+    width: 100%;
+    
+}
+
+.main-container {
+    display: flex;
+    background-color: #FFBE30;
+    flex-wrap: wrap;
+    gap: 50px;
+    align-items: center;
+    max-width: 1400px;
+    margin: 0px auto;
+}
+
+.hero {
+    background-color: #FFBE30;
+    padding: 30px 20px;
+}
+
+.gallery-main-image img {
+    width: 900px;
+    height: auto;
+    border-radius: 15px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+}
+
+.main-content {
+    flex: 1 1 45%;
+    min-width: 300px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+
+/* ===== TOP BAR ===== */
+.top-bar {
+    max-width: 1400px;
+    margin: 30px auto;
+    padding: 0 20px;
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.top-bar input {
+    flex: 1;
+    padding: 12px 16px;
+    border-radius: 30px;
+    border: 1px solid #ddd;
+    font-size: 16px;
+}
+
+.rating {
+    background: white;
+    padding: 10px 14px;
+    border-radius: 20px;
+    border: 1px solid #ddd;
+    font-size: 14px;
+    white-space: nowrap;
+}
+
+.rating span {
+    color: #777;
+}
+
+/* ===== SIDE IMAGES - CORRECTION ===== */
+.gallery-container {
+    max-width: 1400px;
+    margin: 40px auto;
+    padding: 0 20px;
+    display: flex;
+    gap: 15px;
+    display: flex;
+}
+
+.gallery-main-image {
+    flex: 1;
+    height: 500px;
+    overflow: hidden;
+    border-radius: 15px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.gallery-main-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.gallery-side-images {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 15px;
+    width: 350px;
+}
+
+.gallery-small-image {
+    height: 242.5px;
+    overflow: hidden;
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    cursor: pointer;
+    transition: transform 0.3s ease;
+    
+}
+
+.gallery-small-image:hover {
+    transform: scale(1.02);
+}
+
+.gallery-small-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* ===== FOOTER ===== */
 .footer-main {
     background: #173334;
     color: white;
@@ -256,7 +347,13 @@ form {
     color: rgba(255, 255, 255, 0.7);
 }
 
-/* ===== MEDIA QUERIES FOOTER ===== */
+/* ===== MEDIA QUERIES ===== */
+@media (max-width: 1024px) {
+    .side-image {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
 @media (max-width: 768px) {
     .navbar {
         padding: 0 20px;
@@ -288,13 +385,11 @@ form {
         gap: 15px;
     }
 
-    .nav-icon,
-    .nav-icon- {
+    .nav-icon {
         width: 35px;
         height: 35px;
     }
 
-    /* ===== HERO SECTION ===== */
     .main {
         padding: 40px 15px;
     }
@@ -311,111 +406,44 @@ form {
         flex: 1 1 100%;
     }
 
-    .hero h3 {
-        font-size: 1.5rem;
-        text-align: center;
+    .main-image {
+        flex: 1 1 50%;
+        min-width: 300px;
     }
 
-    .hero p {
-        font-size: 1rem;
-        text-align: center;
+    .main-image img {
+        width: 300px;
+        height: auto;
+        border-radius: 15px;
+        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
     }
 
-    .btn {
-        padding: 12px 24px;
-        font-size: 0.9rem;
-        align-self: center;
-    }
-
-    /* ===== SECTION CATEGORIES ===== */
-    .grid-categories {
+    .side-image {
         grid-template-columns: repeat(2, 1fr);
         gap: 15px;
-        padding: 40px 15px;
     }
 
-    .section-title {
-        font-size: 1.5rem;
-        margin-bottom: 15px;
+    .image1,
+    .image2,
+    .image3, {
+        height: 200px;
     }
 
-    .featured-card1,
-    .featured-card2,
-    .featured-card3,
-    .featured-card4 {
-        height: 250px;
+    .image1 img,
+    .image2 img,
+    .image3 img, {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        transition: transform 0.3s ease;
     }
 
-    .featured-title {
-        font-size: 1.2rem;
+    .image1 img:hover,
+    .image2 img:hover,
+    .image3 img:hover, {
+        transform: scale(1.05);
     }
 
-    .featured-btn {
-        padding: 6px 14px;
-        font-size: 0.85rem;
-    }
-
-    /* ===== SECTION RECOMMANDATIONS ===== */
-    .reco-grid {
-        grid-template-columns: repeat(2, 1fr);
-        gap: 15px;
-        padding: 40px 15px;
-    }
-
-    .section-title2 {
-        font-size: 1.5rem;
-        margin-bottom: 15px;
-    }
-
-    .item-card img {
-        height: 220px;
-    }
-
-    .item-info {
-        padding: 15px;
-    }
-
-    .item-title {
-        font-size: 0.85rem;
-    }
-
-    .item-rating {
-        font-size: 0.8rem;
-    }
-
-    .item-price {
-        font-size: 1.1rem;
-    }
-
-    .favorite-btn {
-        width: 34px;
-        height: 34px;
-        top: 10px;
-        right: 10px;
-    }
-
-    .favorite-btn i {
-        font-size: 1rem;
-    }
-
-    /* ===== SECTION HERO 2 (RECETTES DU MOMENT) ===== */
-    .hero2 {
-        padding: 40px 0;
-        margin-top: 15px;
-    }
-
-    .hero-container2 {
-        grid-template-columns: repeat(2, 1fr);
-        gap: 15px;
-        padding: 0 15px;
-    }
-
-    .section-title3 {
-        font-size: 1.5rem;
-        margin-bottom: 15px;
-    }
-
-    /* ===== FOOTER ===== */
     .footer-main {
         padding: 40px 15px 20px;
         margin-top: 60px;
@@ -464,8 +492,6 @@ form {
 
 /* Très petits mobiles (480px et moins) */
 @media (max-width: 480px) {
-    
-    /* ===== NAVBAR ===== */
     .navbar-logo a {
         font-size: 0.9rem;
     }
@@ -478,112 +504,8 @@ form {
         font-size: 0.85rem;
     }
 
-    /* ===== GRILLES EN 1 COLONNE ===== */
-    .grid-categories {
-        grid-template-columns: 1fr;
-        padding: 30px 15px;
-    }
-
-    .reco-grid {
-        grid-template-columns: 1fr;
-        padding: 30px 15px;
-    }
-
-    .hero-container2 {
+    .side-image {
         grid-template-columns: 1fr;
         padding: 0 15px;
     }
-
-    /* ===== TITRES ===== */
-    .section-title,
-    .section-title2,
-    .section-title3 {
-        font-size: 1.3rem;
-    }
-
-    .hero h3 {
-        font-size: 1.3rem;
-    }
-
-    .hero p {
-        font-size: 0.95rem;
-    }
 }
-
-.container {
-  max-width: 1200px;
-  margin: 30px auto;
-  padding: 0 20px;
-}
-
-/* Barre du haut */
-.top-bar {
-  display: flex;
-  align-items: center;
-  gap: 15px;
-  margin-bottom: 20px;
-}
-
-.top-bar input {
-  flex: 1;
-  padding: 12px 16px;
-  border-radius: 30px;
-  border: 1px solid #ddd;
-  font-size: 16px;
-}
-
-.rating {
-  background: white;
-  padding: 10px 14px;
-  border-radius: 20px;
-  border: 1px solid #ddd;
-  font-size: 14px;
-}
-
-.rating span {
-  color: #777;
-}
-
-/* Galerie */
-
-
-/* Image principale */
-
-.main {
-    background-color: #FFBE30;
-    padding: 80px 20px;
-}
-
-.main-container {
-    display: flex;
-    background-color: #FFBE30;
-    flex-wrap: wrap;
-    gap: 50px;
-    align-items: center;
-    max-width: 1400px;
-    margin: 0px auto;
-}
-
-.main-image {
-    flex: 1 1 50%;
-    min-width: 300px;
-}
-
-.main-image img {
-    width : 100%;
-    height: auto;
-    border-radius: 15px;
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
-}
-
-.main-content {
-    flex: 1 1 45%;
-    min-width: 300px;
-    display: flex;
-    flex-direction: column;
-    gap : 20px;
-}
-
-
-
-
