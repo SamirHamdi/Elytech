@@ -112,6 +112,17 @@ form {
 }
 
 /* ===== MAIN SECTION ===== */
+
+.text {
+    text-align: center;
+}
+
+ .image-container h1 {
+    margin-bottom: 20px;
+    font-size: 2rem;
+    color: #333;
+}
+
 .gallery-container {
     background-color: #FFBE30;
     width: 100%;
@@ -146,6 +157,45 @@ form {
     display: flex;
     flex-direction: column;
     gap: 20px;
+}
+
+
+/* ===== INGREDIENTS ===== */
+
+.ingredients {
+  background-color: #f8f8f8;
+  padding: 20px;
+  border-radius: 8px;
+  max-width: 400px;
+}
+
+
+.ingredients h2 {
+  color: #333;
+  margin-bottom: 15px;
+  font-size: 24px;
+}
+
+.ingredients ul {
+  list-style: none;
+  padding: 0;
+}
+
+.ingredients li {
+  padding: 10px 0;
+  border-bottom: 1px solid #e0e0e0;
+}
+
+.ingredients li:last-child {
+  border-bottom: none;
+}
+
+/* Pour ajouter des puces personnalisées */
+.ingredients li::before {
+  content: "✓";
+  color: #4CAF50;
+  font-weight: bold;
+  margin-right: 10px;
 }
 
 
