@@ -135,6 +135,7 @@ form {
 }
 
 .search-bar-nav input:focus {
+    border: none;
     outline: none; /* Suppression de l'outline par défaut */
     box-shadow: 0 0 0 2px rgba(255, 190, 48, 0.3); /* Ombre jaune au focus */
 }
