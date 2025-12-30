@@ -132,6 +132,7 @@ form {
     border-radius: 32px; /* Coins arrondis */
     box-sizing: border-box; /* Inclut padding dans la largeur */
     font-family: 'Kadwa', serif; /* Police cohérente */
+    border: none;
 }
 
 .search-bar-nav input:focus {
