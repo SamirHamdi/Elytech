@@ -1,388 +1,384 @@
 @import url('https://fonts.googleapis.com/css2?family=Kadwa:wght@400;700&display=swap');
 
-*{
-    box-sizing: border-box;
+* {
+    box-sizing: border-box; /* Application du box-sizing à tous les éléments */
 }
 
 body {
-    margin: 0;
-    padding: 0;
-    font-family: 'Kadwa', serif;
+    margin: 0; /* Suppression des marges par défaut */
+    padding: 0; /* Suppression du padding par défaut */
+    font-family: 'Kadwa', serif; /* Police principale du site */
 }
 
 /* ===== NAVBAR ===== */
 
 .navbar {
-    box-sizing: border-box;
-    background: #173334;
-    border-bottom: 1px solid #e5e5e5;
-    padding: 0 40px;
-    position: sticky;
-    top: 0;
-    z-index: 1000;
+    box-sizing: border-box; /* Calcul de largeur incluant padding et bordure */
+    background: #173334; /* Couleur de fond vert foncé */
+    border-bottom: 1px solid #e5e5e5; /* Bordure inférieure grise */
+    padding: 0 40px; /* Espacement horizontal */
+    position: sticky; /* Position fixe en haut lors du scroll */
+    top: 0; /* Collée au sommet */
+    z-index: 1000; /* Au-dessus des autres éléments */
 }
 
 .navbar-container {
-    max-width: 1400px;
-    margin: 0 auto;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    height: 70px;
+    max-width: 1400px; /* Largeur maximale du conteneur */
+    margin: 0 auto; /* Centrage horizontal */
+    display: flex; /* Disposition flexible */
+    justify-content: space-between; /* Espacement entre les éléments */
+    align-items: center; /* Alignement vertical centré */
+    height: 70px; /* Hauteur de la navbar */
 }
 
 /* Logo */
 .navbar-logo {
-    flex: 0 0 auto;
+    flex: 0 0 auto; /* Ne pas grandir ni rétrécir */
 }
 
 .navbar-logo a {
-    font-size: 1.125rem;
-    font-weight: 700;
-    color: white;
-    text-decoration: none;
-    letter-spacing: 1px;
+    font-size: 1.125rem; /* Taille du texte du logo */
+    font-weight: 700; /* Texte en gras */
+    color: white; /* Couleur blanche */
+    text-decoration: none; /* Suppression du soulignement */
+    letter-spacing: 1px; /* Espacement entre les lettres */
 }
 
 /* Conteneur de la barre de recherche */
 .navbar-container > div:nth-child(2) {
-    flex: 1;
-    display: flex;
-    justify-content: center;
+    flex: 1; /* Prend l'espace disponible */
+    display: flex; /* Disposition flexible */
+    justify-content: center; /* Centrage du contenu */
 }
 
 /* Icônes */
 .navbar-icons {
-    flex: 0 0 auto;
-    display: flex;
-    align-items: center;
-    margin-right: 0;
-    gap: 24px;
+    flex: 0 0 auto; /* Ne pas grandir ni rétrécir */
+    display: flex; /* Disposition flexible */
+    align-items: center; /* Alignement vertical centré */
+    margin-right: 0; /* Pas de marge à droite */
+    gap: 24px; /* Espacement entre les icônes */
 }
 
 .nav-icon, .nav-icon- {
-    position: relative;
-    color: #333;
-    text-decoration: none;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width: 40px;
-    height: 40px;
-    border-radius: 50%;
-    transition: background 0.3s ease;
+    position: relative; /* Positionnement relatif */
+    color: #333; /* Couleur de base */
+    text-decoration: none; /* Pas de soulignement */
+    display: flex; /* Disposition flexible */
+    align-items: center; /* Centrage vertical */
+    justify-content: center; /* Centrage horizontal */
+    width: 40px; /* Largeur de l'icône */
+    height: 40px; /* Hauteur de l'icône */
+    border-radius: 50%; /* Forme circulaire */
+    transition: background 0.3s ease; /* Transition douce du fond */
 }
 
 /* Icônes FontAwesome dans les liens */
 .nav-icon i {
-    color: white;
-    font-size: 1.2rem;
-    transition: color 0.3s ease;
+    color: white; /* Couleur blanche */
+    font-size: 1.2rem; /* Taille de l'icône */
+    transition: color 0.3s ease; /* Transition douce de la couleur */
 }
 
 /* Icône active (optionnel - pour la page courante) */
 .nav-icon.active i {
-    color: #FFBE30;
+    color: #FFBE30; /* Couleur jaune/or pour l'état actif */
 }
 
 .nav-icon:hover, .nav-icon-:hover {
-    background: rgba(255, 255, 255, 0.1);
+    background: rgba(255, 255, 255, 0.1); /* Fond semi-transparent au survol */
 }
 
 .nav-icon:hover i {
-    color: #FFBE30;
+    color: #FFBE30; /* Couleur jaune/or au survol */
 }
 
 /* Icônes SVG (profil) */
 .nav-icon svg, .nav-icon- svg {
-    fill: white;
-    transition: fill 0.3s ease;
+    fill: white; /* Remplissage blanc */
+    transition: fill 0.3s ease; /* Transition douce du remplissage */
 }
 
 .nav-icon:hover svg, .nav-icon-:hover svg {
-    fill: #FFBE30;
+    fill: #FFBE30; /* Remplissage jaune/or au survol */
 }
 
 /* Icône coeur (emoji) */
 .nav-icon:last-child {
-    font-size: 1.2rem;
-    color: white;
-    transition: color 0.3s ease;
+    font-size: 1.2rem; /* Taille de l'icône */
+    color: white; /* Couleur blanche */
+    transition: color 0.3s ease; /* Transition douce de la couleur */
 }
 
 .nav-icon:last-child:hover {
-    color: #FFBE30;
+    color: #FFBE30; /* Couleur jaune/or au survol */
 }
 
 form {
-    margin: 0;
+    margin: 0; /* Pas de marge */
 }
 
 .search-bar-nav {
-    width: 500px;
-    margin: 0;
-    position: relative;
-    display: flex;
+    width: 500px; /* Largeur de la barre de recherche */
+    margin: 0; /* Pas de marge */
+    position: relative; /* Positionnement relatif pour le bouton absolu */
+    display: flex; /* Disposition flexible */
 }
 
 .search-bar-nav input {
-    width: 100%;
-    height: 40px;
-    padding: 5px 50px 5px 20px;
-      border-radius: 32px;
-    box-sizing: border-box;
-    font-family: 'Kadwa', serif;
+    width: 100%; /* Largeur totale */
+    height: 40px; /* Hauteur du champ */
+    padding: 5px 50px 5px 20px; /* Espacement interne avec espace pour le bouton */
+    border-radius: 32px; /* Coins arrondis */
+    box-sizing: border-box; /* Inclut padding dans la largeur */
+    font-family: 'Kadwa', serif; /* Police cohérente */
 }
 
 .search-bar-nav input:focus {
-    outline: none;
-    box-shadow: 0 0 0 2px rgba(255, 190, 48, 0.3);
+    outline: none; /* Suppression de l'outline par défaut */
+    box-shadow: 0 0 0 2px rgba(255, 190, 48, 0.3); /* Ombre jaune au focus */
 }
 
 .search-bar-nav button {
-    position: absolute;
-    top: 0;
-    right: 0;
-    height: 100%;
-    width: 50px;
-    border: none;
-    border-radius: 0 32px 32px 0;
-    background-color: white;
-    cursor: pointer;
-    margin: 0;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    transition: background-color 0.3s ease;
+    position: absolute; /* Positionnement absolu dans le champ */
+    top: 0; /* Aligné en haut */
+    right: 0; /* Aligné à droite */
+    height: 100%; /* Hauteur totale */
+    width: 50px; /* Largeur du bouton */
+    border: none; /* Pas de bordure */
+    border-radius: 0 32px 32px 0; /* Coins arrondis à droite */
+    background-color: white; /* Fond blanc */
+    cursor: pointer; /* Curseur pointeur */
+    margin: 0; /* Pas de marge */
+    display: flex; /* Disposition flexible */
+    align-items: center; /* Centrage vertical */
+    justify-content: center; /* Centrage horizontal */
+    transition: background-color 0.3s ease; /* Transition du fond */
 }
 
 .search-bar-nav button:hover {
-    background-color: #f0f0f0;
+    background-color: #f0f0f0; /* Fond gris clair au survol */
 }
 
 .search-bar-nav button i {
-    color: #173334;
-    font-size: 1rem;
+    color: #173334; /* Couleur de l'icône de recherche */
+    font-size: 1rem; /* Taille de l'icône */
 }
 
 /* ===== SECTION HERO (Bannière principale) ===== */
 .hero {
-    background-color: #FFBE30;
-    padding: 80px 20px;
+    background-color: #FFBE30; /* Fond jaune/or */
+    padding: 80px 20px; /* Espacement vertical et horizontal */
 }
 
 .hero-container {
-    display: flex;
-    background-color: #FFBE30;
-    flex-wrap: wrap;
-    gap: 50px;
-    align-items: center;
-    max-width: 1400px;
-    margin: 0 auto;
+    display: flex; /* Disposition flexible */
+    background-color: #FFBE30; /* Fond jaune/or */
+    flex-wrap: wrap; /* Permet le passage à la ligne */
+    gap: 50px; /* Espacement entre les éléments */
+    align-items: center; /* Alignement vertical centré */
+    max-width: 1400px; /* Largeur maximale */
+    margin: 0 auto; /* Centrage horizontal */
 }
 
 .hero-image {
-    flex: 1 1 45%;
-    min-width: 300px;
+    flex: 1 1 45%; /* Flexibilité et largeur de base */
+    min-width: 300px; /* Largeur minimale */
 }
 
 .hero-image img {
-    width: 100%;
-    height: auto;
-    border-radius: 15px;
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    width: 100%; /* Image responsive */
+    height: auto; /* Hauteur automatique */
+    border-radius: 15px; /* Coins arrondis */
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1); /* Ombre portée */
 }
 
 .hero-content {
-    flex: 1 1 45%;
-    min-width: 300px;
-    display: flex;
-    flex-direction: column;
-    gap: 24px;
+    flex: 1 1 45%; /* Flexibilité et largeur de base */
+    min-width: 300px; /* Largeur minimale */
+    display: flex; /* Disposition flexible */
+    flex-direction: column; /* Direction verticale */
+    gap: 24px; /* Espacement entre les éléments */
 }
 
 .hero h3 {
-    align-self: center;
-    font-size: 1.875rem;
-    line-height: 1.2;
-    color: #3f3f3f;
+    align-self: center; /* Centrage horizontal */
+    font-size: 1.875rem; /* Taille du titre */
+    line-height: 1.2; /* Hauteur de ligne */
+    color: #3f3f3f; /* Couleur gris foncé */
 }
 
 .hero p {
-    align-self: center;
-    font-size: 1.125rem;
-    color: #666;
-    max-width: 500px;
-    line-height: 1.8;
+    align-self: center; /* Centrage horizontal */
+    font-size: 1.125rem; /* Taille du texte */
+    color: #666; /* Couleur grise */
+    max-width: 500px; /* Largeur maximale */
+    line-height: 1.8; /* Hauteur de ligne */
 }
 
 /* ===== BOUTONS ===== */
 .btn {
-    display: inline-block;
-    padding: 14px 32px;
-    background: white;
-    color: #173334;
-    border: none;
-    border-radius: 6px;
-    font-size: 1rem;
-    font-weight: 600;
-    text-decoration: none;
-    cursor: pointer;
-    transition: background 0.3s ease;
+    display: inline-block; /* Affichage inline-block */
+    padding: 14px 32px; /* Espacement interne */
+    background: white; /* Fond blanc */
+    color: #173334; /* Couleur du texte */
+    border: none; /* Pas de bordure */
+    border-radius: 6px; /* Coins légèrement arrondis */
+    font-size: 1rem; /* Taille du texte */
+    font-weight: 600; /* Texte semi-gras */
+    text-decoration: none; /* Pas de soulignement */
+    cursor: pointer; /* Curseur pointeur */
+    transition: background 0.3s ease; /* Transition du fond */
 }
 
 .btn:hover {
-    background: #a17c03;
+    background: #a17c03; /* Fond marron/doré au survol */
 }
 
 /* ===== SECTION Grid Catégories ===== */
 .grid-categories {
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    gap: 20px;
-    max-width: 1400px;
-    margin: 0 auto;
-    padding: 60px 20px;
+    display: grid; /* Disposition en grille */
+    grid-template-columns: repeat(4, 1fr); /* 4 colonnes égales */
+    gap: 20px; /* Espacement entre les éléments */
+    max-width: 1400px; /* Largeur maximale */
+    margin: 0 auto; /* Centrage horizontal */
+    padding: 60px 20px; /* Espacement vertical et horizontal */
 }
 
 .section-title {
-    grid-column: 1 / -1;
-    text-align: center;
-    margin-bottom: 20px;
-    color: #173334;
-    font-size: 2rem;
+    grid-column: 1 / -1; /* S'étend sur toutes les colonnes */
+    text-align: center; /* Texte centré */
+    margin-bottom: 20px; /* Marge en bas */
+    color: #173334; /* Couleur du titre */
+    font-size: 2rem; /* Taille du titre */
 }
 
 .featured-card1,
 .featured-card2,
 .featured-card3,
 .featured-card4 {
-    background-size: cover;
-    background-position: center;
-    height: 300px;
-    border-radius: 15px;
-    position: relative;
-    overflow: hidden;
-    cursor: pointer;
-    transition: transform 0.3s ease;
+    background-size: cover; /* Image couvre toute la carte */
+    background-position: center; /* Image centrée */
+    height: 300px; /* Hauteur fixe */
+    border-radius: 15px; /* Coins arrondis */
+    position: relative; /* Pour le positionnement du contenu */
+    overflow: hidden; /* Cache le débordement */
+    cursor: pointer; /* Curseur pointeur */
+    transition: transform 0.3s ease; /* Transition de transformation */
 }
 
 .featured-card1 {
-    background-image: url("/images/image-cuisine-inde.jpg");
+    background-image: url("/images/image-cuisine-inde.jpg"); /* Image cuisine indienne */
 }
 
 .featured-card2 {
-    background-image: url("/images/image-cuisine-france.jpg");
+    background-image: url("/images/image-cuisine-france.jpg"); /* Image cuisine française */
 }
 
 .featured-card3 {
-    background-image: url("/images/image-cuisine-marocaine.jpg");
+    background-image: url("/images/image-cuisine-marocaine.jpg"); /* Image cuisine marocaine */
 }
 
 .featured-card4 {
-    background-image: url("/images/image-cuisine-italienne.jpg");
+    background-image: url("/images/image-cuisine-italienne.jpg"); /* Image cuisine italienne */
 }
 
 .featured-card1:hover,
 .featured-card2:hover,
 .featured-card3:hover,
 .featured-card4:hover {
-    transform: scale(1.05);
+    transform: scale(1.05); /* Agrandissement au survol */
 }
 
 .featured-content {
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    padding: 20px;
-    background: linear-gradient(to top, rgba(0,0,0,0.8), transparent);
-    color: white;
+    position: absolute; /* Positionnement absolu */
+    bottom: 0; /* En bas de la carte */
+    left: 0; /* Aligné à gauche */
+    right: 0; /* Aligné à droite */
+    padding: 20px; /* Espacement interne */
+    background: linear-gradient(to top, rgba(0,0,0,0.8), transparent); /* Dégradé sombre */
+    color: white; /* Texte blanc */
 }
 
 .featured-title {
-    font-size: 1.5rem;
-    margin: 0 0 10px 0;
+    font-size: 1.5rem; /* Taille du titre */
+    margin: 0 0 10px 0; /* Marge en bas */
 }
 
 .featured-btn {
-    display: inline-block;
-    padding: 8px 16px;
-    background: white;
-    color: #173334;
-    text-decoration: none;
-    border-radius: 5px;
-    font-size: 0.9rem;
-    transition: background 0.3s ease;
+    display: inline-block; /* Affichage inline-block */
+    padding: 8px 16px; /* Espacement interne */
+    background: white; /* Fond blanc */
+    color: #173334; /* Couleur du texte */
+    text-decoration: none; /* Pas de soulignement */
+    border-radius: 5px; /* Coins arrondis */
+    font-size: 0.9rem; /* Taille du texte */
+    transition: background 0.3s ease; /* Transition du fond */
 }
 
 .featured-btn:hover {
-    background: #FFBE30;
+    background: #FFBE30; /* Fond jaune au survol */
 }
 
 /* ===== SECTION Reco ===== */
 
 .section-title2 {
-    grid-column: 1 / -1;
-    text-align: center;
-    margin-bottom: 20px;
-    color: #173334;
-    font-size: 2rem;
+    grid-column: 1 / -1; /* S'étend sur toutes les colonnes */
+    text-align: center; /* Texte centré */
+    margin-bottom: 20px; /* Marge en bas */
+    color: #173334; /* Couleur du titre */
+    font-size: 2rem; /* Taille du titre */
 }
+
 .reco-grid {
-    display: grid; /* Disposition grid */
-    grid-template-columns: repeat(4, 1fr); /* 4 colonnes */
+    display: grid; /* Disposition en grille */
+    grid-template-columns: repeat(4, 1fr); /* 4 colonnes égales */
     gap: 20px; /* Espacement entre éléments */
-    max-width: 1400px; /* Largeur maximum */
+    max-width: 1400px; /* Largeur maximale */
     margin: 0 auto; /* Centrage horizontal */
 }
 
-
-
-/* ===============================
-   BOUTON FAVORI (COEUR)
-   =============================== */
+/* ===== BOUTON FAVORI (COEUR) ===== */
 
 .item-card {
-    position: relative;
-    background-color: bisque;
+    position: relative; /* Positionnement relatif pour le bouton favori */
+    background-color: bisque; /* Fond beige */
 }
 
 .favorite-btn {
-    position: absolute;
-    top: 12px;
-    right: 12px;
-    width: 36px;
-    height: 36px;
-    background: white;
-    border: none;
-    border-radius: 50%;
-    display: flex;
-    align-items: center;    
-    justify-content: center;
-    cursor: pointer;
-    z-index: 5;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
-    transition: transform 0.2s ease, background 0.2s ease;
+    position: absolute; /* Positionnement absolu */
+    top: 12px; /* Distance du haut */
+    right: 12px; /* Distance de droite */
+    width: 36px; /* Largeur du bouton */
+    height: 36px; /* Hauteur du bouton */
+    background: white; /* Fond blanc */
+    border: none; /* Pas de bordure */
+    border-radius: 50%; /* Forme circulaire */
+    display: flex; /* Disposition flexible */
+    align-items: center; /* Centrage vertical */
+    justify-content: center; /* Centrage horizontal */
+    cursor: pointer; /* Curseur pointeur */
+    z-index: 5; /* Au-dessus de l'image */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15); /* Ombre portée */
+    transition: transform 0.2s ease, background 0.2s ease; /* Transitions */
 }
 
 .favorite-btn i {
-    font-size: 1.1rem;
-    color: #173334;
+    font-size: 1.1rem; /* Taille de l'icône */
+    color: #173334; /* Couleur de l'icône */
 }
 
 .favorite-btn:hover {
-    transform: scale(1.1);
-    background: #ffefef;
+    transform: scale(1.1); /* Agrandissement au survol */
+    background: #ffefef; /* Fond rose clair au survol */
 }
 
 .favorite-btn:hover i {
-    color: #e63946;
+    color: #e63946; /* Couleur rouge au survol */
 }
 
-
 .item-card:hover {
-    transform: translateY(-5px); /* Légère élévation */
+    transform: translateY(-5px); /* Légère élévation au survol */
     box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15); /* Ombre au survol */
 }
 
@@ -397,50 +393,48 @@ form {
 }
 
 .item-title {
-    font-size: 0.9rem; /* Taille police */
-    font-weight: 500; /* Poids police */
-    color: #333; /* Couleur texte */
-    margin-bottom: 8px; /* Marge bas */
+    font-size: 0.9rem; /* Taille de police */
+    font-weight: 500; /* Poids moyen */
+    color: #333; /* Couleur du texte */
+    margin-bottom: 8px; /* Marge en bas */
 }
 
 .item-rating {
-    color: #ffc107; /* Couleur étoiles (jaune) */
-    font-size: 0.875rem; /* Taille police */
-    margin-bottom: 12px; /* Marge bas */
+    color: #ffc107; /* Couleur jaune pour les étoiles */
+    font-size: 0.875rem; /* Taille de police */
+    margin-bottom: 12px; /* Marge en bas */
 }
 
 .item-price {
-    font-size: 1.25rem; /* Taille police */
-    font-weight: 700; /* Poids police */
-    color: #333; /* Couleur texte */
+    font-size: 1.25rem; /* Taille du prix */
+    font-weight: 700; /* Texte en gras */
+    color: #333; /* Couleur du texte */
 }
-
 
 /* ===== Section HERO 2 ===== */
 
 .hero2 {
-    width: 100%;
-    background-color: #ffc107;
-    padding: 60px 0;
-    margin-top: 20px;    
+    width: 100%; /* Largeur totale */
+    background-color: #ffc107; /* Fond jaune */
+    padding: 60px 0; /* Espacement vertical */
+    margin-top: 20px; /* Marge en haut */
 }
 
-
 .hero-container2 {
-    display: grid;
-    grid-template-columns: repeat(5, 1fr); /* 3 colonnes */
-    gap: 20px;
-    max-width: 1400px;
-    margin: 0 auto;
-    padding: 0 20px;
+    display: grid; /* Disposition en grille */
+    grid-template-columns: repeat(5, 1fr); /* 5 colonnes égales */
+    gap: 20px; /* Espacement entre les éléments */
+    max-width: 1400px; /* Largeur maximale */
+    margin: 0 auto; /* Centrage horizontal */
+    padding: 0 20px; /* Espacement horizontal */
 }
 
 .section-title3 {
-    grid-column: 1 / -1;
-    text-align: center;
-    margin-bottom: 20px;
-    color: #173334;
-    font-size: 2rem;
+    grid-column: 1 / -1; /* S'étend sur toutes les colonnes */
+    text-align: center; /* Texte centré */
+    margin-bottom: 20px; /* Marge en bas */
+    color: #173334; /* Couleur du titre */
+    font-size: 2rem; /* Taille du titre */
 }
 
 /* ===== MEDIA QUERIES RESPONSIVE ===== */
@@ -449,87 +443,87 @@ form {
 @media (max-width: 768px) {
     /* Navbar */
     .navbar {
-        padding: 0 20px;
+        padding: 0 20px; /* Réduction du padding */
     }
 
     .navbar-container {
-        height: 60px;
+        height: 60px; /* Réduction de la hauteur */
     }
 
     .navbar-logo a {
-        font-size: 1rem;
+        font-size: 1rem; /* Réduction de la taille du logo */
     }
 
     .search-bar-nav {
-        width: 250px;
+        width: 250px; /* Réduction de la largeur */
     }
 
     .search-bar-nav input {
-        height: 35px;
-        font-size: 0.9rem;
-        padding: 5px 40px 5px 15px;
+        height: 35px; /* Réduction de la hauteur */
+        font-size: 0.9rem; /* Réduction de la taille du texte */
+        padding: 5px 40px 5px 15px; /* Ajustement du padding */
     }
 
     .search-bar-nav button {
-        width: 40px;
+        width: 40px; /* Réduction de la largeur */
     }
 
     .navbar-icons {
-        gap: 15px;
+        gap: 15px; /* Réduction de l'espacement */
     }
 
     .nav-icon,
     .nav-icon- {
-        width: 35px;
-        height: 35px;
+        width: 35px; /* Réduction de la taille */
+        height: 35px; /* Réduction de la taille */
     }
 
     /* Hero section */
     .hero {
-        padding: 40px 15px;
+        padding: 40px 15px; /* Réduction du padding */
     }
 
     .hero-container {
-        gap: 30px;
+        gap: 30px; /* Réduction de l'espacement */
     }
 
     .hero h3 {
-        font-size: 1.5rem;
+        font-size: 1.5rem; /* Réduction de la taille du titre */
     }
 
     .hero p {
-        font-size: 1rem;
+        font-size: 1rem; /* Réduction de la taille du texte */
     }
 
     .btn {
-        padding: 12px 24px;
-        font-size: 0.9rem;
+        padding: 12px 24px; /* Réduction du padding */
+        font-size: 0.9rem; /* Réduction de la taille du texte */
     }
 
     /* Grilles - passage en 2 colonnes */
     .grid-categories {
-        grid-template-columns: repeat(2, 1fr);
-        gap: 15px;
-        padding: 40px 15px;
+        grid-template-columns: repeat(2, 1fr); /* 2 colonnes au lieu de 4 */
+        gap: 15px; /* Réduction de l'espacement */
+        padding: 40px 15px; /* Réduction du padding */
     }
 
     .reco-grid {
-        grid-template-columns: repeat(2, 1fr);
-        gap: 15px;
-        padding: 40px 15px;
+        grid-template-columns: repeat(2, 1fr); /* 2 colonnes au lieu de 4 */
+        gap: 15px; /* Réduction de l'espacement */
+        padding: 40px 15px; /* Réduction du padding */
     }
 
     .hero-container2 {
-        grid-template-columns: repeat(2, 1fr);
-        gap: 15px;
+        grid-template-columns: repeat(2, 1fr); /* 2 colonnes au lieu de 5 */
+        gap: 15px; /* Réduction de l'espacement */
     }
 
     /* Titres */
     .section-title,
     .section-title2,
     .section-title3 {
-        font-size: 1.5rem;
-        margin-bottom: 15px;
+        font-size: 1.5rem; /* Réduction de la taille */
+        margin-bottom: 15px; /* Réduction de la marge */
     }
 
     /* Cartes catégories */
@@ -537,395 +531,380 @@ form {
     .featured-card2,
     .featured-card3,
     .featured-card4 {
-        height: 250px;
+        height: 250px; /* Réduction de la hauteur */
     }
 
     .featured-title {
-        font-size: 1.2rem;
+        font-size: 1.2rem; /* Réduction de la taille */
     }
 
     .featured-btn {
-        padding: 6px 14px;
-        font-size: 0.85rem;
+        padding: 6px 14px; /* Réduction du padding */
+        font-size: 0.85rem; /* Réduction de la taille */
     }
 
     /* Cartes recettes */
     .item-card img {
-        height: 220px;
+        height: 220px; /* Réduction de la hauteur */
     }
 
     .item-info {
-        padding: 15px;
+        padding: 15px; /* Réduction du padding */
     }
 
     .item-title {
-        font-size: 0.85rem;
+        font-size: 0.85rem; /* Réduction de la taille */
     }
 
     .item-rating {
-        font-size: 0.8rem;
+        font-size: 0.8rem; /* Réduction de la taille */
     }
 
     .item-price {
-        font-size: 1.1rem;
+        font-size: 1.1rem; /* Réduction de la taille */
     }
 
     .favorite-btn {
-        width: 34px;
-        height: 34px;
-        top: 10px;
-        right: 10px;
+        width: 34px; /* Réduction de la taille */
+        height: 34px; /* Réduction de la taille */
+        top: 10px; /* Ajustement de la position */
+        right: 10px; /* Ajustement de la position */
     }
 
     .favorite-btn i {
-        font-size: 1rem;
+        font-size: 1rem; /* Réduction de la taille */
     }
 
     /* Hero 2 */
     .hero2 {
-        padding: 40px 0;
-        margin-top: 15px;
+        padding: 40px 0; /* Réduction du padding */
+        margin-top: 15px; /* Réduction de la marge */
     }
 }
 
 /* ===== FOOTER ===== */
 .footer-main {
-    background: #173334;
-    color: white;
-    padding: 60px 20px 20px;
-    margin-top: 80px;
+    background: #173334; /* Fond vert foncé */
+    color: white; /* Texte blanc */
+    padding: 60px 20px 20px; /* Espacement */
+    margin-top: 80px; /* Marge en haut */
 }
 
 .footer-container {
-    max-width: 1400px;
-    margin: 0 auto;
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    gap: 40px;
-    margin-bottom: 40px;
+    max-width: 1400px; /* Largeur maximale */
+    margin: 0 auto; /* Centrage horizontal */
+    display: grid; /* Disposition en grille */
+    grid-template-columns: repeat(4, 1fr); /* 4 colonnes égales */
+    gap: 40px; /* Espacement entre colonnes */
+    margin-bottom: 40px; /* Marge en bas */
 }
 
 .footer-column h3 {
-    font-size: 1.5rem;
-    margin-bottom: 20px;
-    color: white;
+    font-size: 1.5rem; /* Taille du titre */
+    margin-bottom: 20px; /* Marge en bas */
+    color: white; /* Couleur blanche */
 }
 
 .footer-column h4 {
-    font-size: 1.2rem;
-    margin-bottom: 20px;
-    color: white;
+    font-size: 1.2rem; /* Taille du sous-titre */
+    margin-bottom: 20px; /* Marge en bas */
+    color: white; /* Couleur blanche */
 }
 
 .footer-column p {
-    font-size: 0.95rem;
-    line-height: 1.6;
-    color: rgba(255, 255, 255, 0.8);
+    font-size: 0.95rem; /* Taille du texte */
+    line-height: 1.6; /* Hauteur de ligne */
+    color: rgba(255, 255, 255, 0.8); /* Blanc semi-transparent */
 }
 
 .footer-links {
-    list-style: none;
-    padding: 0;
-    margin: 0;
+    list-style: none; /* Pas de puces */
+    padding: 0; /* Pas de padding */
+    margin: 0; /* Pas de marge */
 }
 
 .footer-links li {
-    margin-bottom: 12px;
+    margin-bottom: 12px; /* Marge entre les liens */
 }
 
 .footer-links a {
-    color: rgba(255, 255, 255, 0.8);
-    text-decoration: none;
-    font-size: 0.95rem;
-    transition: color 0.3s ease;
+    color: rgba(255, 255, 255, 0.8); /* Blanc semi-transparent */
+    text-decoration: none; /* Pas de soulignement */
+    font-size: 0.95rem; /* Taille du texte */
+    transition: color 0.3s ease; /* Transition de couleur */
 }
 
 .footer-links a:hover {
-    color: #FFBE30;
+    color: #FFBE30; /* Couleur jaune au survol */
 }
 
 /* Newsletter */
 .newsletter-form {
-    display: flex;
-    margin-top: 20px;
+    display: flex; /* Disposition flexible */
+    margin-top: 20px; /* Marge en haut */
 }
 
 .newsletter-form input {
-    flex: 1;
-    padding: 12px 20px;
-    border: 1px solid rgba(255, 255, 255, 0.3);
-    background: rgba(255, 255, 255, 0.1);
-    color: white;
-    border-radius: 5px 0 0 5px;
-    font-family: 'Kadwa', serif;
-    font-size: 0.95rem;
+    flex: 1; /* Prend l'espace disponible */
+    padding: 12px 20px; /* Espacement interne */
+    border: 1px solid rgba(255, 255, 255, 0.3); /* Bordure semi-transparente */
+    background: rgba(255, 255, 255, 0.1); /* Fond semi-transparent */
+    color: white; /* Texte blanc */
+    border-radius: 5px 0 0 5px; /* Coins arrondis à gauche */
+    font-family: 'Kadwa', serif; /* Police cohérente */
+    font-size: 0.95rem; /* Taille du texte */
 }
 
 .newsletter-form input::placeholder {
-    color: rgba(255, 255, 255, 0.6);
+    color: rgba(255, 255, 255, 0.6); /* Placeholder semi-transparent */
 }
 
 .newsletter-form input:focus {
-    outline: none;
-    background: rgba(255, 255, 255, 0.15);
-    border-color: #FFBE30;
+    outline: none; /* Pas d'outline */
+    background: rgba(255, 255, 255, 0.15); /* Fond plus visible au focus */
+    border-color: #FFBE30; /* Bordure jaune au focus */
 }
 
 .newsletter-form button {
-    padding: 12px 24px;
-    background: #FFBE30;
-    border: none;
-    border-radius: 0 5px 5px 0;
-    cursor: pointer;
-    transition: background 0.3s ease;
+    padding: 12px 24px; /* Espacement interne */
+    background: #FFBE30; /* Fond jaune */
+    border: none; /* Pas de bordure */
+    border-radius: 0 5px 5px 0; /* Coins arrondis à droite */
+    cursor: pointer; /* Curseur pointeur */
+    transition: background 0.3s ease; /* Transition du fond */
 }
 
 .newsletter-form button i {
-    color: #173334;
-    font-size: 1.1rem;
+    color: #173334; /* Couleur de l'icône */
+    font-size: 1.1rem; /* Taille de l'icône */
 }
 
 .newsletter-form button:hover {
-    background: #e6aa1f;
+    background: #e6aa1f; /* Fond jaune foncé au survol */
 }
 
 /* Footer bottom */
 .footer-bottom {
-    max-width: 1400px;
-    margin: 0 auto;
-    padding-top: 30px;
-    border-top: 1px solid rgba(255, 255, 255, 0.2);
-    text-align: center;
+    max-width: 1400px; /* Largeur maximale */
+    margin: 0 auto; /* Centrage horizontal */
+    padding-top: 30px; /* Padding en haut */
+    border-top: 1px solid rgba(255, 255, 255, 0.2); /* Bordure supérieure */
+    text-align: center; /* Texte centré */
 }
 
 .footer-bottom p {
-    margin: 0;
-    font-size: 0.9rem;
-    color: rgba(255, 255, 255, 0.7);
+    margin: 0; /* Pas de marge */
+    font-size: 0.9rem; /* Taille du texte */
+    color: rgba(255, 255, 255, 0.7); /* Blanc semi-transparent */
 }
 
 /* ===== MEDIA QUERIES FOOTER ===== */
 @media (max-width: 768px) {
     .navbar {
-        padding: 0 20px;
+        padding: 0 20px; /* Réduction du padding */
     }
 
     .navbar-container {
-        height: 60px;
+        height: 60px; /* Réduction de la hauteur */
     }
 
     .navbar-logo a {
-        font-size: 1rem;
+        font-size: 1rem; /* Réduction de la taille */
     }
 
     .search-bar-nav {
-        width: 250px;
+        width: 250px; /* Réduction de la largeur */
     }
 
     .search-bar-nav input {
-        height: 35px;
-        font-size: 0.9rem;
-        padding: 5px 40px 5px 15px;
+        height: 35px; /* Réduction de la hauteur */
+        font-size: 0.9rem; /* Réduction de la taille */
+        padding: 5px 40px 5px 15px; /* Ajustement du padding */
     }
 
     .search-bar-nav button {
-        width: 40px;
+        width: 40px; /* Réduction de la largeur */
     }
 
     .navbar-icons {
-        gap: 15px;
+        gap: 15px; /* Réduction de l'espacement */
     }
 
     .nav-icon,
     .nav-icon- {
-        width: 35px;
-        height: 35px;
+        width: 35px; /* Réduction de la taille */
+        height: 35px; /* Réduction de la taille */
     }
     
     .nav-icon i {
-        font-size: 1rem;
-    }
-
-
-    .search-bar-nav button {
-        width: 40px;
-    }
-
-    .navbar-icons {
-        gap: 15px;
-    }
-
-    .nav-icon,
-    .nav-icon- {
-        width: 35px;
-        height: 35px;
+        font-size: 1rem; /* Réduction de la taille */
     }
 
     /* ===== HERO SECTION ===== */
     .hero {
-        padding: 40px 15px;
+        padding: 40px 15px; /* Réduction du padding */
     }
 
     .hero-container {
-        gap: 30px;
+        gap: 30px; /* Réduction de l'espacement */
     }
 
     .hero-image {
-        flex: 1 1 100%;
+        flex: 1 1 100%; /* Largeur complète sur mobile */
     }
 
     .hero-content {
-        flex: 1 1 100%;
+        flex: 1 1 100%; /* Largeur complète sur mobile */
     }
 
     .hero h3 {
-        font-size: 1.5rem;
-        text-align: center;
+        font-size: 1.5rem; /* Réduction de la taille */
+        text-align: center; /* Centrage du texte */
     }
 
     .hero p {
-        font-size: 1rem;
-        text-align: center;
+        font-size: 1rem; /* Réduction de la taille */
+        text-align: center; /* Centrage du texte */
     }
 
     .btn {
-        padding: 12px 24px;
-        font-size: 0.9rem;
-        align-self: center;
+        padding: 12px 24px; /* Réduction du padding */
+        font-size: 0.9rem; /* Réduction de la taille */
+        align-self: center; /* Centrage du bouton */
     }
 
     /* ===== SECTION CATEGORIES ===== */
     .grid-categories {
-        grid-template-columns: repeat(2, 1fr);
-        gap: 15px;
-        padding: 40px 15px;
+        grid-template-columns: repeat(2, 1fr); /* 2 colonnes */
+        gap: 15px; /* Réduction de l'espacement */
+        padding: 40px 15px; /* Réduction du padding */
     }
 
     .section-title {
-        font-size: 1.5rem;
-        margin-bottom: 15px;
+        font-size: 1.5rem; /* Réduction de la taille */
+        margin-bottom: 15px; /* Réduction de la marge */
     }
 
     .featured-card1,
     .featured-card2,
     .featured-card3,
     .featured-card4 {
-        height: 250px;
+        height: 250px; /* Réduction de la hauteur */
     }
 
     .featured-title {
-        font-size: 1.2rem;
+        font-size: 1.2rem; /* Réduction de la taille */
     }
 
     .featured-btn {
-        padding: 6px 14px;
-        font-size: 0.85rem;
+        padding: 6px 14px; /* Réduction du padding */
+        font-size: 0.85rem; /* Réduction de la taille */
     }
 
     /* ===== SECTION RECOMMANDATIONS ===== */
     .reco-grid {
-        grid-template-columns: repeat(2, 1fr);
-        gap: 15px;
-        padding: 40px 15px;
+        grid-template-columns: repeat(2, 1fr); /* 2 colonnes */
+        gap: 15px; /* Réduction de l'espacement */
+        padding: 40px 15px; /* Réduction du padding */
     }
 
     .section-title2 {
-        font-size: 1.5rem;
-        margin-bottom: 15px;
+        font-size: 1.5rem; /* Réduction de la taille */
+        margin-bottom: 15px; /* Réduction de la marge */
     }
 
     .item-card img {
-        height: 220px;
+        height: 220px; /* Réduction de la hauteur */
     }
 
     .item-info {
-        padding: 15px;
+        padding: 15px; /* Réduction du padding */
     }
 
     .item-title {
-        font-size: 0.85rem;
+        font-size: 0.85rem; /* Réduction de la taille */
     }
 
     .item-rating {
-        font-size: 0.8rem;
+        font-size: 0.8rem; /* Réduction de la taille */
     }
 
     .item-price {
-        font-size: 1.1rem;
+        font-size: 1.1rem; /* Réduction de la taille */
     }
 
     .favorite-btn {
-        width: 34px;
-        height: 34px;
-        top: 10px;
-        right: 10px;
+        width: 34px; /* Réduction de la taille */
+        height: 34px; /* Réduction de la taille */
+        top: 10px; /* Ajustement de la position */
+        right: 10px; /* Ajustement de la position */
     }
 
     .favorite-btn i {
-        font-size: 1rem;
+        font-size: 1rem; /* Réduction de la taille */
     }
 
     /* ===== SECTION HERO 2 (RECETTES DU MOMENT) ===== */
     .hero2 {
-        padding: 40px 0;
-        margin-top: 15px;
+        padding: 40px 0; /* Réduction du padding */
+        margin-top: 15px; /* Réduction de la marge */
     }
 
     .hero-container2 {
-        grid-template-columns: repeat(2, 1fr);
-        gap: 15px;
-        padding: 0 15px;
+        grid-template-columns: repeat(2, 1fr); /* 2 colonnes */
+        gap: 15px; /* Réduction de l'espacement */
+        padding: 0 15px; /* Réduction du padding */
     }
 
     .section-title3 {
-        font-size: 1.5rem;
-        margin-bottom: 15px;
+        font-size: 1.5rem; /* Réduction de la taille */
+        margin-bottom: 15px; /* Réduction de la marge */
     }
 
     /* ===== FOOTER ===== */
     .footer-main {
-        padding: 40px 15px 20px;
-        margin-top: 60px;
+        padding: 40px 15px 20px; /* Réduction du padding */
+        margin-top: 60px; /* Réduction de la marge */
     }
 
     .footer-container {
-        grid-template-columns: 1fr;
-        gap: 30px;
-        margin-bottom: 30px;
+        grid-template-columns: 1fr; /* 1 colonne sur mobile */
+        gap: 30px; /* Réduction de l'espacement */
+        margin-bottom: 30px; /* Réduction de la marge */
     }
 
     .footer-column h3 {
-        font-size: 1.3rem;
+        font-size: 1.3rem; /* Réduction de la taille */
     }
 
     .footer-column h4 {
-        font-size: 1.1rem;
+        font-size: 1.1rem; /* Réduction de la taille */
     }
 
     .footer-column p {
-        font-size: 0.9rem;
+        font-size: 0.9rem; /* Réduction de la taille */
     }
 
     .footer-links a {
-        font-size: 0.9rem;
+        font-size: 0.9rem; /* Réduction de la taille */
     }
 
     .newsletter-form {
-        flex-direction: column;
+        flex-direction: column; /* Direction verticale */
     }
 
     .newsletter-form input {
-        border-radius: 5px;
-        margin-bottom: 10px;
+        border-radius: 5px; /* Coins arrondis complets */
+        margin-bottom: 10px; /* Marge en bas */
     }
 
     .newsletter-form button {
-        border-radius: 5px;
-        padding: 12px;
+        border-radius: 5px; /* Coins arrondis complets */
+        padding: 12px; /* Espacement interne */
     }
 
     .footer-bottom p {
-        font-size: 0.85rem;
+        font-size: 0.85rem; /* Réduction de la taille */
     }
 }
 
@@ -934,45 +913,45 @@ form {
     
     /* ===== NAVBAR ===== */
     .navbar-logo a {
-        font-size: 0.9rem;
+        font-size: 0.9rem; /* Réduction supplémentaire de la taille */
     }
 
     .search-bar-nav {
-        width: 180px;
+        width: 180px; /* Réduction supplémentaire de la largeur */
     }
 
     .search-bar-nav input {
-        font-size: 0.85rem;
+        font-size: 0.85rem; /* Réduction supplémentaire de la taille */
     }
 
     /* ===== GRILLES EN 1 COLONNE ===== */
     .grid-categories {
-        grid-template-columns: 1fr;
-        padding: 30px 15px;
+        grid-template-columns: 1fr; /* 1 colonne sur très petit écran */
+        padding: 30px 15px; /* Réduction du padding */
     }
 
     .reco-grid {
-        grid-template-columns: 1fr;
-        padding: 30px 15px;
+        grid-template-columns: 1fr; /* 1 colonne sur très petit écran */
+        padding: 30px 15px; /* Réduction du padding */
     }
 
     .hero-container2 {
-        grid-template-columns: 1fr;
-        padding: 0 15px;
+        grid-template-columns: 1fr; /* 1 colonne sur très petit écran */
+        padding: 0 15px; /* Réduction du padding */
     }
 
     /* ===== TITRES ===== */
     .section-title,
     .section-title2,
     .section-title3 {
-        font-size: 1.3rem;
+        font-size: 1.3rem; /* Réduction supplémentaire de la taille */
     }
 
     .hero h3 {
-        font-size: 1.3rem;
+        font-size: 1.3rem; /* Réduction supplémentaire de la taille */
     }
 
     .hero p {
-        font-size: 0.95rem;
+        font-size: 0.95rem; /* Réduction supplémentaire de la taille */
     }
 }
