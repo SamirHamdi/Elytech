@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="./css/page_favori.css">
+    <link rel="stylesheet" href="/css/page_favori.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -26,12 +26,12 @@
                 </form>
             </div>
             <div class="navbar-icons">
-                <a href="#" class="nav-icon-">
+                <a href="page_profil.html" class="nav-icon-">
                     <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="white">
                         <path d="M200-246q54-53 125.5-83.5T480-360q83 0 154.5 30.5T760-246v-514H200v514Zm280-194q58 0 99-41t41-99q0-58-41-99t-99-41q-58 0-99 41t-41 99q0 58 41 99t99 41ZM200-120q-33 0-56.5-23.5T120-200v-560q0-33 23.5-56.5T200-840h560q33 0 56.5 23.5T840-760v560q0 33-23.5 56.5T760-120H200Zm69-80h422q-44-39-99.5-59.5T480-280q-56 0-112.5 20.5T269-200Zm211-320q-25 0-42.5-17.5T420-580q0-25 17.5-42.5T480-640q25 0 42.5 17.5T540-580q0 25-17.5 42.5T480-520Zm0 17Z"/>
                     </svg>
                 </a>
-                <a href="page_favoris.html" class="nav-icon active">❤️</a>
+                <a href="page_favori.html" class="nav-icon active">❤️</a>
             </div>
         </div>
     </nav>
@@ -54,121 +54,9 @@
         </div>
     </section>
 
-    <!-- Grille des recettes favorites -->
+    <!-- Grille des recettes favorites (sera remplie dynamiquement) -->
     <section class="favoris-grid">
-        <!-- Recette 1 -->
-        <article class="recipe-card">
-            <button class="favorite-btn active">
-                <i class="fa-solid fa-heart"></i>
-            </button>
-            <img src="/images/poulet au curry.jpg" alt="Poulet au curry">
-            <div class="recipe-info">
-                <h4 class="recipe-title">Poulet au Curry</h4>
-                <div class="recipe-meta">
-                    <span><i class="fa-regular fa-clock"></i> 45 min</span>
-                    <span><i class="fa-solid fa-user"></i> 4 pers.</span>
-                </div>
-                <div class="recipe-rating">★★★★★</div>
-                <div class="recipe-category">
-                    <span class="category-badge">Cuisine Indienne</span>
-                </div>
-            </div>
-        </article>
-
-        <!-- Recette 2 -->
-        <article class="recipe-card">
-            <button class="favorite-btn active">
-                <i class="fa-solid fa-heart"></i>
-            </button>
-            <img src="/images/boeuf-bourguignon.jpg" alt="Boeuf Bourguignon">
-            <div class="recipe-info">
-                <h4 class="recipe-title">Bœuf Bourguignon</h4>
-                <div class="recipe-meta">
-                    <span><i class="fa-regular fa-clock"></i> 180 min</span>
-                    <span><i class="fa-solid fa-user"></i> 6 pers.</span>
-                </div>
-                <div class="recipe-rating">★★★★★</div>
-                <div class="recipe-category">
-                    <span class="category-badge">Cuisine Française</span>
-                </div>
-            </div>
-        </article>
-
-        <!-- Recette 3 -->
-        <article class="recipe-card">
-            <button class="favorite-btn active">
-                <i class="fa-solid fa-heart"></i>
-            </button>
-            <img src="/images/pate à la carbonara.webp" alt="Pâtes Carbonara">
-            <div class="recipe-info">
-                <h4 class="recipe-title">Pâtes à la Carbonara</h4>
-                <div class="recipe-meta">
-                    <span><i class="fa-regular fa-clock"></i> 20 min</span>
-                    <span><i class="fa-solid fa-user"></i> 4 pers.</span>
-                </div>
-                <div class="recipe-rating">★★★★★</div>
-                <div class="recipe-category">
-                    <span class="category-badge">Cuisine Italienne</span>
-                </div>
-            </div>
-        </article>
-
-        <!-- Recette 4 -->
-        <article class="recipe-card">
-            <button class="favorite-btn active">
-                <i class="fa-solid fa-heart"></i>
-            </button>
-            <img src="/images/rfissa au poulet.jpeg" alt="Rfissa">
-            <div class="recipe-info">
-                <h4 class="recipe-title">Rfissa au Poulet</h4>
-                <div class="recipe-meta">
-                    <span><i class="fa-regular fa-clock"></i> 90 min</span>
-                    <span><i class="fa-solid fa-user"></i> 6 pers.</span>
-                </div>
-                <div class="recipe-rating">★★★★☆</div>
-                <div class="recipe-category">
-                    <span class="category-badge">Cuisine Marocaine</span>
-                </div>
-            </div>
-        </article>
-
-        <!-- Recette 5 -->
-        <article class="recipe-card">
-            <button class="favorite-btn active">
-                <i class="fa-solid fa-heart"></i>
-            </button>
-            <img src="/images/butter chicken.jpg" alt="Butter Chicken">
-            <div class="recipe-info">
-                <h4 class="recipe-title">Butter Chicken</h4>
-                <div class="recipe-meta">
-                    <span><i class="fa-regular fa-clock"></i> 60 min</span>
-                    <span><i class="fa-solid fa-user"></i> 4 pers.</span>
-                </div>
-                <div class="recipe-rating">★★★★★</div>
-                <div class="recipe-category">
-                    <span class="category-badge">Cuisine Indienne</span>
-                </div>
-            </div>
-        </article>
-
-        <!-- Recette 6 -->
-        <article class="recipe-card">
-            <button class="favorite-btn active">
-                <i class="fa-solid fa-heart"></i>
-            </button>
-            <img src="/images/gratin dauphinoid.webp" alt="Gratin Dauphinois">
-            <div class="recipe-info">
-                <h4 class="recipe-title">Gratin Dauphinois</h4>
-                <div class="recipe-meta">
-                    <span><i class="fa-regular fa-clock"></i> 90 min</span>
-                    <span><i class="fa-solid fa-user"></i> 6 pers.</span>
-                </div>
-                <div class="recipe-rating">★★★★★</div>
-                <div class="recipe-category">
-                    <span class="category-badge">Cuisine Française</span>
-                </div>
-            </div>
-        </article>
+        <!-- Les recettes favorites seront ajoutées ici par JavaScript -->
     </section>
 
     <!-- Footer -->
@@ -183,7 +71,7 @@
                 <h4>Navigation</h4>
                 <ul class="footer-links">
                     <li><a href="page_accueil.html">Accueil</a></li>
-                    <li><a href="page_favoris.html">Mes Favoris</a></li>
+                    <li><a href="page_favori.html">Mes Favoris</a></li>
                     <li><a href="#">Catégories</a></li>
                     <li><a href="#">Recettes du moment</a></li>
                 </ul>
@@ -215,5 +103,7 @@
         </div>
     </footer>
 
+    <!-- Script JavaScript -->
+    <script src="/js/favoris-et-filtres.js"></script>
 </body>
 </html>
