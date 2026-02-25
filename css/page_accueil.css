@@ -1,4 +1,4 @@
-           n                @import url('https://fonts.googleapis.com/css2?family=Kadwa:wght@400;700&display=swap');
+        @import url('https://fonts.googleapis.com/css2?family=Kadwa:wght@400;700&display=swap');
 
 * {
     box-sizing: border-box; /* Application du box-sizing à tous les éléments */
@@ -186,6 +186,8 @@ form {
 .hero-image {
     flex: 1 1 45%; /* Flexibilité et largeur de base */
     min-width: 300px; /* Largeur minimale */
+    max-width : 1000px; 
+    max-height : 600px;
 }
 
 .hero-image img {
@@ -270,19 +272,19 @@ form {
 }
 
 .featured-card1 {
-    background-image: url("/images/image-cuisine-inde.jpg"); /* Image cuisine indienne */
+    background-image: url("/images pc/pc_portable.jpg"); /* Pc portable */
 }
 
 .featured-card2 {
-    background-image: url("/images/image-cuisine-france.jpg"); /* Image cuisine française */
+    background-image: url("/images pc/pc1.jpg"); /* Pc fixe */
 }
 
 .featured-card3 {
-    background-image: url("/images/image-cuisine-marocaine.jpg"); /* Image cuisine marocaine */
+    background-image: url("/images pc/tablette.jpg"); /* Tablette */
 }
 
 .featured-card4 {
-    background-image: url("/images/image-cuisine-italienne.jpg"); /* Image cuisine italienne */
+    background-image: url("/images pc/barrette-de-ram.jpg"); /* Composants */
 }
 
 .featured-card1:hover,
@@ -388,7 +390,7 @@ form {
     width: 100%; /* Image responsive */
     height: 280px; /* Hauteur fixe */
     object-fit: cover; /* Image recadrée */
-}
+    width: 350px; /* Largeur fixe */
 
 .item-info {
     padding: 20px; /* Espacement interne */
