@@ -356,9 +356,9 @@ document.addEventListener('DOMContentLoaded', function() {
             message.className = 'no-results-message';
             message.innerHTML = `
                 <i class="fa-solid fa-magnifying-glass" style="font-size: 3rem; color: #ccc; margin-bottom: 1rem;"></i>
-                <h3>Aucune recette trouvée</h3>
-                <p>Désolé, nous n'avons pas trouvé de recettes correspondant à "<strong>${escapeHTML(term)}</strong>".</p>
-                <p>Essayez avec d'autres mots-clés ou parcourez toutes nos recettes.</p>
+                <h3>Aucun produit trouvé</h3>
+                <p>Désolé, nous n'avons pas trouvé de produits correspondant à "<strong>${escapeHTML(term)}</strong>".</p>
+                <p>Essayez avec d'autres mots-clés ou parcourez toutes nos produits.</p>
             `;
             message.style.cssText = `
                 grid-column: 1 / -1;

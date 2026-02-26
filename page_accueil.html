@@ -45,7 +45,71 @@
 
     <section class="hero">
         <div class="hero-container">
-            <img  class="hero-image" src="/images pc/grandpc.jpg" alt="">
+            <!-- Carrousel -->
+            <div class="carousel">
+                <button class="carousel-btn prev" onclick="moveSlide(-1)">&#8249;</button>
+                <div class="carousel-track-wrapper">
+                    <div class="carousel-track" id="carouselTrack">
+                        <!-- Slide 1 -->
+                        <div class="slide slide-1">
+                            <div class="slide-content">
+                                <span class="slide-tag">🔥 Offre limitée</span>
+                                <h2>PC Gaming RTX 4090</h2>
+                                <p>Dominez chaque partie avec la carte graphique la plus puissante du marché.</p>
+                                <div class="slide-price"><span class="old-price">2 499 €</span><span class="new-price">1 999 €</span></div>
+                                <a href="#" class="slide-btn">Voir l'offre</a>
+                            </div>
+                            <div class="slide-visual">🖥️</div>
+                        </div>
+                        <!-- Slide 2 -->
+                        <div class="slide slide-2">
+                            <div class="slide-content">
+                                <span class="slide-tag">⚡ Nouveau</span>
+                                <h2>PC Portable Gaming 144Hz</h2>
+                                <p>Gaming haute performance où que vous soyez. Écran 144Hz, RTX 4070.</p>
+                                <div class="slide-price"><span class="old-price">1 299 €</span><span class="new-price">999 €</span></div>
+                                <a href="#" class="slide-btn">Voir l'offre</a>
+                            </div>
+                            <div class="slide-visual">💻</div>
+                        </div>
+                        <!-- Slide 3 -->
+                        <div class="slide slide-3">
+                            <div class="slide-content">
+                                <span class="slide-tag">🎮 Pack Gaming</span>
+                                <h2>Bundle Clavier + Souris</h2>
+                                <p>Clavier mécanique RGB + souris 25 600 DPI. Le combo parfait pour les pros.</p>
+                                <div class="slide-price"><span class="old-price">180 €</span><span class="new-price">119 €</span></div>
+                                <a href="#" class="slide-btn">Voir l'offre</a>
+                            </div>
+                            <div class="slide-visual">⌨️</div>
+                        </div>
+                        <!-- Slide 4 -->
+                        <div class="slide slide-4">
+                            <div class="slide-content">
+                                <span class="slide-tag">💾 Composants</span>
+                                <h2>RAM DDR5 32 Go</h2>
+                                <p>Boostez vos performances. Compatible Intel & AMD. Livraison gratuite.</p>
+                                <div class="slide-price"><span class="old-price">220 €</span><span class="new-price">149 €</span></div>
+                                <a href="#" class="slide-btn">Voir l'offre</a>
+                            </div>
+                            <div class="slide-visual">🔧</div>
+                        </div>
+                        <!-- Slide 5 -->
+                        <div class="slide slide-5">
+                            <div class="slide-content">
+                                <span class="slide-tag">🖥️ Écran</span>
+                                <h2>Moniteur 4K 240Hz</h2>
+                                <p>Vivez le jeu comme jamais. Ultra-wide 34", temps de réponse 1ms.</p>
+                                <div class="slide-price"><span class="old-price">799 €</span><span class="new-price">599 €</span></div>
+                                <a href="#" class="slide-btn">Voir l'offre</a>
+                            </div>
+                            <div class="slide-visual">🖥️</div>
+                        </div>
+                    </div>
+                </div>
+                <button class="carousel-btn next" onclick="moveSlide(1)">&#8250;</button>
+                <div class="carousel-dots" id="carouselDots"></div>
+            </div>
             <div class="hero-content">
                 <h3> Le meilleur de la technologie pour vous</h3>
                 <p>Retrouvez les meilleurs composants et pc recommandés par nos experts à moindre prix ! </p>
@@ -74,6 +138,7 @@
          <!-- CARTE FEATURED 3 : Tablette -->
         <div class="featured-card3">
             <div class="featured-content">
+                <img src="/images pc/Tablette/tablette_no_bg-removebg-preview.png" alt="Tablette">
                 <h3 class="featured-title">Tablette</h3>
                 <a href="page_Tablette.html" class="featured-btn">Voir tout</a>
             </div>
@@ -96,7 +161,7 @@
         <button class="favorite-btn">
             <i class="fa-regular fa-heart"></i>
         </button>
-        <img src="/images pc/pc portables.jpg" alt="Ordinateur portable">
+        <img src="/images pc/pc portable/pc_portable_no_bg.png" alt="Ordinateur portable">
         <div class="item-info">
             <h4 class="item-title">Ordinateur portable</h4>
             <div class="item-rating">★★★★★</div>
@@ -108,7 +173,7 @@
         <button class="favorite-btn">
             <i class="fa-regular fa-heart"></i>
         </button>
-        <img src="/images pc/pc2.jpg" alt="Ordinateur fixe">
+        <img src="/images pc/pc fixe/pc2-removebg-preview.png" alt="Ordinateur fixe">
         <div class="item-info">
             <h4 class="item-title">Ordinateur fixe</h4>
             <div class="item-rating">★★★★☆</div>
@@ -120,7 +185,7 @@
         <button class="favorite-btn">
             <i class="fa-regular fa-heart"></i>
         </button>
-        <img src="/images pc/tablette3.jpg" alt="Tablette">
+        <img src="/images pc/Tablette/tab1-removebg-preview.png" alt="Tablette">
         <div class="item-info">
             <h4 class="item-title">Tablette</h4>
             <div class="item-rating">★★★★★</div>
@@ -247,5 +312,49 @@
     </div>
 </footer>
 
+<script>
+    let currentSlide = 0;
+    const wrapper = document.getElementById('carouselWrapper');
+    const track = document.getElementById('carouselTrack');
+    const slides = track.querySelectorAll('.slide');
+    const dotsContainer = document.getElementById('carouselDots');
+    let autoplayInterval;
+
+    // Créer les points de navigation
+    slides.forEach((_, i) => {
+        const dot = document.createElement('span');
+        dot.classList.add('dot');
+        if (i === 0) dot.classList.add('active');
+        dot.addEventListener('click', () => { goToSlide(i); resetAutoplay(); });
+        dotsContainer.appendChild(dot);
+    });
+
+    function goToSlide(index) {
+        currentSlide = (index + slides.length) % slides.length;
+        const slideWidth = slides[0].offsetWidth;
+        track.style.transform = `translateX(-${currentSlide * slideWidth}px)`;
+        document.querySelectorAll('.dot').forEach((dot, i) => {
+            dot.classList.toggle('active', i === currentSlide);
+        });
+    }
+
+    function moveSlide(direction) {
+        goToSlide(currentSlide + direction);
+        resetAutoplay();
+    }
+
+    function startAutoplay() {
+        autoplayInterval = setInterval(() => goToSlide(currentSlide + 1), 3500);
+    }
+
+    function resetAutoplay() {
+        clearInterval(autoplayInterval);
+        startAutoplay();
+    }
+
+    window.addEventListener('resize', () => goToSlide(currentSlide));
+
+    startAutoplay();
+</script>
 </body>
 </html>
