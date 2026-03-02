@@ -3,24 +3,24 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="/css/page_favori.css">
+    <link rel="stylesheet" href="/css/page_panier.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Kadwa:wght@400;700&display=swap" rel="stylesheet">
-    <title>Mes Favoris - Cooking 4 Noob</title>
+    <title>Mon panier - Elytech</title>
 </head>
 <body>
     <!-- Navbar -->
     <nav class="navbar">
         <div class="navbar-container">
             <div class="navbar-logo">
-                <a href="page_accueil.html">Cooking 4 Noob</a>
+                <a href="page_accueil.html">Elytech</a>
             </div>
             <div>
                 <form action="" method="get">
                     <div class="search-bar-nav">
-                        <input type="text" placeholder="Que voulez-vous manger?">
+                        <input type="text" placeholder="Rechercher">
                         <button type="submit"><i class="fa-solid fa-magnifying-glass"></i></button>
                     </div>
                 </form>
@@ -31,79 +31,75 @@
                         <path d="M200-246q54-53 125.5-83.5T480-360q83 0 154.5 30.5T760-246v-514H200v514Zm280-194q58 0 99-41t41-99q0-58-41-99t-99-41q-58 0-99 41t-41 99q0 58 41 99t99 41ZM200-120q-33 0-56.5-23.5T120-200v-560q0-33 23.5-56.5T200-840h560q33 0 56.5 23.5T840-760v560q0 33-23.5 56.5T760-120H200Zm69-80h422q-44-39-99.5-59.5T480-280q-56 0-112.5 20.5T269-200Zm211-320q-25 0-42.5-17.5T420-580q0-25 17.5-42.5T480-640q25 0 42.5 17.5T540-580q0 25-17.5 42.5T480-520Zm0 17Z"/>
                     </svg>
                 </a>
-                <a href="page_favori.html" class="nav-icon active">❤️</a>
+                <a href="page_panier.html" class="nav-icon active">🛒</a>
             </div>
         </div>
     </nav>
 
-    <!-- Section Header Favoris -->
+    <!-- Section Header Panier -->
     <section class="favoris-header">
         <div class="favoris-header-container">
-            <h1><i class="fa-solid fa-heart"></i> Mes Recettes Favorites</h1>
-            <p>Retrouvez toutes vos recettes préférées en un seul endroit</p>
+            <h1><i class="fa-solid fa-cart-shopping"></i> Mon panier</h1>
+            <p>Retrouvez tous vos futurs achats en un seul endroit</p>
         </div>
     </section>
 
-    <!-- Message si pas de favoris -->
+    <!-- Message si panier vide -->
     <section class="empty-state" style="display: none;">
         <div class="empty-state-container">
-            <i class="fa-regular fa-heart"></i>
-            <h2>Aucun favori pour le moment</h2>
-            <p>Commencez à ajouter des recettes à vos favoris en cliquant sur le cœur ❤️</p>
-            <a href="page_accueil.html" class="btn">Découvrir les recettes</a>
+            <i class="fa-solid fa-cart-shopping"></i>
+            <h2>Votre panier est vide</h2>
+            <p>Commencez à ajouter des articles à votre panier en cliquant sur "Ajouter au panier" 🛒</p>
+            <a href="page_accueil.html" class="btn">Découvrir les produits</a>
         </div>
     </section>
 
-    <!-- Grille des recettes favorites (sera remplie dynamiquement) -->
+    <!-- Grille des produits du panier (remplie dynamiquement par panier.js) -->
     <section class="favoris-grid">
-        <!-- Les recettes favorites seront ajoutées ici par JavaScript -->
     </section>
 
     <!-- Footer -->
     <footer class="footer-main">
         <div class="footer-container">
             <div class="footer-column">
-                <h3>Cooking 4 Noob</h3>
-                <p>Des recettes simples et délicieuses pour tous les niveaux. Découvrez des plats du monde entier, faciles à réaliser chez vous.</p>
+                <h3>Elytech</h3>
+                <p>PC Gaming, tablette et composants -- la tech de qualité, accessible à tous les budgets.</p>
             </div>
-
             <div class="footer-column">
                 <h4>Navigation</h4>
                 <ul class="footer-links">
-                    <li><a href="page_accueil.html">Accueil</a></li>
-                    <li><a href="page_favori.html">Mes Favoris</a></li>
-                    <li><a href="#">Catégories</a></li>
-                    <li><a href="#">Recettes du moment</a></li>
+                    <li><a href="page_accueil.html">Recherche</a></li>
+                    <li><a href="page_panier.html">Mon Panier</a></li>
+                    <li><a href="#categories">Catégories</a></li>
+                    <li><a href="#moment">Produits du moment</a></li>
                 </ul>
             </div>
-
             <div class="footer-column">
                 <h4>À Propos</h4>
                 <ul class="footer-links">
-                    <li><a href="#">Qui sommes-nous</a></li>
-                    <li><a href="#">Nous contacter</a></li>
-                    <li><a href="#">FAQ</a></li>
-                    <li><a href="#">Conditions d'utilisation</a></li>
-                    <li><a href="#">Politique de confidentialité</a></li>
+                    <li><a href="#about">Qui sommes-nous</a></li>
+                    <li><a href="page_contact.html">Nous contacter</a></li>
+                    <li><a href="#faq">FAQ</a></li>
+                    <li><a href="#terms">Conditions d'utilisation</a></li>
+                    <li><a href="#privacy">Politique de confidentialité</a></li>
                 </ul>
             </div>
-
             <div class="footer-column">
                 <h4>Inscrivez-vous à notre newsletter</h4>
-                <p>Recevez nos meilleures recettes et astuces culinaires chaque semaine directement dans votre boîte mail.</p>
+                <p>Recevez nos meilleures produits et offres chaque semaine directement dans votre boîte mail.</p>
                 <form class="newsletter-form">
                     <input type="email" placeholder="Entrez votre email..." required>
                     <button type="submit"><i class="fa-solid fa-arrow-right"></i></button>
                 </form>
             </div>
         </div>
-
         <div class="footer-bottom">
-            <p>© 2024, Tous droits réservés - Cooking 4 Noob</p>
+            <p>© 2024, Tous droits réservés - Elytech</p>
         </div>
     </footer>
 
-    <!-- Script JavaScript -->
-    <script src="/js/favoris-et-filtres.js"></script>
+    <!-- Script panier -->
+    <script src="/js/panier.js"></script>
+
 </body>
 </html>

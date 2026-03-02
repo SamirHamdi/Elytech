@@ -1,6 +1,6 @@
-
 <!DOCTYPE html>
 <html lang="fr">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -11,42 +11,46 @@
     <link href="https://fonts.googleapis.com/css2?family=Kadwa:wght@400;700&display=swap" rel="stylesheet">
     <title>Ordinateur fixe - Elytech</title>
 </head>
+
 <body>
     <!-- Navbar -->
-<nav class="navbar">
-    <div class="navbar-container">
-        <div class="navbar-logo">
-            <a href="#">Elytech</a>
+    <nav class="navbar">
+        <div class="navbar-container">
+            <div class="navbar-logo">
+                <a href="#">Elytech</a>
+            </div>
+            <div>
+                <form action="" method="get">
+                    <div class="search-bar-nav">
+                        <input type="text" placeholder="Rechercher">
+                        <button type="submit"><i class="fa-solid fa-magnifying-glass"></i></button>
+                    </div>
+                </form>
+            </div>
+            <div class="navbar-icons">
+                <!-- Icône Contact -->
+                <a href="page_contact.html" class="nav-icon">
+                    <i class="fa-solid fa-envelope"></i>
+                </a>
+
+                <a href="page_profil.html" class="nav-icon-">
+                    <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px"
+                        fill="white">
+                        <path
+                            d="M200-246q54-53 125.5-83.5T480-360q83 0 154.5 30.5T760-246v-514H200v514Zm280-194q58 0 99-41t41-99q0-58-41-99t-99-41q-58 0-99 41t-41 99q0 58 41 99t99 41ZM200-120q-33 0-56.5-23.5T120-200v-560q0-33 23.5-56.5T200-840h560q33 0 56.5 23.5T840-760v560q0 33-23.5 56.5T760-120H200Zm69-80h422q-44-39-99.5-59.5T480-280q-56 0-112.5 20.5T269-200Zm211-320q-25 0-42.5-17.5T420-580q0-25 17.5-42.5T480-640q25 0 42.5 17.5T540-580q0 25 17.5 42.5T480-520Zm0 17Z" />
+                    </svg>
+                </a>
+                <a href="page_panier.html" class="nav-icon">❤️</a>
+            </div>
         </div>
-        <div>
-            <form action="" method="get">
-                <div class="search-bar-nav">
-                    <input type="text" placeholder="Rechercher">
-                    <button type="submit"><i class="fa-solid fa-magnifying-glass"></i></button>
-                </div>
-            </form>
-        </div>
-        <div class="navbar-icons">
-            <!-- Icône Contact -->
-            <a href="page_contact.html" class="nav-icon">
-                <i class="fa-solid fa-envelope"></i>
-            </a>
-            
-            <a href="page_profil.html" class="nav-icon-">
-                <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="white">
-                    <path d="M200-246q54-53 125.5-83.5T480-360q83 0 154.5 30.5T760-246v-514H200v514Zm280-194q58 0 99-41t41-99q0-58-41-99t-99-41q-58 0-99 41t-41 99q0 58 41 99t99 41ZM200-120q-33 0-56.5-23.5T120-200v-560q0-33 23.5-56.5T200-840h560q33 0 56.5 23.5T840-760v560q0 33-23.5 56.5T760-120H200Zm69-80h422q-44-39-99.5-59.5T480-280q-56 0-112.5 20.5T269-200Zm211-320q-25 0-42.5-17.5T420-580q0-25 17.5-42.5T480-640q25 0 42.5 17.5T540-580q0 25 17.5 42.5T480-520Zm0 17Z"/>
-                </svg>
-            </a>
-            <a href="page_panier.html" class="nav-icon">❤️</a>
-        </div>
-    </div>
-</nav>
+    </nav>
     <!-- Hero Catégorie -->
-    <section class="category-hero" style="background-image: url('/images pc/pc fixe/');">
+    <section class="category-hero" style="background-image: url('/images pc/pc fixe/grospc.avif')">
         <div class="category-hero-overlay">
             <div class="category-hero-content">
                 <h1>Ordinateur fixe</h1>
-                <p>"Explorez notre sélection de PC fixes : des machines performantes et durables, pour tous les budgets et tous les usages.</p>
+                <p>"Explorez notre sélection de PC fixes : des machines performantes et durables, pour tous les budgets
+                    et tous les usages.</p>
             </div>
         </div>
     </section>
@@ -72,15 +76,17 @@
             <button class="favorite-btn">
                 <i class="fa-regular fa-heart"></i>
             </button>
-            <img src="/images pc/pc fixe/pcCL1.jpg" alt="Ordinateur fixe classique">
+            <a href="page_produit.html" class="recipe-image-link">
+                <img src="/images pc/pc fixe/pcCL1.jpg" alt="Ordinateur fixe classique">
+            </a>
             <div class="recipe-info">
                 <h4 class="recipe-title">Ordinateur fixe classique</h4>
                 <div class="recipe-meta">
-                    <span><i class="fa-regular fa-clock"></i> 180 min</span>
-                    <span><i class="fa-solid fa-user"></i> 6 pers.</span>
+                    <span><i class="fa-solid fa-euro-sign"></i>950€</span>
                 </div>
                 <div class="recipe-rating">★★★★★</div>
-                <p class="recipe-description">NVIDIA GeForce RTX 5080, AMD Ryzen 7 9800X3D, 32 Go DDR5, SSD NVMe 2 To, Win11 version d'essai - Déjà monté et testé</p>
+                <p class="recipe-description">NVIDIA GeForce RTX 5080, AMD Ryzen 7 9800X3D, 32 Go DDR5, SSD NVMe 2 To,
+                    Win11 version d'essai - Déjà monté et testé</p>
             </div>
         </article>
 
@@ -93,11 +99,11 @@
             <div class="recipe-info">
                 <h4 class="recipe-title">Ordinateur fixe classique</h4>
                 <div class="recipe-meta">
-                    <span><i class="fa-regular fa-clock"></i> 120 min</span>
-                    <span><i class="fa-solid fa-user"></i> 5 pers.</span>
+                    <span><i class="fa-solid fa-euro-sign"></i> 750€</span>
                 </div>
                 <div class="recipe-rating">★★★★★</div>
-                <p class="recipe-description">NVIDIA GeForce RTX 5060, AMD Ryzen 5 5500, 32 Go DDR4, SSD NVMe 1 To, Win11 version d'essai - Déjà monté et testé</p>
+                <p class="recipe-description">NVIDIA GeForce RTX 5060, AMD Ryzen 5 5500, 32 Go DDR4, SSD NVMe 1 To,
+                    Win11 version d'essai - Déjà monté et testé</p>
             </div>
         </article>
 
@@ -110,11 +116,11 @@
             <div class="recipe-info">
                 <h4 class="recipe-title">Ordinateur fixe gaming</h4>
                 <div class="recipe-meta">
-                    <span><i class="fa-regular fa-clock"></i> 150 min</span>
-                    <span><i class="fa-solid fa-user"></i> 6 pers.</span>
+                    <span><i class="fa-solid fa-euro-sign"></i> 1300€</span>
                 </div>
                 <div class="recipe-rating">★★★★☆</div>
-                <p class="recipe-description">NVIDIA GeForce RTX 5090, AMD Ryzen 9 9950X, 64 Go DDR5, SSD NVMe 4 To, Win11 version d'essai - Déjà monté et testé</p>
+                <p class="recipe-description">NVIDIA GeForce RTX 5090, AMD Ryzen 9 9950X, 64 Go DDR5, SSD NVMe 4 To,
+                    Win11 version d'essai - Déjà monté et testé</p>
             </div>
         </article>
 
@@ -127,11 +133,11 @@
             <div class="recipe-info">
                 <h4 class="recipe-title">Ordinateur fixe gaming</h4>
                 <div class="recipe-meta">
-                    <span><i class="fa-regular fa-clock"></i> 90 min</span>
-                    <span><i class="fa-solid fa-user"></i> 6 pers.</span>
+                    <span><i class="fa-solid fa-euro-sign"></i> 1100€</span>
                 </div>
                 <div class="recipe-rating">★★★★★</div>
-                <p class="recipe-description">NVIDIA GeForce RTX 5070, AMD Ryzen 7 9800X3D, 32 Go DDR5, SSD NVMe 2 To, Win11 version d'essai - Déjà monté et testé</p>
+                <p class="recipe-description">NVIDIA GeForce RTX 5070, AMD Ryzen 7 9800X3D, 32 Go DDR5, SSD NVMe 2 To,
+                    Win11 version d'essai - Déjà monté et testé</p>
             </div>
         </article>
 
@@ -144,11 +150,11 @@
             <div class="recipe-info">
                 <h4 class="recipe-title">Ordinateur fixe professionnel</h4>
                 <div class="recipe-meta">
-                    <span><i class="fa-regular fa-clock"></i> 60 min</span>
-                    <span><i class="fa-solid fa-user"></i> 6 pers.</span>
+                    <span><i class="fa-solid fa-euro-sign"></i> 800€</span>
                 </div>
                 <div class="recipe-rating">★★★★★</div>
-                <p class="recipe-description">NVIDIA GeForce RTX 5060, AMD Ryzen 5 5500, 32 Go DDR4, SSD NVMe 1 To, Win11 version d'essai - Déjà monté et testé</p>
+                <p class="recipe-description">NVIDIA GeForce RTX 5060, AMD Ryzen 5 5500, 32 Go DDR4, SSD NVMe 1 To,
+                    Win11 version d'essai - Déjà monté et testé</p>
             </div>
         </article>
 
@@ -161,11 +167,11 @@
             <div class="recipe-info">
                 <h4 class="recipe-title">Ordinateur fixe professionnel</h4>
                 <div class="recipe-meta">
-                    <span><i class="fa-regular fa-clock"></i> 60 min</span>
-                    <span><i class="fa-solid fa-user"></i> 4 pers.</span>
+                    <span><i class="fa-solid fa-euro-sign"></i> 650€</span>
                 </div>
                 <div class="recipe-rating">★★★★☆</div>
-                <p class="recipe-description">Edition limitée, NVIDIA GeForce RTX 5060, Intel Core Ultra 5 225F, 16 Go DDR5, SSD NVMe 1 To, Win11 version d'essai avec licence fournie - Déjà monté et testé</p>
+                <p class="recipe-description">Edition limitée, NVIDIA GeForce RTX 5060, Intel Core Ultra 5 225F, 16 Go
+                    DDR5, SSD NVMe 1 To, Win11 version d'essai avec licence fournie - Déjà monté et testé</p>
             </div>
         </article>
 
@@ -178,11 +184,11 @@
             <div class="recipe-info">
                 <h4 class="recipe-title">Ordinateur tout usage</h4>
                 <div class="recipe-meta">
-                    <span><i class="fa-regular fa-clock"></i> 180 min</span>
-                    <span><i class="fa-solid fa-user"></i> 8 pers.</span>
+                    <span><i class="fa-solid fa-euro-sign"></i> 700€</span>
                 </div>
                 <div class="recipe-rating">★★★★★</div>
-                <p class="recipe-description">NVIDIA GeForce RTX 5060, AMD Ryzen 7 5800X, 32 Go DDR4, SSD NVMe 1 To, Win11 version d'essai avec licence fournie - Déjà monté et testé</p>
+                <p class="recipe-description">NVIDIA GeForce RTX 5060, AMD Ryzen 7 5800X, 32 Go DDR4, SSD NVMe 1 To,
+                    Win11 version d'essai avec licence fournie - Déjà monté et testé</p>
             </div>
         </article>
 
@@ -195,64 +201,64 @@
             <div class="recipe-info">
                 <h4 class="recipe-title">Ordinateur tout usage</h4>
                 <div class="recipe-meta">
-                    <span><i class="fa-regular fa-clock"></i> 20 min</span>
-                    <span><i class="fa-solid fa-user"></i> 2 pers.</span>
+                    <span><i class="fa-solid fa-euro-sign"></i> 1150€</span>
                 </div>
                 <div class="recipe-rating">★★★★☆</div>
-                <p class="recipe-description">NVIDIA GeForce RTX 3050, AMD Ryzen 5 5500, 16 Go DDR4, SSD NVMe 1 To, Win11 version d'essai - Monté et testé à la commande</p>
+                <p class="recipe-description">NVIDIA GeForce RTX 3050, AMD Ryzen 5 5500, 16 Go DDR4, SSD NVMe 1 To,
+                    Win11 version d'essai - Monté et testé à la commande</p>
             </div>
         </article>
     </section>
 
-<!-- Footer -->
-<!-- Footer -->
-<footer class="footer-main">
-    <div class="footer-container">
-        <!-- Colonne 1: A propos -->
-        <div class="footer-column">
-            <h3>Elytech</h3>
-            <p>PC Gaming,tablette et composants -- la tech de qualité, accessible à tous les budgets. </p>
+    <!-- Footer -->
+    <footer class="footer-main">
+        <div class="footer-container">
+            <!-- Colonne 1: A propos -->
+            <div class="footer-column">
+                <h3>Elytech</h3>
+                <p>PC Gaming,tablette et composants -- la tech de qualité, accessible à tous les budgets. </p>
+            </div>
+
+            <!-- Colonne 2: Navigation -->
+            <div class="footer-column">
+                <h4>Navigation</h4>
+                <ul class="footer-links">
+                    <li><a href="page_accueil.html">Recherche</a></li> <!-- Changé de # à page_accueil.html -->
+                    <li><a href="page_panier.html">Mon panier</a></li> <!-- Déjà correct -->
+                    <li><a href="#categories">Catégories</a></li> <!-- Ancre vers section catégories -->
+                    <li><a href="#moment">Produits du moment</a></li> <!-- Ancre vers section produit du moment -->
+                </ul>
+            </div>
+
+            <!-- Colonne 3: A propos -->
+            <div class="footer-column">
+                <h4>À Propos</h4>
+                <ul class="footer-links">
+                    <li><a href="#about">Qui sommes-nous</a></li> <!-- Ancre à définir -->
+                    <li><a href="page_contact.html">Nous contacter</a></li> <!-- Déjà correct -->
+                    <li><a href="#faq">FAQ</a></li> <!-- Ancre à définir -->
+                    <li><a href="#terms">Conditions d'utilisation</a></li> <!-- Ancre à définir -->
+                    <li><a href="#privacy">Politique de confidentialité</a></li> <!-- Ancre à définir -->
+                </ul>
+            </div>
+
+            <!-- Colonne 4: Newsletter -->
+            <div class="footer-column">
+                <h4>Inscrivez-vous à notre newsletter</h4>
+                <p>Recevez nos meilleures produits et offres chaque semaine directement dans votre boîte mail.</p>
+                <form class="newsletter-form">
+                    <input type="email" placeholder="Entrez votre email..." required>
+                    <button type="submit"><i class="fa-solid fa-arrow-right"></i></button>
+                </form>
+            </div>
         </div>
 
-        <!-- Colonne 2: Navigation -->
-        <div class="footer-column">
-            <h4>Navigation</h4>
-            <ul class="footer-links">
-                <li><a href="page_accueil.html">Recherche</a></li>  <!-- Changé de # à page_accueil.html -->
-                <li><a href="page_panier.html">Mon panier</a></li>  <!-- Déjà correct -->
-                <li><a href="#categories">Catégories</a></li>  <!-- Ancre vers section catégories -->
-                <li><a href="#moment">Produits du moment</a></li>  <!-- Ancre vers section produit du moment -->
-            </ul>
+        <!-- Copyright -->
+        <div class="footer-bottom">
+            <p>© 2024, Tous droits réservés - Elytech</p>
         </div>
-
-        <!-- Colonne 3: A propos -->
-        <div class="footer-column">
-            <h4>À Propos</h4>
-            <ul class="footer-links">
-                <li><a href="#about">Qui sommes-nous</a></li>  <!-- Ancre à définir -->
-                <li><a href="page_contact.html">Nous contacter</a></li>  <!-- Déjà correct -->
-                <li><a href="#faq">FAQ</a></li>  <!-- Ancre à définir -->
-                <li><a href="#terms">Conditions d'utilisation</a></li>  <!-- Ancre à définir -->
-                <li><a href="#privacy">Politique de confidentialité</a></li>  <!-- Ancre à définir -->
-            </ul>
-        </div>
-
-        <!-- Colonne 4: Newsletter -->
-        <div class="footer-column">
-            <h4>Inscrivez-vous à notre newsletter</h4>
-            <p>Recevez nos meilleures produits et offres chaque semaine directement dans votre boîte mail.</p>
-            <form class="newsletter-form">
-                <input type="email" placeholder="Entrez votre email..." required>
-                <button type="submit"><i class="fa-solid fa-arrow-right"></i></button>
-            </form>
-        </div>
-    </div>
-
-    <!-- Copyright -->
-    <div class="footer-bottom">
-        <p>© 2024, Tous droits réservés - Elytech</p>
-    </div>
-</footer>
+    </footer>
 
 </body>
+
 </html>

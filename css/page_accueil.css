@@ -621,7 +621,7 @@ form {
 
 .hero-container2 {
     display: grid; /* Disposition en grille */
-    grid-template-columns: repeat(5, 1fr); /* 5 colonnes égales */
+    grid-template-columns: repeat(4, 1fr); /* 4 colonnes égales */
     gap: 20px; /* Espacement entre les éléments */
     max-width: 1400px; /* Largeur maximale */
     margin: 0 auto; /* Centrage horizontal */

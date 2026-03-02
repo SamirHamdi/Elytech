@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="/css/page_recette.css">
+    <link rel="stylesheet" href="/css/page_produit.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -16,12 +16,12 @@
     <nav class="navbar">
         <div class="navbar-container">
             <div class="navbar-logo">
-                <a href="page_accueil.html">Cooking 4 Noob</a>
+                <a href="page_accueil.html">Elytech</a>
             </div>
             <div>
                 <form action="" method="get">
                     <div class="search-bar-nav">
-                        <input type="text" placeholder="Que voulez-vous manger?">
+                        <input type="text" placeholder="Rechercher">
                         <button type="submit"><i class="fa-solid fa-magnifying-glass"></i></button>
                     </div>
                 </form>
@@ -32,98 +32,96 @@
                         <path
                             d="M200-246q54-53 125.5-83.5T480-360q83 0 154.5 30.5T760-246v-514H200v514Zm280-194q58 0 99-41t41-99q0-58-41-99t-99-41q-58 0-99 41t-41 99q0 58 41 99t99 41ZM200-120q-33 0-56.5-23.5T120-200v-560q0-33 23.5-56.5T200-840h560q33 0 56.5 23.5T840-760v560q0 33-23.5 56.5T760-120H200Zm69-80h422q-44-39-99.5-59.5T480-280q-56 0-112.5 20.5T269-200Zm211-320q-25 0-42.5-17.5T420-580q0-25 17.5-42.5T480-640q25 0 42.5 17.5T540-580q0 25-17.5 42.5T480-520Zm0 17Z" />
                     </svg></a>
-                <a href="page_favori.html" class="nav-icon">❤️</a>
+                <a href="page_panier.html" class="nav-icon">🛒</a>
             </div>
         </div>
     </nav>
 
-    <!--Section main-->
-
-
-    <!-- Barre de recherche -->
-    <div class="top-bar">
-        <input type="text" placeholder="Gâteau au yaourt">
-        <div class="rating">
-            ⭐ 5 <span>(146)</span>
-        </div>
-    </div>
-    </div>
     <section class="hero">
         <div class="text">
-            <h1>Gâteau au yaourt</h1>
+            <div class="product-title-bar">
+                <h1>Ordinateur fixe classique</h1>
+                <button class="btn-add-cart">
+                    <i class="fa-solid fa-cart-shopping"></i> Ajouter au panier
+                </button>
+            </div>
         </div>
-        <section class="gallery-container">
 
+        <section class="gallery-container">
             <div class="gallery-main-image">
-                <img src="/images/gato4.jpg" alt="Image principale">
+                <img src="/images pc/pc fixe/pcCL1.jpg" alt="Image principale">
             </div>
             <div class="gallery-side-images">
                 <div class="gallery-small-image">
-                    <img src="/images/gato1.jpg" alt="Gâteau1">
+                    <img src="/images pc/pc fixe/pcsecond.webp" alt="pc1">
                 </div>
                 <div class="gallery-small-image">
-                    <img src="/images/gatoto.jpg" alt="Gâteau2">
+                    <img src="/images pc/pc fixe/pcthird.jpg" alt="pc2">
                 </div>
                 <div class="gallery-small-image">
-                    <img src="/images/gato2.jpg" alt="Gâteau3">
+                    <img src="/images pc/pc fixe/pcfourth.jpg" alt="pc3">
                 </div>
                 <div class="gallery-small-image">
-                    <img src="/images/gato.jpg" alt="Gâteau4">
+                    <img src="/images pc/pc fixe/pcfifth.jpg" alt="pc4">
                 </div>
             </div>
         </section>
     </section>
 
-
     <div class="recipe-content">
         <section class="ingredients">
-            <h2>Ingrédients</h2>
+            <h2>Caractéristiques techniques</h2>
             <ul>
                 <li>
-                    <img src="/images/farine.jpg" alt="Farine">
-                    <span>250g de farine</span>
+                    <img src="/images pc/Composant/msipro.jpg" alt="Carte mère">
+                    <span>Carte mère H610M-E PRO MSI</span>
                 </li>
                 <li>
-                    <img src="/images/the oeuf.jpg" alt="Œufs">
-                    <span>3 œufs</span>
+                    <img src="/images pc/Composant/i5.jpg" alt="Processeur">
+                    <span>Processeur INTEL Core i5-12400F</span>
                 </li>
                 <li>
-                    <img src="/images/lait.jpg" alt="Lait">
-                    <span>50cl de lait</span>
+                    <img src="/images pc/Composant/venti.jpg" alt="Ventirad">
+                    <span>Ventirad Deepcool AG400 ARGB V2+ kryonaut Extreme</span>
                 </li>
                 <li>
-                    <img src="/images/beure.jpg" alt="Beurre">
-                    <span>50g de beurre fondu</span>
+                    <img src="/images pc/Composant/16go.jpg" alt="RAM">
+                    <span>16Go DDR4 3200Mhz Kingston Fury Beast (2x8Go)</span>
                 </li>
                 <li>
-                    <img src="/images/sel.jpg" alt="Sel">
-                    <span>1 pincée de sel</span>
+                    <img src="/images pc/Composant/geforce.jpg" alt="GPU">
+                    <span>Geforce RTX-5060 Windforce OC 8Go Gigabyte</span>
                 </li>
             </ul>
+
+            <div class="product-price">
+                <span class="price-label">Prix</span>
+                <span class="price-amount">999 €</span>
+            </div>
         </section>
 
         <section class="steps">
             <h2>Étapes de préparation</h2>
             <ol>
                 <li>
-                    <strong>Étape 1</strong>
-                    <p>Dans un grand bol, mélangez la farine avec le sel.</p>
+                    <strong>Carte mère</strong>
+                    <p>Intel H610 - Socket LGA1700 - Micro ATX - Alder Lake S - Compatible processeurs Intel Core 12ème génération - Support DDR4</p>
                 </li>
                 <li>
-                    <strong>Étape 2</strong>
-                    <p>Ajoutez les œufs un par un en mélangeant bien entre chaque ajout.</p>
+                    <strong>Processeur</strong>
+                    <p>6 coeurs, 12 threads, 2.5 GHz, 18 Mo, Alder Lake, 65/117 Watts, CM8071504555318, version sans boîte sans ventilateur</p>
                 </li>
                 <li>
-                    <strong>Étape 3</strong>
-                    <p>Incorporez progressivement le lait tout en remuant pour éviter les grumeaux.</p>
+                    <strong>Ventilateur</strong>
+                    <p>Actif Raccordement 4 pins Niveau de bruit 31,6 dB Vitesse max. de rotation 2 100 tr/min Hauteur totale 154 mm</p>
                 </li>
                 <li>
-                    <strong>Étape 4</strong>
-                    <p>Ajoutez le beurre fondu et mélangez jusqu'à obtenir une pâte lisse.</p>
+                    <strong>Mémoire</strong>
+                    <p>16Go/CL16-Kingston FURY Beast DDR4 module 16 Go DIMM 288 broches 3200 MHz PC4 25600 memoire sans tampon</p>
                 </li>
                 <li>
-                    <strong>Étape 5</strong>
-                    <p>Laissez reposer la pâte pendant 30 minutes avant utilisation.</p>
+                    <strong>Carte graphique</strong>
+                    <p>GeForce RTX 5060, PCI-Express 8x, 8 Go GDDR7, DLSS 4, HDMI / 3x DisplayPort</p>
                 </li>
             </ol>
         </section>
@@ -136,13 +134,10 @@
             <img src="/images/homme1.jpg" alt="Photo de profil" class="profile-pic">
             <div class="comment-content">
                 <div class="comment-header">
-                    <h3>Alex Térieur</h3>
-                    <div class="rating-stars">
-                        ⭐⭐⭐⭐⭐
-                    </div>
+                    <h3>Thomas le goat</h3>
+                    <div class="rating-stars">⭐⭐⭐⭐⭐</div>
                 </div>
-                <p class="comment-text">Recette excellente ! Très facile à réaliser et le résultat est délicieux. Toute
-                    la famille a adoré 😊</p>
+                <p class="comment-text">Super, je te valide ton ccp1</p>
                 <span class="comment-date">Il y a 2 jours</span>
             </div>
         </div>
@@ -152,12 +147,9 @@
             <div class="comment-content">
                 <div class="comment-header">
                     <h3>Justin Ptipeu</h3>
-                    <div class="rating-stars">
-                        ⭐⭐⭐⭐
-                    </div>
+                    <div class="rating-stars">⭐⭐⭐⭐</div>
                 </div>
-                <p class="comment-text">Très bonne recette, j'ai juste ajouté un peu de vanille pour plus de goût. Je
-                    recommande !</p>
+                <p class="comment-text">Très bon produit, très performant !</p>
                 <span class="comment-date">Il y a 5 jours</span>
             </div>
         </div>
@@ -167,12 +159,9 @@
             <div class="comment-content">
                 <div class="comment-header">
                     <h3>Terry Kiki</h3>
-                    <div class="rating-stars">
-                        ⭐⭐⭐⭐⭐
-                    </div>
+                    <div class="rating-stars">⭐⭐⭐⭐⭐</div>
                 </div>
-                <p class="comment-text">Parfait pour un goûter ! Mes enfants en redemandent. Merci pour cette recette
-                    simple et efficace.</p>
+                <p class="comment-text">Excellent rapport qualité-prix, je recommande vivement !</p>
                 <span class="comment-date">Il y a 1 semaine</span>
             </div>
         </div>
@@ -182,73 +171,55 @@
             <div class="comment-content">
                 <div class="comment-header">
                     <h3>Jean Bonboeur</h3>
-                    <div class="rating-stars">
-                        ⭐⭐⭐⭐⭐
-                    </div>
+                    <div class="rating-stars">⭐⭐⭐⭐⭐</div>
                 </div>
-                <p class="comment-text">Recette inratable ! Même pour un débutant comme moi, c'était vraiment simple à
-                    faire.</p>
+                <p class="comment-text">Très satisfait de mon achat, livraison rapide et produit conforme à la description.</p>
                 <span class="comment-date">Il y a 2 semaines</span>
             </div>
         </div>
     </section>
 
-
-
-
-
-
-
     <footer class="footer-main">
         <div class="footer-container">
-            <!-- Colonne 1: A propos -->
             <div class="footer-column">
-                <h3>Cooking 4 Noob</h3>
-                <p>Des recettes simples et délicieuses pour tous les niveaux. Découvrez des plats du monde entier,
-                    faciles à réaliser chez vous.</p>
+                <h3>Elytech</h3>
+                <p>PC Gaming, tablette et composants -- la tech de qualité, accessible à tous les budgets.</p>
             </div>
-
-            <!-- Colonne 2: Navigation -->
             <div class="footer-column">
                 <h4>Navigation</h4>
                 <ul class="footer-links">
-                    <li><a href="#">Recherche</a></li>
-                    <li><a href="#">Mes Favoris</a></li>
-                    <li><a href="#">Catégories</a></li>
-                    <li><a href="#">Recettes du moment</a></li>
+                    <li><a href="page_accueil.html">Recherche</a></li>
+                    <li><a href="page_panier.html">Mon Panier</a></li>
+                    <li><a href="#categories">Catégories</a></li>
+                    <li><a href="#moment">Produits du moment</a></li>
                 </ul>
             </div>
-
-            <!-- Colonne 3: A propos -->
             <div class="footer-column">
                 <h4>À Propos</h4>
                 <ul class="footer-links">
-                    <li><a href="#">Qui sommes-nous</a></li>
-                    <li><a href="#">Nous contacter</a></li>
-                    <li><a href="#">FAQ</a></li>
-                    <li><a href="#">Conditions d'utilisation</a></li>
-                    <li><a href="#">Politique de confidentialité</a></li>
+                    <li><a href="#about">Qui sommes-nous</a></li>
+                    <li><a href="page_contact.html">Nous contacter</a></li>
+                    <li><a href="#faq">FAQ</a></li>
+                    <li><a href="#terms">Conditions d'utilisation</a></li>
+                    <li><a href="#privacy">Politique de confidentialité</a></li>
                 </ul>
             </div>
-
-            <!-- Colonne 4: Newsletter -->
             <div class="footer-column">
                 <h4>Inscrivez-vous à notre newsletter</h4>
-                <p>Recevez nos meilleures recettes et astuces culinaires chaque semaine directement dans votre boîte
-                    mail.</p>
+                <p>Recevez nos meilleures produits et offres chaque semaine directement dans votre boîte mail.</p>
                 <form class="newsletter-form">
                     <input type="email" placeholder="Entrez votre email..." required>
                     <button type="submit"><i class="fa-solid fa-arrow-right"></i></button>
                 </form>
             </div>
         </div>
-
-        <!-- Copyright -->
         <div class="footer-bottom">
-            <p>© 2024, Tous droits réservés - Cooking 4 Noob</p>
+            <p>© 2024, Tous droits réservés - Elytech</p>
         </div>
     </footer>
 
-</body>
+    <!-- Script panier -->
+    <script src="/js/panier.js"></script>
 
+</body>
 </html>
