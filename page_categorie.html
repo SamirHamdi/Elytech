@@ -1,0 +1,634 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ordinateur fixe - Elytech</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <link href="https://fonts.googleapis.com/css2?family=Kadwa:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/page_categorie.css">
+</head>
+<body>
+
+<!-- ── NAVBAR ── -->
+<nav class="navbar">
+  <div class="navbar-container">
+    <div class="navbar-logo">
+      <a href="page_accueil.html">Ely<span>tech</span></a>
+    </div>
+    <div>
+      <form action="" method="get">
+        <div class="search-bar-nav">
+          <input type="text" placeholder="Rechercher un produit...">
+          <button type="submit"><i class="fa-solid fa-magnifying-glass"></i></button>
+        </div>
+      </form>
+    </div>
+    <div class="navbar-icons">
+      <a href="page_contact.html" class="nav-icon">
+        <i class="fa-solid fa-envelope"></i>
+      </a>
+      <a href="page_profil.html" class="nav-icon-">
+        <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="white">
+          <path d="M200-246q54-53 125.5-83.5T480-360q83 0 154.5 30.5T760-246v-514H200v514Zm280-194q58 0 99-41t41-99q0-58-41-99t-99-41q-58 0-99 41t-41 99q0 58 41 99t99 41ZM200-120q-33 0-56.5-23.5T120-200v-560q0-33 23.5-56.5T200-840h560q33 0 56.5 23.5T840-760v560q0 33-23.5 56.5T760-120H200Zm69-80h422q-44-39-99.5-59.5T480-280q-56 0-112.5 20.5T269-200Zm211-320q-25 0-42.5-17.5T420-580q0-25 17.5-42.5T480-640q25 0 42.5 17.5T540-580q0 25-17.5 42.5T480-520Zm0 17Z"/>
+        </svg>
+      </a>
+      <a href="page_panier.html" class="nav-icon" style="font-size:1.2rem">🛒</a>
+    </div>
+  </div>
+</nav>
+
+<!-- ── HERO CATÉGORIE ── -->
+<section class="category-hero">
+  <div class="hero-inner">
+    <nav class="breadcrumb">
+      <a href="page_accueil.html">Accueil</a>
+      <span class="sep">›</span>
+      <a href="#">Catégories</a>
+      <span class="sep">›</span>
+      <span class="current">Ordinateur fixe</span>
+    </nav>
+    <h1>Ordinateur <span>fixe</span></h1>
+    <p>Explorez notre sélection de PC fixes : des machines performantes et durables, pour tous les budgets et tous les usages.</p>
+    <div class="hero-stats">
+      <div class="stat">
+        <span class="stat-number">8</span>
+        <span class="stat-label">Produits disponibles</span>
+      </div>
+      <div class="stat">
+        <span class="stat-number">4</span>
+        <span class="stat-label">Catégories</span>
+      </div>
+      <div class="stat">
+        <span class="stat-number">650€</span>
+        <span class="stat-label">À partir de</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ── BARRE CONTEXTUELLE ── -->
+<div class="context-bar">
+  <div class="context-bar-inner">
+    <div class="ctx-field" style="flex:1.5">
+      <i class="fa-solid fa-magnifying-glass"></i>
+      <div>
+        <span class="cf-label">Rechercher dans cette catégorie</span>
+        <div class="cf-value">Ordinateurs fixes</div>
+      </div>
+    </div>
+    <div class="ctx-field">
+      <i class="fa-solid fa-tag"></i>
+      <div>
+        <span class="cf-label">Budget maximum</span>
+        <div class="cf-value">Tous les prix</div>
+      </div>
+    </div>
+    <div class="ctx-field">
+      <i class="fa-solid fa-layer-group"></i>
+      <div>
+        <span class="cf-label">Type</span>
+        <div class="cf-value">Tous types</div>
+      </div>
+    </div>
+    <div class="ctx-field">
+      <i class="fa-solid fa-star"></i>
+      <div>
+        <span class="cf-label">Note minimale</span>
+        <div class="cf-value">Toutes les notes</div>
+      </div>
+    </div>
+    <button class="ctx-search-btn">
+      <i class="fa-solid fa-magnifying-glass"></i> Rechercher
+    </button>
+  </div>
+</div>
+
+<!-- ── LAYOUT PRINCIPAL ── -->
+<div class="main-layout">
+
+  <!-- ════ SIDEBAR FILTRES ════ -->
+  <aside class="sidebar">
+    <div class="filter-card">
+      <div class="filter-header">
+        <h3><i class="fa-solid fa-sliders" style="margin-right:6px"></i>Filtrer par</h3>
+        <button class="filter-reset">Tout effacer</button>
+      </div>
+
+      <!-- Budget -->
+      <div class="filter-section">
+        <div class="filter-section-title">Budget</div>
+        <input type="range" class="price-slider" min="0" max="1500" value="1500">
+        <div class="price-labels"><span>0 €</span><span>1 500 €+</span></div>
+        <br>
+        <label class="filter-label"><input type="checkbox"> Moins de 700 € <span class="count">3</span></label>
+        <label class="filter-label"><input type="checkbox"> 700 € – 1 000 € <span class="count">3</span></label>
+        <label class="filter-label"><input type="checkbox"> 1 000 € – 1 200 € <span class="count">1</span></label>
+        <label class="filter-label"><input type="checkbox"> 1 200 € et plus <span class="count">1</span></label>
+      </div>
+
+      <!-- Type -->
+      <div class="filter-section">
+        <div class="filter-section-title">Type de PC</div>
+        <label class="filter-label"><input type="checkbox" checked> Tous <span class="count">8</span></label>
+        <label class="filter-label"><input type="checkbox"> Classique <span class="count">2</span></label>
+        <label class="filter-label"><input type="checkbox"> Gaming <span class="count">2</span></label>
+        <label class="filter-label"><input type="checkbox"> Professionnel <span class="count">2</span></label>
+        <label class="filter-label"><input type="checkbox"> Tout usage <span class="count">2</span></label>
+      </div>
+
+      <!-- Note -->
+      <div class="filter-section">
+        <div class="filter-section-title">Note clients</div>
+        <label class="filter-label"><input type="checkbox"> <span class="stars">★★★★★</span> Excellent <span class="count">5</span></label>
+        <label class="filter-label"><input type="checkbox"> <span class="stars">★★★★☆</span> Très bien <span class="count">3</span></label>
+      </div>
+
+      <!-- Composants clés -->
+      <div class="filter-section">
+        <div class="filter-section-title">Carte graphique</div>
+        <label class="filter-label"><input type="checkbox"> RTX 5090 <span class="count">1</span></label>
+        <label class="filter-label"><input type="checkbox"> RTX 5080 <span class="count">1</span></label>
+        <label class="filter-label"><input type="checkbox"> RTX 5070 <span class="count">1</span></label>
+        <label class="filter-label"><input type="checkbox"> RTX 5060 <span class="count">4</span></label>
+        <label class="filter-label"><input type="checkbox"> RTX 3050 <span class="count">1</span></label>
+      </div>
+
+      <!-- RAM -->
+      <div class="filter-section">
+        <div class="filter-section-title">Mémoire RAM</div>
+        <label class="filter-label"><input type="checkbox"> 16 Go <span class="count">1</span></label>
+        <label class="filter-label"><input type="checkbox"> 32 Go <span class="count">5</span></label>
+        <label class="filter-label"><input type="checkbox"> 64 Go <span class="count">1</span></label>
+      </div>
+
+      <!-- Disponibilité -->
+      <div class="filter-section">
+        <div class="filter-section-title">Disponibilité</div>
+        <label class="filter-label"><input type="checkbox"> En stock <span class="count">7</span></label>
+        <label class="filter-label"><input type="checkbox"> Édition limitée <span class="count">1</span></label>
+        <label class="filter-label"><input type="checkbox"> Sur commande <span class="count">1</span></label>
+      </div>
+    </div>
+  </aside>
+
+  <!-- ════ RÉSULTATS ════ -->
+  <section class="results-zone">
+
+    <!-- En-tête résultats -->
+    <div class="results-header">
+      <div>
+        <div class="results-count">Ordinateurs fixes : <span>8</span> produits trouvés</div>
+        <div class="results-sub">Montés et testés par nos experts · Livraison disponible</div>
+      </div>
+      <div class="results-actions">
+        <button class="view-map-btn"><i class="fa-solid fa-store"></i> Voir en magasin</button>
+        <select class="sort-select">
+          <option>Notre sélection</option>
+          <option>Prix croissant</option>
+          <option>Prix décroissant</option>
+          <option>Meilleures notes</option>
+          <option>Plus récents</option>
+        </select>
+      </div>
+    </div>
+
+    <!-- Chips filtres actifs -->
+    <div class="active-filters">
+      <span class="chip">Tous les types <i class="fa-solid fa-xmark"></i></span>
+      <span class="chip">En stock <i class="fa-solid fa-xmark"></i></span>
+    </div>
+
+    <!-- Bande info -->
+    <div class="info-strip">
+      <i class="fa-solid fa-circle-info" style="color:var(--yellow);font-size:14px;flex-shrink:0"></i>
+      <span>Tous nos PC sont <strong>montés et testés</strong> avant expédition. Garantie 2 ans incluse.</span>
+    </div>
+
+    <!-- ═══ CARTE 1 ═══ -->
+    <div class="product-card">
+      <div class="promo-badge">⭐ Bestseller</div>
+      <button class="card-fav-btn"><i class="fa-regular fa-heart"></i></button>
+      <img class="product-img" src="/images pc/pc fixe/pcCL1.jpg" alt="Ordinateur fixe classique">
+      <div class="product-body">
+        <div class="product-info">
+          <span class="product-type">Classique</span>
+          <div class="product-name">Ordinateur fixe classique — Ryzen 7 / RTX 5080</div>
+          <div class="product-rating">★★★★★</div>
+          <div class="product-badges">
+            <span class="pbadge pbadge-green">En stock</span>
+            <span class="pbadge pbadge-teal">Monté & testé</span>
+            <span class="pbadge pbadge-gold">Garantie 2 ans</span>
+          </div>
+          <p class="product-desc">NVIDIA GeForce RTX 5080 · AMD Ryzen 7 9800X3D · 32 Go DDR5 · SSD NVMe 2 To · Windows 11 version d'essai</p>
+          <div class="product-specs">
+            <span class="spec">DDR5 32 Go</span>
+            <span class="spec">SSD 2 To NVMe</span>
+            <span class="spec">Win 11 inclus</span>
+            <span class="spec">Refroidissement custom</span>
+          </div>
+        </div>
+        <div class="product-right">
+          <div class="score-block">
+            <div class="score-text">
+              <div class="slabel">Excellent</div>
+              <div class="scount">142 avis</div>
+            </div>
+            <div class="score-badge">4.9</div>
+          </div>
+          <div class="price-block">
+            <div class="price-nights">Prix unitaire TTC</div>
+            <div class="price-old">1 100 €</div>
+            <div class="price-current">950 €</div>
+            <div class="price-ttc">TVA incluse</div>
+            <div class="price-economy">Vous économisez 150 €</div>
+            <button class="btn-voir" onclick="location.href='page_produit.html'">
+              <i class="fa-solid fa-cart-shopping"></i> Voir le produit
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- ═══ CARTE 2 ═══ -->
+    <div class="product-card">
+      <button class="card-fav-btn"><i class="fa-regular fa-heart"></i></button>
+      <img class="product-img" src="/images pc/pc fixe/pcCL2.jpg" alt="Ordinateur fixe classique 2">
+      <div class="product-body">
+        <div class="product-info">
+          <span class="product-type">Classique</span>
+          <div class="product-name">Ordinateur fixe classique — Ryzen 5 / RTX 5060</div>
+          <div class="product-rating">★★★★★</div>
+          <div class="product-badges">
+            <span class="pbadge pbadge-green">En stock</span>
+            <span class="pbadge pbadge-teal">Monté & testé</span>
+          </div>
+          <p class="product-desc">NVIDIA GeForce RTX 5060 · AMD Ryzen 5 5500 · 32 Go DDR4 · SSD NVMe 1 To · Windows 11 version d'essai</p>
+          <div class="product-specs">
+            <span class="spec">DDR4 32 Go</span>
+            <span class="spec">SSD 1 To</span>
+            <span class="spec">Idéal bureau</span>
+          </div>
+        </div>
+        <div class="product-right">
+          <div class="score-block">
+            <div class="score-text">
+              <div class="slabel">Excellent</div>
+              <div class="scount">98 avis</div>
+            </div>
+            <div class="score-badge">4.8</div>
+          </div>
+          <div class="price-block">
+            <div class="price-nights">Prix unitaire TTC</div>
+            <div class="price-current">750 €</div>
+            <div class="price-ttc">TVA incluse</div>
+            <button class="btn-voir">
+              <i class="fa-solid fa-cart-shopping"></i> Voir le produit
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- ═══ CARTE 3 — Gaming ═══ -->
+    <div class="product-card">
+      <div class="promo-badge">🔥 Gaming</div>
+      <button class="card-fav-btn"><i class="fa-regular fa-heart"></i></button>
+      <img class="product-img" src="/images pc/pc fixe/pcgaming.jpg" alt="Ordinateur fixe gaming">
+      <div class="product-body">
+        <div class="product-info">
+          <span class="product-type" style="background:#fde8e8;color:#8b0000">Gaming</span>
+          <div class="product-name">Ordinateur fixe gaming — Ryzen 9 / RTX 5090</div>
+          <div class="product-rating">★★★★☆</div>
+          <div class="product-badges">
+            <span class="pbadge pbadge-green">En stock</span>
+            <span class="pbadge pbadge-teal">Monté & testé</span>
+            <span class="pbadge pbadge-gold">Édition limitée</span>
+          </div>
+          <p class="product-desc">NVIDIA GeForce RTX 5090 · AMD Ryzen 9 9950X · 64 Go DDR5 · SSD NVMe 4 To · Windows 11 version d'essai</p>
+          <div class="product-specs">
+            <span class="spec">DDR5 64 Go</span>
+            <span class="spec">SSD 4 To NVMe</span>
+            <span class="spec">Watercooling</span>
+            <span class="spec">RGB Premium</span>
+          </div>
+        </div>
+        <div class="product-right">
+          <div class="score-block">
+            <div class="score-text">
+              <div class="slabel">Très bien</div>
+              <div class="scount">67 avis</div>
+            </div>
+            <div class="score-badge">4.5</div>
+          </div>
+          <div class="price-block">
+            <div class="price-nights">Prix unitaire TTC</div>
+            <div class="price-old">1 550 €</div>
+            <div class="price-current">1 300 €</div>
+            <div class="price-ttc">TVA incluse</div>
+            <div class="price-economy">Vous économisez 250 €</div>
+            <button class="btn-voir">
+              <i class="fa-solid fa-cart-shopping"></i> Voir le produit
+            </button>
+            <div class="stock-alert">⚠ Plus que 2 en stock !</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- ═══ CARTE 4 ═══ -->
+    <div class="product-card">
+      <button class="card-fav-btn"><i class="fa-regular fa-heart"></i></button>
+      <img class="product-img" src="/images pc/pc fixe/pcgaming2.jpg" alt="Ordinateur fixe gaming 2">
+      <div class="product-body">
+        <div class="product-info">
+          <span class="product-type" style="background:#fde8e8;color:#8b0000">Gaming</span>
+          <div class="product-name">Ordinateur fixe gaming — Ryzen 7 / RTX 5070</div>
+          <div class="product-rating">★★★★★</div>
+          <div class="product-badges">
+            <span class="pbadge pbadge-green">En stock</span>
+            <span class="pbadge pbadge-teal">Monté & testé</span>
+          </div>
+          <p class="product-desc">NVIDIA GeForce RTX 5070 · AMD Ryzen 7 9800X3D · 32 Go DDR5 · SSD NVMe 2 To · Windows 11 version d'essai</p>
+          <div class="product-specs">
+            <span class="spec">DDR5 32 Go</span>
+            <span class="spec">SSD 2 To</span>
+            <span class="spec">Boîtier Mid-Tower</span>
+          </div>
+        </div>
+        <div class="product-right">
+          <div class="score-block">
+            <div class="score-text">
+              <div class="slabel">Excellent</div>
+              <div class="scount">113 avis</div>
+            </div>
+            <div class="score-badge">4.9</div>
+          </div>
+          <div class="price-block">
+            <div class="price-nights">Prix unitaire TTC</div>
+            <div class="price-current">1 100 €</div>
+            <div class="price-ttc">TVA incluse</div>
+            <button class="btn-voir">
+              <i class="fa-solid fa-cart-shopping"></i> Voir le produit
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- ═══ CARTE 5 — Pro ═══ -->
+    <div class="product-card">
+      <button class="card-fav-btn"><i class="fa-regular fa-heart"></i></button>
+      <img class="product-img" src="/images pc/pc fixe/pcfixePro.jpg" alt="Ordinateur fixe professionnel">
+      <div class="product-body">
+        <div class="product-info">
+          <span class="product-type" style="background:#e8eaf6;color:#283593">Professionnel</span>
+          <div class="product-name">Ordinateur fixe professionnel — Ryzen 5 / RTX 5060</div>
+          <div class="product-rating">★★★★★</div>
+          <div class="product-badges">
+            <span class="pbadge pbadge-green">En stock</span>
+            <span class="pbadge pbadge-teal">Monté & testé</span>
+            <span class="pbadge pbadge-gold">Garantie 2 ans</span>
+          </div>
+          <p class="product-desc">NVIDIA GeForce RTX 5060 · AMD Ryzen 5 5500 · 32 Go DDR4 · SSD NVMe 1 To · Windows 11 version d'essai</p>
+          <div class="product-specs">
+            <span class="spec">DDR4 32 Go</span>
+            <span class="spec">Compact & silencieux</span>
+            <span class="spec">Usage bureau intensif</span>
+          </div>
+        </div>
+        <div class="product-right">
+          <div class="score-block">
+            <div class="score-text">
+              <div class="slabel">Excellent</div>
+              <div class="scount">76 avis</div>
+            </div>
+            <div class="score-badge">4.8</div>
+          </div>
+          <div class="price-block">
+            <div class="price-nights">Prix unitaire TTC</div>
+            <div class="price-current">800 €</div>
+            <div class="price-ttc">TVA incluse</div>
+            <button class="btn-voir">
+              <i class="fa-solid fa-cart-shopping"></i> Voir le produit
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- ═══ CARTE 6 — Pro édition limitée ═══ -->
+    <div class="product-card">
+      <div class="promo-badge">⚡ Éd. limitée</div>
+      <button class="card-fav-btn"><i class="fa-regular fa-heart"></i></button>
+      <img class="product-img" src="/images pc/pc fixe/pcPro2.png" alt="Ordinateur fixe professionnel 2">
+      <div class="product-body">
+        <div class="product-info">
+          <span class="product-type" style="background:#e8eaf6;color:#283593">Professionnel</span>
+          <div class="product-name">Ordinateur fixe pro — Intel Ultra 5 / RTX 5060 (Éd. limitée)</div>
+          <div class="product-rating">★★★★☆</div>
+          <div class="product-badges">
+            <span class="pbadge pbadge-gold">Édition limitée</span>
+            <span class="pbadge pbadge-teal">Licence Win 11 fournie</span>
+            <span class="pbadge pbadge-green">Monté & testé</span>
+          </div>
+          <p class="product-desc">NVIDIA GeForce RTX 5060 · Intel Core Ultra 5 225F · 16 Go DDR5 · SSD NVMe 1 To · Windows 11 avec licence complète</p>
+          <div class="product-specs">
+            <span class="spec">DDR5 16 Go</span>
+            <span class="spec">Licence Win 11 incluse</span>
+            <span class="spec">Design épuré</span>
+          </div>
+        </div>
+        <div class="product-right">
+          <div class="score-block">
+            <div class="score-text">
+              <div class="slabel">Très bien</div>
+              <div class="scount">54 avis</div>
+            </div>
+            <div class="score-badge">4.4</div>
+          </div>
+          <div class="price-block">
+            <div class="price-nights">Prix unitaire TTC</div>
+            <div class="price-old">750 €</div>
+            <div class="price-current">650 €</div>
+            <div class="price-ttc">TVA incluse</div>
+            <div class="price-economy">Vous économisez 100 €</div>
+            <button class="btn-voir">
+              <i class="fa-solid fa-cart-shopping"></i> Voir le produit
+            </button>
+            <div class="stock-alert">⚠ Dernières unités !</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- ═══ CARTE 7 ═══ -->
+    <div class="product-card">
+      <button class="card-fav-btn"><i class="fa-regular fa-heart"></i></button>
+      <img class="product-img" src="/images pc/pc fixe/pcfixe1.jpg" alt="Ordinateur tout usage">
+      <div class="product-body">
+        <div class="product-info">
+          <span class="product-type" style="background:#f3e5f5;color:#6a1b9a">Tout usage</span>
+          <div class="product-name">Ordinateur tout usage — Ryzen 7 / RTX 5060</div>
+          <div class="product-rating">★★★★★</div>
+          <div class="product-badges">
+            <span class="pbadge pbadge-green">En stock</span>
+            <span class="pbadge pbadge-teal">Licence fournie</span>
+          </div>
+          <p class="product-desc">NVIDIA GeForce RTX 5060 · AMD Ryzen 7 5800X · 32 Go DDR4 · SSD NVMe 1 To · Windows 11 avec licence fournie</p>
+          <div class="product-specs">
+            <span class="spec">DDR4 32 Go</span>
+            <span class="spec">Polyvalent</span>
+            <span class="spec">Licence Win incluse</span>
+          </div>
+        </div>
+        <div class="product-right">
+          <div class="score-block">
+            <div class="score-text">
+              <div class="slabel">Excellent</div>
+              <div class="scount">89 avis</div>
+            </div>
+            <div class="score-badge">4.9</div>
+          </div>
+          <div class="price-block">
+            <div class="price-nights">Prix unitaire TTC</div>
+            <div class="price-current">700 €</div>
+            <div class="price-ttc">TVA incluse</div>
+            <button class="btn-voir">
+              <i class="fa-solid fa-cart-shopping"></i> Voir le produit
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- ═══ CARTE 8 ═══ -->
+    <div class="product-card">
+      <button class="card-fav-btn"><i class="fa-regular fa-heart"></i></button>
+      <img class="product-img" src="/images pc/pc fixe/pcfixe2.jpg" alt="Ordinateur tout usage 2">
+      <div class="product-body">
+        <div class="product-info">
+          <span class="product-type" style="background:#f3e5f5;color:#6a1b9a">Tout usage</span>
+          <div class="product-name">Ordinateur tout usage — Ryzen 5 / RTX 3050</div>
+          <div class="product-rating">★★★★☆</div>
+          <div class="product-badges">
+            <span class="pbadge pbadge-teal">Sur commande</span>
+            <span class="pbadge pbadge-teal">Monté à la commande</span>
+          </div>
+          <p class="product-desc">NVIDIA GeForce RTX 3050 · AMD Ryzen 5 5500 · 16 Go DDR4 · SSD NVMe 1 To · Windows 11 version d'essai</p>
+          <div class="product-specs">
+            <span class="spec">DDR4 16 Go</span>
+            <span class="spec">Personnalisable</span>
+            <span class="spec">Montage sur commande</span>
+          </div>
+        </div>
+        <div class="product-right">
+          <div class="score-block">
+            <div class="score-text">
+              <div class="slabel">Très bien</div>
+              <div class="scount">31 avis</div>
+            </div>
+            <div class="score-badge">4.3</div>
+          </div>
+          <div class="price-block">
+            <div class="price-nights">Prix unitaire TTC</div>
+            <div class="price-current">1 150 €</div>
+            <div class="price-ttc">TVA incluse</div>
+            <button class="btn-voir">
+              <i class="fa-solid fa-cart-shopping"></i> Voir le produit
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- PAGINATION -->
+    <div class="pagination">
+      <button class="page-btn" disabled>‹</button>
+      <button class="page-btn active">1</button>
+      <button class="page-btn">2</button>
+      <button class="page-btn">3</button>
+      <button class="page-btn">›</button>
+    </div>
+
+  </section>
+</div>
+
+<!-- ── FOOTER ── -->
+<footer class="footer-main">
+  <div class="footer-container">
+    <div class="footer-column">
+      <h3>Elytech</h3>
+      <p>PC Gaming, tablette et composants — la tech de qualité, accessible à tous les budgets.</p>
+    </div>
+    <div class="footer-column">
+      <h4>Navigation</h4>
+      <ul class="footer-links">
+        <li><a href="page_accueil.html">Accueil</a></li>
+        <li><a href="page_panier.html">Mon panier</a></li>
+        <li><a href="#categories">Catégories</a></li>
+        <li><a href="#moment">Produits du moment</a></li>
+      </ul>
+    </div>
+    <div class="footer-column">
+      <h4>À Propos</h4>
+      <ul class="footer-links">
+        <li><a href="#about">Qui sommes-nous</a></li>
+        <li><a href="page_contact.html">Nous contacter</a></li>
+        <li><a href="#faq">FAQ</a></li>
+        <li><a href="#terms">Conditions d'utilisation</a></li>
+        <li><a href="#privacy">Politique de confidentialité</a></li>
+      </ul>
+    </div>
+    <div class="footer-column">
+      <h4>Inscrivez-vous à notre newsletter</h4>
+      <p>Recevez nos meilleures produits et offres chaque semaine directement dans votre boîte mail.</p>
+      <form class="newsletter-form">
+        <input type="email" placeholder="Entrez votre email..." required>
+        <button type="submit"><i class="fa-solid fa-arrow-right"></i></button>
+      </form>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <p>© 2024, Tous droits réservés — Elytech</p>
+  </div>
+</footer>
+
+<script>
+  // Filtres actifs toggle
+  document.querySelectorAll('.filter-btn').forEach(btn => {
+    btn.addEventListener('click', () => {
+      document.querySelectorAll('.filter-btn').forEach(b => b.classList.remove('active'));
+      btn.classList.add('active');
+    });
+  });
+
+  // Favoris toggle
+  document.querySelectorAll('.card-fav-btn').forEach(btn => {
+    btn.addEventListener('click', e => {
+      e.stopPropagation();
+      const icon = btn.querySelector('i');
+      icon.classList.toggle('fa-regular');
+      icon.classList.toggle('fa-solid');
+      if (icon.classList.contains('fa-solid')) {
+        icon.style.color = '#e63946';
+        btn.style.background = '#ffefef';
+      } else {
+        icon.style.color = 'var(--green)';
+        btn.style.background = 'white';
+      }
+    });
+  });
+
+  // Chip suppression filtre
+  document.querySelectorAll('.chip').forEach(chip => {
+    chip.addEventListener('click', () => chip.remove());
+  });
+
+  // Tri select
+  document.querySelector('.sort-select').addEventListener('change', function() {
+    console.log('Tri par :', this.value);
+  });
+</script>
+</body>
+</html>
