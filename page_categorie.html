@@ -70,37 +70,81 @@
 <!-- ── BARRE CONTEXTUELLE ── -->
 <div class="context-bar">
   <div class="context-bar-inner">
-    <div class="ctx-field" style="flex:1.5">
+
+    <!-- Champ 1 : Catégorie -->
+    <div class="ctx-field" style="flex:1.5" id="field-search">
       <i class="fa-solid fa-magnifying-glass"></i>
       <div>
         <span class="cf-label">Rechercher dans cette catégorie</span>
-        <div class="cf-value">Ordinateurs fixes</div>
+        <div class="cf-value" id="val-search">Ordinateurs fixes</div>
+      </div>
+      <i class="fa-solid fa-chevron-down arrow"></i>
+      <div class="dropdown-menu">
+        <div class="dropdown-header">Choisir une catégorie</div>
+        <div class="dropdown-option selected" data-value="Ordinateurs fixes">Ordinateurs fixes</div>
+        <div class="dropdown-option" data-value="Ordinateurs portables">Ordinateurs portables</div>
+        <div class="dropdown-option" data-value="Tablettes">Tablettes</div>
+        <div class="dropdown-option" data-value="Composants">Composants</div>
       </div>
     </div>
-    <div class="ctx-field">
+
+    <!-- Champ 2 : Budget -->
+    <div class="ctx-field" id="field-budget">
       <i class="fa-solid fa-tag"></i>
       <div>
         <span class="cf-label">Budget maximum</span>
-        <div class="cf-value">Tous les prix</div>
+        <div class="cf-value" id="val-budget">Tous les prix</div>
+      </div>
+      <i class="fa-solid fa-chevron-down arrow"></i>
+      <div class="dropdown-menu">
+        <div class="dropdown-header">Choisir un budget</div>
+        <div class="dropdown-option selected" data-value="Tous les prix">Tous les prix</div>
+        <div class="dropdown-option" data-value="Moins de 700 €">Moins de 700 €</div>
+        <div class="dropdown-option" data-value="700 € – 1 000 €">700 € – 1 000 €</div>
+        <div class="dropdown-option" data-value="1 000 € – 1 200 €">1 000 € – 1 200 €</div>
+        <div class="dropdown-option" data-value="1 200 € et plus">1 200 € et plus</div>
       </div>
     </div>
-    <div class="ctx-field">
+
+    <!-- Champ 3 : Type -->
+    <div class="ctx-field" id="field-type">
       <i class="fa-solid fa-layer-group"></i>
       <div>
-        <span class="cf-label">Type</span>
-        <div class="cf-value">Tous types</div>
+        <span class="cf-label">Type de PC</span>
+        <div class="cf-value" id="val-type">Tous types</div>
+      </div>
+      <i class="fa-solid fa-chevron-down arrow"></i>
+      <div class="dropdown-menu">
+        <div class="dropdown-header">Choisir un type</div>
+        <div class="dropdown-option selected" data-value="Tous types">Tous types</div>
+        <div class="dropdown-option" data-value="Classique">Classique</div>
+        <div class="dropdown-option" data-value="Gaming">🎮 Gaming</div>
+        <div class="dropdown-option" data-value="Professionnel">💼 Professionnel</div>
+        <div class="dropdown-option" data-value="Tout usage">🔧 Tout usage</div>
       </div>
     </div>
-    <div class="ctx-field">
+
+    <!-- Champ 4 : Note -->
+    <div class="ctx-field" id="field-note">
       <i class="fa-solid fa-star"></i>
       <div>
         <span class="cf-label">Note minimale</span>
-        <div class="cf-value">Toutes les notes</div>
+        <div class="cf-value" id="val-note">Toutes les notes</div>
+      </div>
+      <i class="fa-solid fa-chevron-down arrow"></i>
+      <div class="dropdown-menu">
+        <div class="dropdown-header">Choisir une note</div>
+        <div class="dropdown-option selected" data-value="Toutes les notes">Toutes les notes</div>
+        <div class="dropdown-option" data-value="4.5 et plus">⭐ 4.5 et plus — Excellent</div>
+        <div class="dropdown-option" data-value="4.0 et plus">⭐ 4.0 et plus — Très bien</div>
+        <div class="dropdown-option" data-value="3.5 et plus">⭐ 3.5 et plus — Bien</div>
       </div>
     </div>
-    <button class="ctx-search-btn">
+
+    <button class="ctx-search-btn" id="btn-search">
       <i class="fa-solid fa-magnifying-glass"></i> Rechercher
     </button>
+
   </div>
 </div>
 
@@ -208,7 +252,6 @@
     <!-- ═══ CARTE 1 ═══ -->
     <div class="product-card">
       <div class="promo-badge">⭐ Bestseller</div>
-      <button class="card-fav-btn"><i class="fa-regular fa-heart"></i></button>
       <img class="product-img" src="/images pc/pc fixe/pcCL1.jpg" alt="Ordinateur fixe classique">
       <div class="product-body">
         <div class="product-info">
@@ -252,7 +295,6 @@
 
     <!-- ═══ CARTE 2 ═══ -->
     <div class="product-card">
-      <button class="card-fav-btn"><i class="fa-regular fa-heart"></i></button>
       <img class="product-img" src="/images pc/pc fixe/pcCL2.jpg" alt="Ordinateur fixe classique 2">
       <div class="product-body">
         <div class="product-info">
@@ -293,7 +335,6 @@
     <!-- ═══ CARTE 3 — Gaming ═══ -->
     <div class="product-card">
       <div class="promo-badge">🔥 Gaming</div>
-      <button class="card-fav-btn"><i class="fa-regular fa-heart"></i></button>
       <img class="product-img" src="/images pc/pc fixe/pcgaming.jpg" alt="Ordinateur fixe gaming">
       <div class="product-body">
         <div class="product-info">
@@ -338,7 +379,6 @@
 
     <!-- ═══ CARTE 4 ═══ -->
     <div class="product-card">
-      <button class="card-fav-btn"><i class="fa-regular fa-heart"></i></button>
       <img class="product-img" src="/images pc/pc fixe/pcgaming2.jpg" alt="Ordinateur fixe gaming 2">
       <div class="product-body">
         <div class="product-info">
@@ -378,7 +418,6 @@
 
     <!-- ═══ CARTE 5 — Pro ═══ -->
     <div class="product-card">
-      <button class="card-fav-btn"><i class="fa-regular fa-heart"></i></button>
       <img class="product-img" src="/images pc/pc fixe/pcfixePro.jpg" alt="Ordinateur fixe professionnel">
       <div class="product-body">
         <div class="product-info">
@@ -420,7 +459,6 @@
     <!-- ═══ CARTE 6 — Pro édition limitée ═══ -->
     <div class="product-card">
       <div class="promo-badge">⚡ Éd. limitée</div>
-      <button class="card-fav-btn"><i class="fa-regular fa-heart"></i></button>
       <img class="product-img" src="/images pc/pc fixe/pcPro2.png" alt="Ordinateur fixe professionnel 2">
       <div class="product-body">
         <div class="product-info">
@@ -464,7 +502,6 @@
 
     <!-- ═══ CARTE 7 ═══ -->
     <div class="product-card">
-      <button class="card-fav-btn"><i class="fa-regular fa-heart"></i></button>
       <img class="product-img" src="/images pc/pc fixe/pcfixe1.jpg" alt="Ordinateur tout usage">
       <div class="product-body">
         <div class="product-info">
@@ -504,7 +541,6 @@
 
     <!-- ═══ CARTE 8 ═══ -->
     <div class="product-card">
-      <button class="card-fav-btn"><i class="fa-regular fa-heart"></i></button>
       <img class="product-img" src="/images pc/pc fixe/pcfixe2.jpg" alt="Ordinateur tout usage 2">
       <div class="product-body">
         <div class="product-info">
@@ -595,15 +631,7 @@
 </footer>
 
 <script>
-  // Filtres actifs toggle
-  document.querySelectorAll('.filter-btn').forEach(btn => {
-    btn.addEventListener('click', () => {
-      document.querySelectorAll('.filter-btn').forEach(b => b.classList.remove('active'));
-      btn.classList.add('active');
-    });
-  });
-
-  // Favoris toggle
+  // ── Favoris toggle ──
   document.querySelectorAll('.card-fav-btn').forEach(btn => {
     btn.addEventListener('click', e => {
       e.stopPropagation();
@@ -620,14 +648,74 @@
     });
   });
 
-  // Chip suppression filtre
+  // ── Chip suppression filtre ──
   document.querySelectorAll('.chip').forEach(chip => {
     chip.addEventListener('click', () => chip.remove());
   });
 
-  // Tri select
+  // ── Tri select ──
   document.querySelector('.sort-select').addEventListener('change', function() {
     console.log('Tri par :', this.value);
+  });
+
+  // ════════════════════════════════════
+  // MENUS DÉROULANTS
+  // ════════════════════════════════════
+
+  const fields = document.querySelectorAll('.ctx-field');
+
+  // Ouvrir / fermer au clic sur le champ
+  fields.forEach(function(field) {
+    field.addEventListener('click', function(event) {
+      event.stopPropagation(); // empêche la fermeture immédiate via le listener document
+      const isOpen = field.classList.contains('open');
+      closeAllFields();
+      if (!isOpen) field.classList.add('open');
+    });
+  });
+
+  // Clic en dehors → fermer tous les menus
+  document.addEventListener('click', function() {
+    closeAllFields();
+  });
+
+  // Fonction utilitaire : ferme tous les champs
+  function closeAllFields() {
+    fields.forEach(function(f) { f.classList.remove('open'); });
+  }
+
+  // Sélection d'une option dans un menu
+  document.querySelectorAll('.dropdown-option').forEach(function(option) {
+    option.addEventListener('click', function(event) {
+      event.stopPropagation(); // empêche la fermeture avant la mise à jour
+
+      const value = option.getAttribute('data-value');
+      const parentField = option.closest('.ctx-field');
+
+      // Retire "selected" de toutes les options du même champ
+      parentField.querySelectorAll('.dropdown-option').forEach(function(opt) {
+        opt.classList.remove('selected');
+      });
+
+      // Marque cette option comme sélectionnée
+      option.classList.add('selected');
+
+      // Met à jour le texte affiché dans le champ
+      parentField.querySelector('.cf-value').textContent = value;
+
+      // Ferme le menu
+      closeAllFields();
+    });
+  });
+
+  // Bouton Rechercher
+  document.getElementById('btn-search').addEventListener('click', function() {
+    const cat    = document.getElementById('val-search').textContent;
+    const budget = document.getElementById('val-budget').textContent;
+    const type   = document.getElementById('val-type').textContent;
+    const note   = document.getElementById('val-note').textContent;
+    console.log('Recherche lancée :', cat, '|', budget, '|', type, '|', note);
+    // Tu pourras ici déclencher un vrai filtrage des cartes produits
   });
 </script>
 </body>
