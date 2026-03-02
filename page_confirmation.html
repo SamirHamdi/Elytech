@@ -1,487 +1,23 @@
 <!DOCTYPE html>
 <html lang="fr">
+
 <head>
+    <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/css/page_confirmation.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Kadwa:wght@400;700&display=swap" rel="stylesheet">
     <title>Commande confirmée - Elytech</title>
-    <link href="https://fonts.googleapis.com/css2?family=Kadwa:wght@400;700&family=Syne:wght@600;800&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
-    <style>
-        :root {
-            --dark:    #173334;
-            --darker:  #0f2223;
-            --accent:  #FFBE30;
-            --accent2: #4a90ff;
-            --light:   #f5f8f8;
-            --text:    #2c2c2c;
-            --muted:   #7a8a8a;
-            --border:  #e0eaea;
-            --success: #1faf6e;
-        }
-
-        * { margin: 0; padding: 0; box-sizing: border-box; }
-
-        body {
-            font-family: 'Kadwa', serif;
-            background: var(--light);
-            color: var(--text);
-            min-height: 100vh;
-        }
-
-        /* ===== NAVBAR ===== */
-        .navbar {
-            background: var(--dark);
-            padding: 0 40px;
-            position: sticky;
-            top: 0;
-            z-index: 100;
-        }
-        .navbar-container {
-            max-width: 1200px;
-            margin: 0 auto;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            height: 70px;
-        }
-        .navbar-logo a {
-            font-size: 1.125rem;
-            font-weight: 700;
-            color: white;
-            text-decoration: none;
-            letter-spacing: 1px;
-        }
-        .nav-links a {
-            color: rgba(255,255,255,0.7);
-            text-decoration: none;
-            font-size: 0.9rem;
-            transition: color 0.2s;
-        }
-        .nav-links a:hover { color: var(--accent); }
-
-        /* ===== PROGRESS BAR ===== */
-        .progress-bar {
-            background: white;
-            border-bottom: 1px solid var(--border);
-            padding: 20px 40px;
-        }
-        .progress-inner {
-            max-width: 700px;
-            margin: 0 auto;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            gap: 0;
-        }
-        .step {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            gap: 6px;
-            flex: 1;
-            position: relative;
-        }
-        .step-circle {
-            width: 36px;
-            height: 36px;
-            border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-size: 0.85rem;
-            font-weight: 700;
-            transition: all 0.3s;
-            position: relative;
-            z-index: 2;
-        }
-        .step.done .step-circle   { background: var(--success); color: white; }
-        .step.active .step-circle { background: var(--dark); color: white; box-shadow: 0 0 0 4px rgba(23,51,52,0.15); }
-        .step.pending .step-circle { background: #e5e5e5; color: #aaa; }
-        .step-label {
-            font-size: 0.72rem;
-            color: var(--muted);
-            white-space: nowrap;
-            letter-spacing: 0.5px;
-        }
-        .step.done .step-label,
-        .step.active .step-label { color: var(--dark); font-weight: 700; }
-        .step-connector {
-            flex: 1;
-            height: 2px;
-            background: #e5e5e5;
-            margin-bottom: 22px;
-            transition: background 0.3s;
-        }
-        .step-connector.done { background: var(--success); }
-
-        /* ===== MAIN ===== */
-        .main {
-            max-width: 960px;
-            margin: 50px auto;
-            padding: 0 20px;
-        }
-
-        /* ===== HERO CONFIRMATION ===== */
-        .confirm-hero {
-            background: var(--dark);
-            border-radius: 20px;
-            padding: 56px 40px;
-            text-align: center;
-            position: relative;
-            overflow: hidden;
-            margin-bottom: 32px;
-            animation: fadeUp 0.6s ease forwards;
-        }
-        .confirm-hero::before {
-            content: '';
-            position: absolute;
-            inset: 0;
-            background-image:
-                linear-gradient(rgba(255,255,255,0.03) 1px, transparent 1px),
-                linear-gradient(90deg, rgba(255,255,255,0.03) 1px, transparent 1px);
-            background-size: 32px 32px;
-        }
-        .confirm-hero .orb {
-            position: absolute;
-            border-radius: 50%;
-            filter: blur(70px);
-            opacity: 0.2;
-        }
-        .confirm-hero .orb-1 { width:300px;height:300px;background:#FFBE30;top:-80px;left:-60px; }
-        .confirm-hero .orb-2 { width:250px;height:250px;background:#4a90ff;bottom:-60px;right:-40px; }
-
-        .checkmark-wrap {
-            position: relative;
-            z-index: 2;
-            margin-bottom: 24px;
-        }
-        .checkmark-circle {
-            width: 80px;
-            height: 80px;
-            background: rgba(31, 175, 110, 0.15);
-            border: 2px solid rgba(31, 175, 110, 0.5);
-            border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            margin: 0 auto;
-            animation: popIn 0.5s 0.3s cubic-bezier(0.175,0.885,0.32,1.275) both;
-        }
-        .checkmark-circle i {
-            font-size: 2rem;
-            color: #2de08a;
-        }
-        @keyframes popIn {
-            from { transform: scale(0); opacity: 0; }
-            to   { transform: scale(1); opacity: 1; }
-        }
-
-        .confirm-hero h1 {
-            font-family: 'Syne', sans-serif;
-            font-size: 2.2rem;
-            font-weight: 800;
-            color: white;
-            position: relative;
-            z-index: 2;
-            margin-bottom: 12px;
-        }
-        .confirm-hero p {
-            color: rgba(255,255,255,0.65);
-            font-size: 1rem;
-            line-height: 1.6;
-            position: relative;
-            z-index: 2;
-            max-width: 480px;
-            margin: 0 auto 28px;
-        }
-        .order-number {
-            display: inline-block;
-            background: rgba(255,190,48,0.15);
-            border: 1px solid rgba(255,190,48,0.4);
-            color: var(--accent);
-            padding: 8px 20px;
-            border-radius: 30px;
-            font-size: 0.85rem;
-            letter-spacing: 1px;
-            position: relative;
-            z-index: 2;
-        }
-
-        /* ===== GRID LAYOUT ===== */
-        .grid-layout {
-            display: grid;
-            grid-template-columns: 1fr 380px;
-            gap: 24px;
-            animation: fadeUp 0.6s 0.2s ease both;
-        }
-
-        /* ===== CARDS ===== */
-        .card {
-            background: white;
-            border-radius: 16px;
-            padding: 28px;
-            border: 1px solid var(--border);
-            box-shadow: 0 2px 12px rgba(0,0,0,0.04);
-        }
-        .card-title {
-            font-family: 'Syne', sans-serif;
-            font-size: 1rem;
-            font-weight: 700;
-            color: var(--dark);
-            margin-bottom: 20px;
-            display: flex;
-            align-items: center;
-            gap: 10px;
-        }
-        .card-title i {
-            width: 32px; height: 32px;
-            background: rgba(23,51,52,0.08);
-            border-radius: 8px;
-            display: flex; align-items: center; justify-content: center;
-            font-size: 0.85rem;
-            color: var(--dark);
-        }
-
-        /* Récapitulatif commande */
-        .order-item {
-            display: flex;
-            align-items: center;
-            gap: 16px;
-            padding: 14px 0;
-            border-bottom: 1px solid var(--border);
-        }
-        .order-item:last-of-type { border-bottom: none; }
-        .item-img {
-            width: 64px; height: 64px;
-            border-radius: 10px;
-            background: var(--light);
-            border: 1px solid var(--border);
-            display: flex; align-items: center; justify-content: center;
-            flex-shrink: 0;
-            overflow: hidden;
-        }
-        .item-img img { width: 100%; height: 100%; object-fit: cover; border-radius: 10px; }
-        .item-img i { font-size: 1.4rem; color: var(--muted); }
-        .item-details { flex: 1; }
-        .item-name {
-            font-size: 0.95rem;
-            font-weight: 700;
-            color: var(--dark);
-            margin-bottom: 4px;
-        }
-        .item-sub {
-            font-size: 0.78rem;
-            color: var(--muted);
-        }
-        .item-qty {
-            font-size: 0.78rem;
-            background: var(--light);
-            border: 1px solid var(--border);
-            padding: 3px 10px;
-            border-radius: 20px;
-            color: var(--muted);
-        }
-        .item-price {
-            font-size: 1rem;
-            font-weight: 700;
-            color: var(--dark);
-            white-space: nowrap;
-        }
-
-        /* Totaux */
-        .totals { margin-top: 16px; }
-        .total-row {
-            display: flex;
-            justify-content: space-between;
-            font-size: 0.9rem;
-            color: var(--muted);
-            padding: 6px 0;
-        }
-        .total-row.final {
-            border-top: 2px solid var(--dark);
-            margin-top: 10px;
-            padding-top: 14px;
-            font-size: 1.1rem;
-            font-weight: 700;
-            color: var(--dark);
-        }
-        .total-row .discount { color: var(--success); }
-
-        /* Infos livraison / paiement */
-        .info-grid {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 16px;
-        }
-        .info-block {
-            background: var(--light);
-            border-radius: 10px;
-            padding: 16px;
-        }
-        .info-block-label {
-            font-size: 0.7rem;
-            text-transform: uppercase;
-            letter-spacing: 1px;
-            color: var(--muted);
-            margin-bottom: 8px;
-        }
-        .info-block-value {
-            font-size: 0.88rem;
-            color: var(--dark);
-            line-height: 1.6;
-        }
-        .info-block-value strong { font-weight: 700; display: block; }
-
-        /* Timeline livraison */
-        .timeline {
-            display: flex;
-            flex-direction: column;
-            gap: 0;
-        }
-        .timeline-item {
-            display: flex;
-            gap: 16px;
-            position: relative;
-        }
-        .timeline-item:not(:last-child)::before {
-            content: '';
-            position: absolute;
-            left: 15px;
-            top: 32px;
-            bottom: -4px;
-            width: 2px;
-            background: var(--border);
-        }
-        .timeline-item.done::before { background: var(--success); }
-        .tl-dot {
-            width: 32px; height: 32px; border-radius: 50%;
-            display: flex; align-items: center; justify-content: center;
-            flex-shrink: 0;
-            font-size: 0.75rem;
-            margin-top: 2px;
-        }
-        .timeline-item.done .tl-dot   { background: var(--success); color: white; }
-        .timeline-item.active .tl-dot { background: var(--dark); color: white; animation: pulse 2s infinite; }
-        .timeline-item.pending .tl-dot { background: #e5e5e5; color: #bbb; }
-        @keyframes pulse {
-            0%,100% { box-shadow: 0 0 0 0 rgba(23,51,52,0.3); }
-            50%      { box-shadow: 0 0 0 6px rgba(23,51,52,0); }
-        }
-        .tl-content { padding-bottom: 20px; }
-        .tl-title { font-size: 0.9rem; font-weight: 700; color: var(--dark); margin-bottom: 2px; }
-        .tl-date  { font-size: 0.78rem; color: var(--muted); }
-
-        /* Colonne droite */
-        .right-col { display: flex; flex-direction: column; gap: 24px; }
-
-        /* Récap paiement */
-        .payment-method {
-            display: flex;
-            align-items: center;
-            gap: 12px;
-            background: var(--light);
-            border-radius: 10px;
-            padding: 14px 16px;
-            margin-bottom: 16px;
-        }
-        .payment-icon {
-            width: 40px; height: 28px;
-            background: var(--dark);
-            border-radius: 6px;
-            display: flex; align-items: center; justify-content: center;
-        }
-        .payment-icon i { color: white; font-size: 0.85rem; }
-        .payment-text { font-size: 0.88rem; }
-        .payment-text strong { display: block; color: var(--dark); font-weight: 700; }
-        .payment-text span { color: var(--muted); font-size: 0.78rem; }
-
-        /* Actions */
-        .actions { display: flex; flex-direction: column; gap: 12px; margin-top: 4px; }
-        .btn {
-            width: 100%;
-            padding: 14px;
-            border-radius: 10px;
-            font-family: 'Kadwa', serif;
-            font-size: 0.9rem;
-            font-weight: 700;
-            cursor: pointer;
-            border: none;
-            transition: all 0.2s;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            gap: 8px;
-            text-decoration: none;
-        }
-        .btn-main {
-            background: var(--dark);
-            color: white;
-            box-shadow: 0 6px 20px rgba(23,51,52,0.3);
-        }
-        .btn-main:hover { background: var(--darker); transform: translateY(-1px); }
-        .btn-outline {
-            background: transparent;
-            color: var(--dark);
-            border: 2px solid var(--border);
-        }
-        .btn-outline:hover { border-color: var(--dark); background: var(--light); }
-        .btn-accent {
-            background: var(--accent);
-            color: var(--dark);
-        }
-        .btn-accent:hover { background: #e6aa1f; transform: translateY(-1px); }
-
-        /* Email confirm */
-        .email-notice {
-            background: rgba(74,144,255,0.06);
-            border: 1px solid rgba(74,144,255,0.2);
-            border-radius: 10px;
-            padding: 14px 16px;
-            display: flex;
-            gap: 12px;
-            align-items: flex-start;
-        }
-        .email-notice i { color: var(--accent2); margin-top: 2px; }
-        .email-notice p { font-size: 0.82rem; color: #4a6080; line-height: 1.5; }
-        .email-notice p strong { color: var(--accent2); }
-
-        /* ===== FOOTER ===== */
-        .footer-main {
-            background: var(--dark);
-            color: white;
-            padding: 40px 20px 20px;
-            margin-top: 60px;
-        }
-        .footer-bottom {
-            max-width: 960px;
-            margin: 0 auto;
-            text-align: center;
-        }
-        .footer-bottom p { font-size: 0.85rem; color: rgba(255,255,255,0.5); }
-
-        @keyframes fadeUp {
-            from { opacity: 0; transform: translateY(24px); }
-            to   { opacity: 1; transform: translateY(0); }
-        }
-
-        /* ===== RESPONSIVE ===== */
-        @media (max-width: 768px) {
-            .navbar { padding: 0 20px; }
-            .progress-bar { padding: 16px 20px; }
-            .main { margin: 30px auto; }
-            .confirm-hero { padding: 40px 24px; }
-            .confirm-hero h1 { font-size: 1.6rem; }
-            .grid-layout { grid-template-columns: 1fr; }
-            .info-grid { grid-template-columns: 1fr; }
-
-            
-        }
-    </style>
 </head>
+</head>
+
 <body>
 
-<!-- Navbar -->
-<nav class="navbar">
+    <!-- Navbar -->
+    <nav class="navbar">
     <div class="navbar-container">
         <div class="navbar-logo">
             <a href="page_accueil.html">Elytech</a>
@@ -510,247 +46,295 @@
     </div>
 </nav>
 
-<!-- Barre de progression -->
-<div class="progress-bar">
-    <div class="progress-inner">
-        <div class="step done">
-            <div class="step-circle"><i class="fa-solid fa-check"></i></div>
-            <span class="step-label">Panier</span>
-        </div>
-        <div class="step-connector done"></div>
-        <div class="step done">
-            <div class="step-circle"><i class="fa-solid fa-check"></i></div>
-            <span class="step-label">Livraison</span>
-        </div>
-        <div class="step-connector done"></div>
-        <div class="step done">
-            <div class="step-circle"><i class="fa-solid fa-check"></i></div>
-            <span class="step-label">Paiement</span>
-        </div>
-        <div class="step-connector done"></div>
-        <div class="step active">
-            <div class="step-circle"><i class="fa-solid fa-flag"></i></div>
-            <span class="step-label">Confirmation</span>
+    <!-- Barre de progression -->
+    <div class="progress-bar">
+        <div class="progress-inner">
+            <div class="step done">
+                <div class="step-circle"><i class="fa-solid fa-check"></i></div>
+                <span class="step-label">Panier</span>
+            </div>
+            <div class="step-connector done"></div>
+            <div class="step done">
+                <div class="step-circle"><i class="fa-solid fa-check"></i></div>
+                <span class="step-label">Livraison</span>
+            </div>
+            <div class="step-connector done"></div>
+            <div class="step done">
+                <div class="step-circle"><i class="fa-solid fa-check"></i></div>
+                <span class="step-label">Paiement</span>
+            </div>
+            <div class="step-connector done"></div>
+            <div class="step active">
+                <div class="step-circle"><i class="fa-solid fa-flag"></i></div>
+                <span class="step-label">Confirmation</span>
+            </div>
         </div>
     </div>
-</div>
 
-<!-- Contenu principal -->
-<main class="main">
+    <!-- Contenu principal -->
+    <main class="main">
 
-    <!-- Hero -->
-    <div class="confirm-hero">
-        <div class="orb orb-1"></div>
-        <div class="orb orb-2"></div>
-        <div class="checkmark-wrap">
-            <div class="checkmark-circle">
-                <i class="fa-solid fa-check"></i>
-            </div>
-        </div>
-        <h1>Commande confirmée !</h1>
-        <p>Merci pour votre achat. Votre commande a bien été reçue et est en cours de traitement.</p>
-        <span class="order-number">✦ Commande #ELY-2025-48291</span>
-    </div>
-
-    <!-- Grille principale -->
-    <div class="grid-layout">
-
-        <!-- Colonne gauche -->
-        <div class="left-col" style="display:flex;flex-direction:column;gap:24px;">
-
-            <!-- Récapitulatif produits -->
-            <div class="card">
-                <div class="card-title">
-                    <i class="fa-solid fa-bag-shopping"></i>
-                    Récapitulatif de la commande
-                </div>
-
-                <div class="order-item">
-                    <div class="item-img">
-                        <img src="https://images.unsplash.com/photo-1544244015-0df4b3ffc6b0?w=200&q=80" alt="iPad Pro">
-                    </div>
-                    <div class="item-details">
-                        <div class="item-name">iPad Pro 12,9"</div>
-                        <div class="item-sub">256 Go · Wi-Fi · Gris sidéral</div>
-                    </div>
-                    <span class="item-qty">x1</span>
-                    <span class="item-price">1 199 €</span>
-                </div>
-
-                <div class="order-item">
-                    <div class="item-img">
-                        <img src="https://images.unsplash.com/photo-1589739900243-4b52cd9b104e?w=200&q=80" alt="Samsung Galaxy Tab">
-                    </div>
-                    <div class="item-details">
-                        <div class="item-name">Samsung Galaxy Tab S9</div>
-                        <div class="item-sub">128 Go · Wi-Fi + 5G · Beige</div>
-                    </div>
-                    <span class="item-qty">x1</span>
-                    <span class="item-price">799 €</span>
-                </div>
-
-                <div class="order-item">
-                    <div class="item-img">
-                        <i class="fa-solid fa-keyboard"></i>
-                    </div>
-                    <div class="item-details">
-                        <div class="item-name">Clavier Magic Keyboard</div>
-                        <div class="item-sub">Compatible iPad Pro · AZERTY</div>
-                    </div>
-                    <span class="item-qty">x1</span>
-                    <span class="item-price">349 €</span>
-                </div>
-
-                <div class="totals">
-                    <div class="total-row"><span>Sous-total</span><span>2 347 €</span></div>
-                    <div class="total-row"><span>Livraison</span><span style="color:var(--success);">Gratuite</span></div>
-                    <div class="total-row"><span>Code promo <em style="font-size:0.8em">(ELYTECH10)</em></span><span class="discount">− 234 €</span></div>
-                    <div class="total-row final"><span>Total payé</span><span>2 113 €</span></div>
+        <!-- Hero -->
+        <div class="confirm-hero">
+            <div class="orb orb-1"></div>
+            <div class="orb orb-2"></div>
+            <div class="checkmark-wrap">
+                <div class="checkmark-circle">
+                    <i class="fa-solid fa-check"></i>
                 </div>
             </div>
-
-            <!-- Infos livraison -->
-            <div class="card">
-                <div class="card-title">
-                    <i class="fa-solid fa-location-dot"></i>
-                    Adresse de livraison
-                </div>
-                <div class="info-grid">
-                    <div class="info-block">
-                        <div class="info-block-label">Destinataire</div>
-                        <div class="info-block-value">
-                            <strong>Jean Dupont</strong>
-                            12 Rue de la Paix<br>
-                            75001 Paris<br>
-                            France
-                        </div>
-                    </div>
-                    <div class="info-block">
-                        <div class="info-block-label">Contact</div>
-                        <div class="info-block-value">
-                            <strong>jean.dupont@email.com</strong>
-                            +33 6 12 34 56 78
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Suivi livraison -->
-            <div class="card">
-                <div class="card-title">
-                    <i class="fa-solid fa-truck"></i>
-                    Suivi de livraison
-                </div>
-                <div class="timeline">
-                    <div class="timeline-item done">
-                        <div class="tl-dot"><i class="fa-solid fa-check"></i></div>
-                        <div class="tl-content">
-                            <div class="tl-title">Commande confirmée</div>
-                            <div class="tl-date">Aujourd'hui · 14h32</div>
-                        </div>
-                    </div>
-                    <div class="timeline-item active">
-                        <div class="tl-dot"><i class="fa-solid fa-box"></i></div>
-                        <div class="tl-content">
-                            <div class="tl-title">Préparation en cours</div>
-                            <div class="tl-date">Estimé : dans 2h</div>
-                        </div>
-                    </div>
-                    <div class="timeline-item pending">
-                        <div class="tl-dot"><i class="fa-solid fa-warehouse"></i></div>
-                        <div class="tl-content">
-                            <div class="tl-title">Expédié depuis l'entrepôt</div>
-                            <div class="tl-date">Estimé : demain matin</div>
-                        </div>
-                    </div>
-                    <div class="timeline-item pending">
-                        <div class="tl-dot"><i class="fa-solid fa-house"></i></div>
-                        <div class="tl-content">
-                            <div class="tl-title">Livraison à domicile</div>
-                            <div class="tl-date">Estimé : dans 24h</div>
-                        </div>
-                    </div>
-                </div>
-            </div>
+            <h1>Commande confirmée !</h1>
+            <p>Merci pour votre achat. Votre commande a bien été reçue et est en cours de traitement.</p>
+            <span class="order-number">✦ Commande #ELY-2025-48291</span>
         </div>
 
-        <!-- Colonne droite -->
-        <div class="right-col">
+        <!-- Grille principale -->
+        <div class="grid-layout">
 
-            <!-- Paiement -->
-            <div class="card">
-                <div class="card-title">
-                    <i class="fa-solid fa-credit-card"></i>
-                    Paiement
-                </div>
-                <div class="payment-method">
-                    <div class="payment-icon"><i class="fa-brands fa-cc-visa"></i></div>
-                    <div class="payment-text">
-                        <strong>Visa •••• 4291</strong>
-                        <span>Débitée le 02/03/2025</span>
+            <!-- Colonne gauche -->
+            <div class="left-col" style="display:flex;flex-direction:column;gap:24px;">
+
+                <!-- Récapitulatif produits -->
+                <div class="card">
+                    <div class="card-title">
+                        <i class="fa-solid fa-bag-shopping"></i>
+                        Récapitulatif de la commande
                     </div>
-                    <i class="fa-solid fa-check" style="color:var(--success);margin-left:auto;"></i>
-                </div>
-                <div class="totals" style="margin-top:0;">
-                    <div class="total-row final" style="border-top-color:var(--border);margin-top:0;">
-                        <span>Montant débité</span><span>2 113 €</span>
+
+                    <div class="order-item">
+                        <div class="item-img">
+                            <img src="https://images.unsplash.com/photo-1544244015-0df4b3ffc6b0?w=200&q=80"
+                                alt="iPad Pro">
+                        </div>
+                        <div class="item-details">
+                            <div class="item-name">iPad Pro 12,9"</div>
+                            <div class="item-sub">256 Go · Wi-Fi · Gris sidéral</div>
+                        </div>
+                        <span class="item-qty">x1</span>
+                        <span class="item-price">1 199 €</span>
+                    </div>
+
+                    <div class="order-item">
+                        <div class="item-img">
+                            <img src="https://images.unsplash.com/photo-1589739900243-4b52cd9b104e?w=200&q=80"
+                                alt="Samsung Galaxy Tab">
+                        </div>
+                        <div class="item-details">
+                            <div class="item-name">Samsung Galaxy Tab S9</div>
+                            <div class="item-sub">128 Go · Wi-Fi + 5G · Beige</div>
+                        </div>
+                        <span class="item-qty">x1</span>
+                        <span class="item-price">799 €</span>
+                    </div>
+
+                    <div class="order-item">
+                        <div class="item-img">
+                            <img src="images pc/Composant/clavier2.jpg">
+                        </div>
+                        <div class="item-details">
+                            <div class="item-name">Asus TUF K3 Gen II - Hatsune Miku Edition</div>
+                            <div class="item-sub">Compatible iPad Pro · AZERTY</div>
+                        </div>
+                        <span class="item-qty">x1</span>
+                        <span class="item-price">349 €</span>
+                    </div>
+
+                    <div class="totals">
+                        <div class="total-row"><span>Sous-total</span><span>2 347 €</span></div>
+                        <div class="total-row"><span>Livraison</span><span style="color:var(--success);">Gratuite</span>
+                        </div>
+                        <div class="total-row"><span>Code promo <em style="font-size:0.8em">(ELYTECH10)</em></span><span
+                                class="discount">− 234 €</span></div>
+                        <div class="total-row final"><span>Total payé</span><span>2 113 €</span></div>
                     </div>
                 </div>
-            </div>
 
-            <!-- Notification email -->
-            <div class="email-notice">
-                <i class="fa-solid fa-envelope-circle-check"></i>
-                <p>Un email de confirmation a été envoyé à <strong>jean.dupont@email.com</strong> avec tous les détails de votre commande.</p>
-            </div>
-
-            <!-- Actions -->
-            <div class="card">
-                <div class="card-title">
-                    <i class="fa-solid fa-ellipsis"></i>
-                    Actions
+                <!-- Infos livraison -->
+                <div class="card">
+                    <div class="card-title">
+                        <i class="fa-solid fa-location-dot"></i>
+                        Adresse de livraison
+                    </div>
+                    <div class="info-grid">
+                        <div class="info-block">
+                            <div class="info-block-label">Destinataire</div>
+                            <div class="info-block-value">
+                                <strong>Jean Dupont</strong>
+                                12 Rue de la Paix<br>
+                                75001 Paris<br>
+                                France
+                            </div>
+                        </div>
+                        <div class="info-block">
+                            <div class="info-block-label">Contact</div>
+                            <div class="info-block-value">
+                                <strong>jean.dupont@email.com</strong>
+                                +33 6 12 34 56 78
+                            </div>
+                        </div>
+                    </div>
                 </div>
-                <div class="actions">
-                    <a href="#" class="btn btn-main">
+
+                <!-- Suivi livraison -->
+                <div class="card">
+                    <div class="card-title">
                         <i class="fa-solid fa-truck"></i>
-                        Suivre ma commande
-                    </a>
-                    <a href="#" class="btn btn-accent">
-                        <i class="fa-solid fa-file-invoice"></i>
-                        Télécharger la facture
-                    </a>
-                    <a href="page_accueil.html" class="btn btn-outline">
-                        <i class="fa-solid fa-arrow-left"></i>
-                        Retour à la boutique
-                    </a>
+                        Suivi de livraison
+                    </div>
+                    <div class="timeline">
+                        <div class="timeline-item done">
+                            <div class="tl-dot"><i class="fa-solid fa-check"></i></div>
+                            <div class="tl-content">
+                                <div class="tl-title">Commande confirmée</div>
+                                <div class="tl-date">Aujourd'hui · 14h32</div>
+                            </div>
+                        </div>
+                        <div class="timeline-item active">
+                            <div class="tl-dot"><i class="fa-solid fa-box"></i></div>
+                            <div class="tl-content">
+                                <div class="tl-title">Préparation en cours</div>
+                                <div class="tl-date">Estimé : dans 2h</div>
+                            </div>
+                        </div>
+                        <div class="timeline-item pending">
+                            <div class="tl-dot"><i class="fa-solid fa-warehouse"></i></div>
+                            <div class="tl-content">
+                                <div class="tl-title">Expédié depuis l'entrepôt</div>
+                                <div class="tl-date">Estimé : demain matin</div>
+                            </div>
+                        </div>
+                        <div class="timeline-item pending">
+                            <div class="tl-dot"><i class="fa-solid fa-house"></i></div>
+                            <div class="tl-content">
+                                <div class="tl-title">Livraison à domicile</div>
+                                <div class="tl-date">Estimé : dans 24h</div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
 
-            <!-- Besoin d'aide -->
-            <div class="card" style="background:var(--light);border-style:dashed;">
-                <div class="card-title" style="margin-bottom:12px;">
-                    <i class="fa-solid fa-headset"></i>
-                    Besoin d'aide ?
-                </div>
-                <p style="font-size:0.85rem;color:var(--muted);line-height:1.6;margin-bottom:14px;">
-                    Notre équipe est disponible 7j/7 de 9h à 21h pour répondre à vos questions.
-                </p>
-                <a href="page_contact.html" class="btn btn-outline" style="width:100%;">
-                    <i class="fa-solid fa-envelope"></i>
-                    Nous contacter
-                </a>
-            </div>
+            <!-- Colonne droite -->
+            <div class="right-col">
 
+                <!-- Paiement -->
+                <div class="card">
+                    <div class="card-title">
+                        <i class="fa-solid fa-credit-card"></i>
+                        Paiement
+                    </div>
+                    <div class="payment-method">
+                        <div class="payment-icon"><i class="fa-brands fa-cc-visa"></i></div>
+                        <div class="payment-text">
+                            <strong>Visa •••• 4291</strong>
+                            <span>Débitée le 02/03/2025</span>
+                        </div>
+                        <i class="fa-solid fa-check" style="color:var(--success);margin-left:auto;"></i>
+                    </div>
+                    <div class="totals" style="margin-top:0;">
+                        <div class="total-row final" style="border-top-color:var(--border);margin-top:0;">
+                            <span>Montant débité</span><span>2 113 €</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Notification email -->
+                <div class="email-notice">
+                    <i class="fa-solid fa-envelope-circle-check"></i>
+                    <p>Un email de confirmation a été envoyé à <strong>jean.dupont@email.com</strong> avec tous les
+                        détails de votre commande.</p>
+                </div>
+
+                <!-- Actions -->
+                <div class="card">
+                    <div class="card-title">
+                        <i class="fa-solid fa-ellipsis"></i>
+                        Actions
+                    </div>
+                    <div class="actions">
+                        <a href="#" class="btn btn-main">
+                            <i class="fa-solid fa-truck"></i>
+                            Suivre ma commande
+                        </a>
+                        <a href="#" class="btn btn-accent">
+                            <i class="fa-solid fa-file-invoice"></i>
+                            Télécharger la facture
+                        </a>
+                        <a href="page_accueil.html" class="btn btn-outline">
+                            <i class="fa-solid fa-arrow-left"></i>
+                            Retour à la boutique
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Besoin d'aide -->
+                <div class="card" style="background:var(--light);border-style:dashed;">
+                    <div class="card-title" style="margin-bottom:12px;">
+                        <i class="fa-solid fa-headset"></i>
+                        Besoin d'aide ?
+                    </div>
+                    <p style="font-size:0.85rem;color:var(--muted);line-height:1.6;margin-bottom:14px;">
+                        Notre équipe est disponible 7j/7 de 9h à 21h pour répondre à vos questions.
+                    </p>
+                    <a href="page_contact.html" class="btn btn-outline" style="width:100%;">
+                        <i class="fa-solid fa-envelope"></i>
+                        Nous contacter
+                    </a>
+                </div>
+
+            </div>
         </div>
-    </div>
-</main>
+    </main>
 
-<!-- Footer -->
-<footer class="footer-main">
-    <div class="footer-bottom">
-        <p>© 2025, Tous droits réservés — Elytech</p>
-    </div>
-</footer>
+    <!-- Footer -->
+    <footer class="footer-main">
+        <div class="footer-container">
+            <!-- Colonne 1: A propos -->
+            <div class="footer-column">
+                <h3>Elytech</h3>
+                <p>PC Gaming,tablette et composants -- la tech de qualité, accessible à tous les budgets. </p>
+            </div>
+
+            <!-- Colonne 2: Navigation -->
+            <div class="footer-column">
+                <h4>Navigation</h4>
+                <ul class="footer-links">
+                    <li><a href="page_accueil.html">Recherche</a></li> <!-- Changé de # à page_accueil.html -->
+                    <li><a href="page_panier.html">Mes Favoris</a></li> <!-- Déjà correct -->
+                    <li><a href="#categories">Catégories</a></li> <!-- Ancre vers section catégories -->
+                    <li><a href="#moment">Produits du moment</a></li> <!-- Ancre vers section produit du moment -->
+                </ul>
+            </div>
+
+            <!-- Colonne 3: A propos -->
+            <div class="footer-column">
+                <h4>À Propos</h4>
+                <ul class="footer-links">
+                    <li><a href="#about">Qui sommes-nous</a></li> <!-- Ancre à définir -->
+                    <li><a href="page_contact.html">Nous contacter</a></li> <!-- Déjà correct -->
+                    <li><a href="#faq">FAQ</a></li> <!-- Ancre à définir -->
+                    <li><a href="#terms">Conditions d'utilisation</a></li> <!-- Ancre à définir -->
+                    <li><a href="#privacy">Politique de confidentialité</a></li> <!-- Ancre à définir -->
+                </ul>
+            </div>
+
+            <!-- Colonne 4: Newsletter -->
+            <div class="footer-column">
+                <h4>Inscrivez-vous à notre newsletter</h4>
+                <p>Recevez nos meilleures produits et offres chaque semaine directement dans votre boîte mail.</p>
+                <form class="newsletter-form">
+                    <input type="email" placeholder="Entrez votre email..." required>
+                    <button type="submit"><i class="fa-solid fa-arrow-right"></i></button>
+                </form>
+            </div>
+        </div>
+
+        <!-- Copyright -->
+        <div class="footer-bottom">
+            <p>© 2024, Tous droits réservés - Elytech</p>
+        </div>
+    </footer>
 
 </body>
+
 </html>

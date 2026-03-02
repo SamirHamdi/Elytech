@@ -1,0 +1,1013 @@
+:root {
+    --dark: #173334;
+    --darker: #0f2223;
+    --accent: #FFBE30;
+    --accent2: #4a90ff;
+    --light: #f5f8f8;
+    --text: #2c2c2c;
+    --muted: #7a8a8a;
+    --border: #e0eaea;
+    --success: #1faf6e;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Kadwa', serif;
+    background: var(--light);
+    color: var(--text);
+    min-height: 100vh;
+}
+
+/* ===== NAVBAR ===== */
+.navbar {
+    box-sizing: border-box; /* Calcul de largeur incluant padding et bordure */
+    background: #173334; /* Couleur de fond vert foncé */
+    border-bottom: 1px solid #e5e5e5; /* Bordure inférieure grise */
+    padding: 0 40px; /* Espacement horizontal */
+    position: sticky; /* Position fixe en haut lors du scroll */
+    top: 0; /* Collée au sommet */
+    z-index: 1000; /* Au-dessus des autres éléments */
+}
+
+.navbar-container {
+    max-width: 1400px; /* Largeur maximale du conteneur */
+    margin: 0 auto; /* Centrage horizontal */
+    display: flex; /* Disposition flexible */
+    justify-content: space-between; /* Espacement entre les éléments */
+    align-items: center; /* Alignement vertical centré */
+    height: 70px; /* Hauteur de la navbar */
+}
+
+/* Logo */
+.navbar-logo {
+    flex: 0 0 auto; /* Ne pas grandir ni rétrécir */
+}
+
+.navbar-logo a {
+    font-size: 1.125rem; /* Taille du texte du logo */
+    font-weight: 700; /* Texte en gras */
+    color: white; /* Couleur blanche */
+    text-decoration: none; /* Suppression du soulignement */
+    letter-spacing: 1px; /* Espacement entre les lettres */
+}
+
+/* Conteneur de la barre de recherche */
+.navbar-container > div:nth-child(2) {
+    flex: 1; /* Prend l'espace disponible */
+    display: flex; /* Disposition flexible */
+    justify-content: center; /* Centrage du contenu */
+}
+
+/* Icônes */
+.navbar-icons {
+    flex: 0 0 auto; /* Ne pas grandir ni rétrécir */
+    display: flex; /* Disposition flexible */
+    align-items: center; /* Alignement vertical centré */
+    margin-right: 0; /* Pas de marge à droite */
+    gap: 24px; /* Espacement entre les icônes */
+}
+
+.nav-icon, .nav-icon- {
+    position: relative; /* Positionnement relatif */
+    color: #333; /* Couleur de base */
+    text-decoration: none; /* Pas de soulignement */
+    display: flex; /* Disposition flexible */
+    align-items: center; /* Centrage vertical */
+    justify-content: center; /* Centrage horizontal */
+    width: 40px; /* Largeur de l'icône */
+    height: 40px; /* Hauteur de l'icône */
+    border-radius: 50%; /* Forme circulaire */
+    transition: background 0.3s ease; /* Transition douce du fond */
+}
+
+/* Icônes FontAwesome dans les liens */
+.nav-icon i {
+    color: white; /* Couleur blanche */
+    font-size: 1.2rem; /* Taille de l'icône */
+    transition: color 0.3s ease; /* Transition douce de la couleur */
+}
+
+/* Icône active (optionnel - pour la page courante) */
+.nav-icon.active i {
+    color: #FFBE30; /* Couleur jaune/or pour l'état actif */
+}
+
+.nav-icon:hover, .nav-icon-:hover {
+    background: rgba(255, 255, 255, 0.1); /* Fond semi-transparent au survol */
+}
+
+.nav-icon:hover i {
+    color: #FFBE30; /* Couleur jaune/or au survol */
+}
+
+/* Icônes SVG (profil) */
+.nav-icon svg, .nav-icon- svg {
+    fill: white; /* Remplissage blanc */
+    transition: fill 0.3s ease; /* Transition douce du remplissage */
+}
+
+.nav-icon:hover svg, .nav-icon-:hover svg {
+    fill: #FFBE30; /* Remplissage jaune/or au survol */
+}
+
+/* Icône coeur (emoji) */
+.nav-icon:last-child {
+    font-size: 1.2rem; /* Taille de l'icône */
+    color: white; /* Couleur blanche */
+    transition: color 0.3s ease; /* Transition douce de la couleur */
+}
+
+.nav-icon:last-child:hover {
+    color: #FFBE30; /* Couleur jaune/or au survol */
+}
+
+form {
+    margin: 0; /* Pas de marge */
+}
+
+.search-bar-nav {
+    width: 500px; /* Largeur de la barre de recherche */
+    margin: 0; /* Pas de marge */
+    position: relative; /* Positionnement relatif pour le bouton absolu */
+    display: flex; /* Disposition flexible */
+}
+
+.search-bar-nav input {
+    width: 100%; /* Largeur totale */
+    height: 40px; /* Hauteur du champ */
+    padding: 5px 50px 5px 20px; /* Espacement interne avec espace pour le bouton */
+    border-radius: 32px; /* Coins arrondis */
+    box-sizing: border-box; /* Inclut padding dans la largeur */
+    font-family: 'Kadwa', serif; /* Police cohérente */
+    border: none;
+}
+
+.search-bar-nav input:focus {
+    border: none;
+    outline: none; /* Suppression de l'outline par défaut */
+    box-shadow: 0 0 0 2px rgba(255, 190, 48, 0.3); /* Ombre jaune au focus */
+}
+
+.search-bar-nav button {
+    position: absolute; /* Positionnement absolu dans le champ */
+    top: 0; /* Aligné en haut */
+    right: 0; /* Aligné à droite */
+    height: 100%; /* Hauteur totale */
+    width: 50px; /* Largeur du bouton */
+    border: none; /* Pas de bordure */
+    border-radius: 0 32px 32px 0; /* Coins arrondis à droite */
+    background-color: white; /* Fond blanc */
+    cursor: pointer; /* Curseur pointeur */
+    margin: 0; /* Pas de marge */
+    display: flex; /* Disposition flexible */
+    align-items: center; /* Centrage vertical */
+    justify-content: center; /* Centrage horizontal */
+    transition: background-color 0.3s ease; /* Transition du fond */
+}
+
+.search-bar-nav button:hover {
+    background-color: #f0f0f0; /* Fond gris clair au survol */
+}
+
+.search-bar-nav button i {
+    color: #173334; /* Couleur de l'icône de recherche */
+    font-size: 1rem; /* Taille de l'icône */
+}
+
+/* ===== PROGRESS BAR ===== */
+.progress-bar {
+    background: white;
+    border-bottom: 1px solid var(--border);
+    padding: 20px 40px;
+}
+
+.progress-inner {
+    max-width: 700px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0;
+}
+
+.step {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 6px;
+    flex: 1;
+    position: relative;
+}
+
+.step-circle {
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 0.85rem;
+    font-weight: 700;
+    transition: all 0.3s;
+    position: relative;
+    z-index: 2;
+}
+
+.step.done .step-circle {
+    background: var(--success);
+    color: white;
+}
+
+.step.active .step-circle {
+    background: var(--dark);
+    color: white;
+    box-shadow: 0 0 0 4px rgba(23, 51, 52, 0.15);
+}
+
+.step.pending .step-circle {
+    background: #e5e5e5;
+    color: #aaa;
+}
+
+.step-label {
+    font-size: 0.72rem;
+    color: var(--muted);
+    white-space: nowrap;
+    letter-spacing: 0.5px;
+}
+
+.step.done .step-label,
+.step.active .step-label {
+    color: var(--dark);
+    font-weight: 700;
+}
+
+.step-connector {
+    flex: 1;
+    height: 2px;
+    background: #e5e5e5;
+    margin-bottom: 22px;
+    transition: background 0.3s;
+}
+
+.step-connector.done {
+    background: var(--success);
+}
+
+/* ===== MAIN ===== */
+.main {
+    max-width: 960px;
+    margin: 50px auto;
+    padding: 0 20px;
+}
+
+/* ===== HERO CONFIRMATION ===== */
+.confirm-hero {
+    background: var(--dark);
+    border-radius: 20px;
+    padding: 56px 40px;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+    margin-bottom: 32px;
+    animation: fadeUp 0.6s ease forwards;
+}
+
+.confirm-hero::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background-image:
+        linear-gradient(rgba(255, 255, 255, 0.03) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(255, 255, 255, 0.03) 1px, transparent 1px);
+    background-size: 32px 32px;
+}
+
+.confirm-hero .orb {
+    position: absolute;
+    border-radius: 50%;
+    filter: blur(70px);
+    opacity: 0.2;
+}
+
+.confirm-hero .orb-1 {
+    width: 300px;
+    height: 300px;
+    background: #FFBE30;
+    top: -80px;
+    left: -60px;
+}
+
+.confirm-hero .orb-2 {
+    width: 250px;
+    height: 250px;
+    background: #4a90ff;
+    bottom: -60px;
+    right: -40px;
+}
+
+.checkmark-wrap {
+    position: relative;
+    z-index: 2;
+    margin-bottom: 24px;
+}
+
+.checkmark-circle {
+    width: 80px;
+    height: 80px;
+    background: rgba(31, 175, 110, 0.15);
+    border: 2px solid rgba(31, 175, 110, 0.5);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto;
+    animation: popIn 0.5s 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275) both;
+}
+
+.checkmark-circle i {
+    font-size: 2rem;
+    color: #2de08a;
+}
+
+@keyframes popIn {
+    from {
+        transform: scale(0);
+        opacity: 0;
+    }
+
+    to {
+        transform: scale(1);
+        opacity: 1;
+    }
+}
+
+.confirm-hero h1 {
+    font-family: 'Syne', sans-serif;
+    font-size: 2.2rem;
+    font-weight: 800;
+    color: white;
+    position: relative;
+    z-index: 2;
+    margin-bottom: 12px;
+}
+
+.confirm-hero p {
+    color: rgba(255, 255, 255, 0.65);
+    font-size: 1rem;
+    line-height: 1.6;
+    position: relative;
+    z-index: 2;
+    max-width: 480px;
+    margin: 0 auto 28px;
+}
+
+.order-number {
+    display: inline-block;
+    background: rgba(255, 190, 48, 0.15);
+    border: 1px solid rgba(255, 190, 48, 0.4);
+    color: var(--accent);
+    padding: 8px 20px;
+    border-radius: 30px;
+    font-size: 0.85rem;
+    letter-spacing: 1px;
+    position: relative;
+    z-index: 2;
+}
+
+/* ===== GRID LAYOUT ===== */
+.grid-layout {
+    display: grid;
+    grid-template-columns: 1fr 380px;
+    gap: 24px;
+    animation: fadeUp 0.6s 0.2s ease both;
+}
+
+/* ===== CARDS ===== */
+.card {
+    background: white;
+    border-radius: 16px;
+    padding: 28px;
+    border: 1px solid var(--border);
+    box-shadow: 0 2px 12px rgba(0, 0, 0, 0.04);
+}
+
+.card-title {
+    font-family: 'Syne', sans-serif;
+    font-size: 1rem;
+    font-weight: 700;
+    color: var(--dark);
+    margin-bottom: 20px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.card-title i {
+    width: 32px;
+    height: 32px;
+    background: rgba(23, 51, 52, 0.08);
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 0.85rem;
+    color: var(--dark);
+}
+
+/* Récapitulatif commande */
+.order-item {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    padding: 14px 0;
+    border-bottom: 1px solid var(--border);
+}
+
+.order-item:last-of-type {
+    border-bottom: none;
+}
+
+.item-img {
+    width: 64px;
+    height: 64px;
+    border-radius: 10px;
+    background: var(--light);
+    border: 1px solid var(--border);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+    overflow: hidden;
+}
+
+.item-img img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+.item-img i {
+    font-size: 1.4rem;
+    color: var(--muted);
+}
+
+.item-details {
+    flex: 1;
+}
+
+.item-name {
+    font-size: 0.95rem;
+    font-weight: 700;
+    color: var(--dark);
+    margin-bottom: 4px;
+}
+
+.item-sub {
+    font-size: 0.78rem;
+    color: var(--muted);
+}
+
+.item-qty {
+    font-size: 0.78rem;
+    background: var(--light);
+    border: 1px solid var(--border);
+    padding: 3px 10px;
+    border-radius: 20px;
+    color: var(--muted);
+}
+
+.item-price {
+    font-size: 1rem;
+    font-weight: 700;
+    color: var(--dark);
+    white-space: nowrap;
+}
+
+/* Totaux */
+.totals {
+    margin-top: 16px;
+}
+
+.total-row {
+    display: flex;
+    justify-content: space-between;
+    font-size: 0.9rem;
+    color: var(--muted);
+    padding: 6px 0;
+}
+
+.total-row.final {
+    border-top: 2px solid var(--dark);
+    margin-top: 10px;
+    padding-top: 14px;
+    font-size: 1.1rem;
+    font-weight: 700;
+    color: var(--dark);
+}
+
+.total-row .discount {
+    color: var(--success);
+}
+
+/* Infos livraison / paiement */
+.info-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 16px;
+}
+
+.info-block {
+    background: var(--light);
+    border-radius: 10px;
+    padding: 16px;
+}
+
+.info-block-label {
+    font-size: 0.7rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    color: var(--muted);
+    margin-bottom: 8px;
+}
+
+.info-block-value {
+    font-size: 0.88rem;
+    color: var(--dark);
+    line-height: 1.6;
+}
+
+.info-block-value strong {
+    font-weight: 700;
+    display: block;
+}
+
+/* Timeline livraison */
+.timeline {
+    display: flex;
+    flex-direction: column;
+    gap: 0;
+}
+
+.timeline-item {
+    display: flex;
+    gap: 16px;
+    position: relative;
+}
+
+.timeline-item:not(:last-child)::before {
+    content: '';
+    position: absolute;
+    left: 15px;
+    top: 32px;
+    bottom: -4px;
+    width: 2px;
+    background: var(--border);
+}
+
+.timeline-item.done::before {
+    background: var(--success);
+}
+
+.tl-dot {
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+    font-size: 0.75rem;
+    margin-top: 2px;
+}
+
+.timeline-item.done .tl-dot {
+    background: var(--success);
+    color: white;
+}
+
+.timeline-item.active .tl-dot {
+    background: var(--dark);
+    color: white;
+    animation: pulse 2s infinite;
+}
+
+.timeline-item.pending .tl-dot {
+    background: #e5e5e5;
+    color: #bbb;
+}
+
+@keyframes pulse {
+
+    0%,
+    100% {
+        box-shadow: 0 0 0 0 rgba(23, 51, 52, 0.3);
+    }
+
+    50% {
+        box-shadow: 0 0 0 6px rgba(23, 51, 52, 0);
+    }
+}
+
+.tl-content {
+    padding-bottom: 20px;
+}
+
+.tl-title {
+    font-size: 0.9rem;
+    font-weight: 700;
+    color: var(--dark);
+    margin-bottom: 2px;
+}
+
+.tl-date {
+    font-size: 0.78rem;
+    color: var(--muted);
+}
+
+/* Colonne droite */
+.right-col {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+}
+
+/* Récap paiement */
+.payment-method {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    background: var(--light);
+    border-radius: 10px;
+    padding: 14px 16px;
+    margin-bottom: 16px;
+}
+
+.payment-icon {
+    width: 40px;
+    height: 28px;
+    background: var(--dark);
+    border-radius: 6px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.payment-icon i {
+    color: white;
+    font-size: 0.85rem;
+}
+
+.payment-text {
+    font-size: 0.88rem;
+}
+
+.payment-text strong {
+    display: block;
+    color: var(--dark);
+    font-weight: 700;
+}
+
+.payment-text span {
+    color: var(--muted);
+    font-size: 0.78rem;
+}
+
+/* Actions */
+.actions {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    margin-top: 4px;
+}
+
+.btn {
+    width: 100%;
+    padding: 14px;
+    border-radius: 10px;
+    font-family: 'Kadwa', serif;
+    font-size: 0.9rem;
+    font-weight: 700;
+    cursor: pointer;
+    border: none;
+    transition: all 0.2s;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    text-decoration: none;
+}
+
+.btn-main {
+    background: var(--dark);
+    color: white;
+    box-shadow: 0 6px 20px rgba(23, 51, 52, 0.3);
+}
+
+.btn-main:hover {
+    background: var(--darker);
+    transform: translateY(-1px);
+}
+
+.btn-outline {
+    background: transparent;
+    color: var(--dark);
+    border: 2px solid var(--border);
+}
+
+.btn-outline:hover {
+    border-color: var(--dark);
+    background: var(--light);
+}
+
+.btn-accent {
+    background: var(--accent);
+    color: var(--dark);
+}
+
+.btn-accent:hover {
+    background: #e6aa1f;
+    transform: translateY(-1px);
+}
+
+/* Email confirm */
+.email-notice {
+    background: rgba(74, 144, 255, 0.06);
+    border: 1px solid rgba(74, 144, 255, 0.2);
+    border-radius: 10px;
+    padding: 14px 16px;
+    display: flex;
+    gap: 12px;
+    align-items: flex-start;
+}
+
+.email-notice i {
+    color: var(--accent2);
+    margin-top: 2px;
+}
+
+.email-notice p {
+    font-size: 0.82rem;
+    color: #4a6080;
+    line-height: 1.5;
+}
+
+.email-notice p strong {
+    color: var(--accent2);
+}
+
+/* ===== FOOTER ===== */
+.footer-main {
+    padding: 40px 15px 20px;
+    /* Réduction du padding */
+    margin-top: 60px;
+    /* Réduction de la marge */
+}
+
+.footer-container {
+    grid-template-columns: 1fr;
+    /* 1 colonne sur mobile */
+    gap: 30px;
+    /* Réduction de l'espacement */
+    margin-bottom: 30px;
+    /* Réduction de la marge */
+}
+
+.footer-column h3 {
+    font-size: 1.3rem;
+    /* Réduction de la taille */
+}
+
+.footer-column h4 {
+    font-size: 1.1rem;
+    /* Réduction de la taille */
+}
+
+.footer-column p {
+    font-size: 0.9rem;
+    /* Réduction de la taille */
+}
+
+.footer-links a {
+    font-size: 0.9rem;
+    /* Réduction de la taille */
+}
+
+.newsletter-form {
+    flex-direction: column;
+    /* Direction verticale */
+}
+
+.newsletter-form input {
+    border-radius: 5px;
+    /* Coins arrondis complets */
+    margin-bottom: 10px;
+    /* Marge en bas */
+}
+
+.newsletter-form button {
+    border-radius: 5px;
+    /* Coins arrondis complets */
+    padding: 12px;
+    /* Espacement interne */
+}
+
+.footer-bottom p {
+    font-size: 0.85rem;
+    /* Réduction de la taille */
+}
+
+/* ===== RESPONSIVE ===== */
+@media (max-width: 768px) {
+    .navbar {
+        padding: 0 20px;
+    }
+
+    .progress-bar {
+        padding: 16px 20px;
+    }
+
+    .main {
+        margin: 30px auto;
+    }
+
+    .confirm-hero {
+        padding: 40px 24px;
+    }
+
+    .confirm-hero h1 {
+        font-size: 1.6rem;
+    }
+
+    .grid-layout {
+        grid-template-columns: 1fr;
+    }
+
+    .info-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+.footer-main {
+    background: #173334; /* Fond vert foncé */
+    color: white; /* Texte blanc */
+    padding: 60px 20px 20px; /* Espacement */
+    margin-top: 80px; /* Marge en haut */
+}
+
+.footer-container {
+    max-width: 1400px; /* Largeur maximale */
+    margin: 0 auto; /* Centrage horizontal */
+    display: grid; /* Disposition en grille */
+    grid-template-columns: repeat(4, 1fr); /* 4 colonnes égales */
+    gap: 40px; /* Espacement entre colonnes */
+    margin-bottom: 40px; /* Marge en bas */
+}
+
+.footer-column h3 {
+    font-size: 1.5rem; /* Taille du titre */
+    margin-bottom: 20px; /* Marge en bas */
+    color: white; /* Couleur blanche */
+}
+
+.footer-column h4 {
+    font-size: 1.2rem; /* Taille du sous-titre */
+    margin-bottom: 20px; /* Marge en bas */
+    color: white; /* Couleur blanche */
+}
+
+.footer-column p {
+    font-size: 0.95rem; /* Taille du texte */
+    line-height: 1.6; /* Hauteur de ligne */
+    color: rgba(255, 255, 255, 0.8); /* Blanc semi-transparent */
+}
+
+.footer-links {
+    list-style: none; /* Pas de puces */
+    padding: 0; /* Pas de padding */
+    margin: 0; /* Pas de marge */
+}
+
+.footer-links li {
+    margin-bottom: 12px; /* Marge entre les liens */
+}
+
+.footer-links a {
+    color: rgba(255, 255, 255, 0.8); /* Blanc semi-transparent */
+    text-decoration: none; /* Pas de soulignement */
+    font-size: 0.95rem; /* Taille du texte */
+    transition: color 0.3s ease; /* Transition de couleur */
+}
+
+.footer-links a:hover {
+    color: #FFBE30; /* Couleur jaune au survol */
+}
+
+/* Newsletter */
+.newsletter-form {
+    display: flex; /* Disposition flexible */
+    margin-top: 20px; /* Marge en haut */
+}
+
+.newsletter-form input {
+    flex: 1; /* Prend l'espace disponible */
+    padding: 12px 20px; /* Espacement interne */
+    border: 1px solid rgba(255, 255, 255, 0.3); /* Bordure semi-transparente */
+    background: rgba(255, 255, 255, 0.1); /* Fond semi-transparent */
+    color: white; /* Texte blanc */
+    border-radius: 5px 0 0 5px; /* Coins arrondis à gauche */
+    font-family: 'Kadwa', serif; /* Police cohérente */
+    font-size: 0.95rem; /* Taille du texte */
+}
+
+.newsletter-form input::placeholder {
+    color: rgba(255, 255, 255, 0.6); /* Placeholder semi-transparent */
+}
+
+.newsletter-form input:focus {
+    outline: none; /* Pas d'outline */
+    background: rgba(255, 255, 255, 0.15); /* Fond plus visible au focus */
+    border-color: #FFBE30; /* Bordure jaune au focus */
+}
+
+.newsletter-form button {
+    padding: 12px 24px; /* Espacement interne */
+    background: #FFBE30; /* Fond jaune */
+    border: none; /* Pas de bordure */
+    border-radius: 0 5px 5px 0; /* Coins arrondis à droite */
+    cursor: pointer; /* Curseur pointeur */
+    transition: background 0.3s ease; /* Transition du fond */
+}
+
+.newsletter-form button i {
+    color: #173334; /* Couleur de l'icône */
+    font-size: 1.1rem; /* Taille de l'icône */
+}
+
+.newsletter-form button:hover {
+    background: #e6aa1f; /* Fond jaune foncé au survol */
+}
+
+/* Footer bottom */
+.footer-bottom {
+    max-width: 1400px; /* Largeur maximale */
+    margin: 0 auto; /* Centrage horizontal */
+    padding-top: 30px; /* Padding en haut */
+    border-top: 1px solid rgba(255, 255, 255, 0.2); /* Bordure supérieure */
+    text-align: center; /* Texte centré */
+}
+
+.footer-bottom p {
+    margin: 0; /* Pas de marge */
+    font-size: 0.9rem; /* Taille du texte */
+    color: rgba(255, 255, 255, 0.7); /* Blanc semi-transparent */
+}
+
+/* ===== MEDIA QUERIES FOOTER ===== */
+@media (max-width: 768px) {
+    .navbar {
+        padding: 0 20px; /* Réduction du padding */
+    }
+
+    .navbar-container {
+        height: 60px; /* Réduction de la hauteur */
+    }
+
+    .navbar-logo a {
+        font-size: 1rem; /* Réduction de la taille */
+    }
+
+    .search-bar-nav {
+        width: 250px; /* Réduction de la largeur */
+    }
+
+    .search-bar-nav input {
+        height: 35px; /* Réduction de la hauteur */
+        font-size: 0.9rem; /* Réduction de la taille */
+        padding: 5px 40px 5px 15px; /* Ajustement du padding */
+    }
+
+    .search-bar-nav button {
+        width: 40px; /* Réduction de la largeur */
+    }
+
+    .navbar-icons {
+        gap: 15px; /* Réduction de l'espacement */
+    }
+
+    .nav-icon,
+    .nav-icon- {
+        width: 35px; /* Réduction de la taille */
+        height: 35px; /* Réduction de la taille */
+    }
+    
+    .nav-icon i {
+        font-size: 1rem; /* Réduction de la taille */
+    }
+}
