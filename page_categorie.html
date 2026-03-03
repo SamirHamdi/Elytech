@@ -633,22 +633,7 @@
 </footer>
 
 <script>
-  // ── Favoris toggle ──
-  document.querySelectorAll('.card-fav-btn').forEach(btn => {
-    btn.addEventListener('click', e => {
-      e.stopPropagation();
-      const icon = btn.querySelector('i');
-      icon.classList.toggle('fa-regular');
-      icon.classList.toggle('fa-solid');
-      if (icon.classList.contains('fa-solid')) {
-        icon.style.color = '#e63946';
-        btn.style.background = '#ffefef';
-      } else {
-        icon.style.color = 'var(--green)';
-        btn.style.background = 'white';
-      }
-    });
-  });
+ 
 
   // ── Chip suppression filtre ──
   document.querySelectorAll('.chip').forEach(chip => {
