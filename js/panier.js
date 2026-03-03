@@ -28,7 +28,7 @@
             try {
                 localStorage.setItem(CART_KEY, JSON.stringify(this.cart));
                 window.dispatchEvent(new Event('cartChanged'));
-            } catch (e) {
+            } catch (e) {;
                 console.error('Erreur sauvegarde panier:', e);
             }
         }
@@ -210,7 +210,7 @@
                 <div class="summary-line"><span>Articles (${count})</span><span>${total} €</span></div>
                 <div class="summary-line"><span>Livraison</span><span>Gratuite</span></div>
                 <div class="summary-line summary-total"><span>Total</span><span>${total} €</span></div>
-                <button class="btn-checkout">Commander</button>
+                <button class="btn-checkout" onclick="window.location.href='page_confirmation.html'">Commander</button>
             </div>
         `;
         const footer = document.querySelector('.footer-main');
